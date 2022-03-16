@@ -11,10 +11,6 @@
 **per** utulitzar les funcions de la aplicacío.
 
 - **Com a** usuari no registrat
-**vull poder** accedir a una prova del qüestionari dels somnis
-**per poder** saber que signifiquen els meus somnis.
-
-- **Com a** usuari no registrat
 **vull poder** Veure les noves aplicacion que sortiran al mercat
 **per** poder tenir una resposta que m'ajudi a solucionar-ho.
 
