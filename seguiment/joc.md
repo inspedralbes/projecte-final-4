@@ -4,7 +4,7 @@
 - Contra mes rapid conseguiexis les 5 paraules , mes punts y mes alt en el ranking estaras.
 ## NORMATIVA DEL JOC
 - Nomes es podra escriure les paraules amb les lletres que nosaltres donem , si introdueixes alguna lletra que no esta en la part dreta de la pantalla automaticament estara malament
-## COM FUNCIONA EL JOC (Pantalla 1)
+## COM FUNCIONA EL JOC (Homepage)
 
 - El Joc es una barreja entre el Wordle y el Paraulogic amb un toc del nostre estil.
 - En la pantalla principal tenim 5 blocs on es poden escriure paraules amb les lletres que nosaltres asignarem.
