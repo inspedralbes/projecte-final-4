@@ -13,4 +13,5 @@ Un cop comenceu heu de canviar aquesta explicació amb la corresponent al vostre
  * Nom del projecte
  * Petita descripció
  * URL de producció (quan la tingueu)
+ * Figma: https://www.figma.com/file/MCxMgehmv22vuDgz8z2NQM/Untitled?node-id=1%3A4
  * Estat: (explicació de en quin punt està)
