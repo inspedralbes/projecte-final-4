@@ -1,69 +1,39 @@
 <script>
-import 'materialize-css'
+import "materialize-css";
 import lletres from "../components/lletres.vue";
+import joc from "../components/joc.vue";
 
-export default{
-  components:{
-        lletres,
+export default {
+  components: {
+    lletres,
+    joc,
+  },
 
-    },
-}
+  
+};
 </script>
 
 <template>
   <main>
     <h1>Joc</h1>
-    <lletres/>
-    <h2>1 Paraula</h2>
-     <div class="row">
-      <div class="col m2"><input/></div>
-      <div class="col m2"></div>
-      <div class="col m2"></div>
-      <div class="col m2"></div>
-      <div class="col m2"></div>
-    </div>
-    <h2>2 Paraula</h2>
-     <div class="row">
-      <div class="col m2"></div>
-      <div class="col m2"></div>
-      <div class="col m2"></div>
-      <div class="col m2"></div>
-      <div class="col m2"></div>
-    </div>
-    <h2>3 Paraula</h2>
-     <div class="row">
-      <div class="col m2"></div>
-      <div class="col m2"></div>
-      <div class="col m2"></div>
-      <div class="col m2"></div>
-      <div class="col m2"></div>
-    </div>
-    <h2>4 Paraula</h2>
-     <div class="row">
-      <div class="col m2"></div>
-      <div class="col m2"></div>
-      <div class="col m2"></div>
-      <div class="col m2"></div>
-      <div class="col m2"></div>
-    </div>
-    <h2>5 Paraula</h2>
-     <div class="row">
-      <div class="col m2"></div>
-      <div class="col m2"></div>
-      <div class="col m2"></div>
-      <div class="col m2"></div>
-      <div class="col m2"></div>
+    <h1 id="lletres"></h1>
+    <div class="row main-container">
+      <div class="col s6">
+        <joc />
+      </div>
+      <div class="col s6">
+        <lletres />
+      </div>
     </div>
   </main>
 </template>
 
 <style>
-.col {
+.col-grid {
+  border: 2px solid black;
   height: 150px;
   width: 150px;
-  line-height: 50px;
-  border: 1px solid black;
-  text-align: center;
 }
+
 
 </style>
