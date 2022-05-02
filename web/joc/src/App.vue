@@ -6,8 +6,12 @@
 
 <script>
 import {RouterLink, RouterView} from "vue-router";
-export default {
+import M from 'materialize-css'
 
+export default {
+mounted () {
+    M.AutoInit()
+}
 }
 </script>
 
