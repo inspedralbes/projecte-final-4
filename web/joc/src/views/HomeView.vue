@@ -2,14 +2,13 @@
 import "materialize-css";
 import lletres from "../components/lletres.vue";
 import joc from "../components/joc.vue";
-import teclat from "../components/teclat.vue";
 
 
 export default {
   components: {
     lletres,
-    joc,
-    teclat
+    joc
+  
   },
 
   
@@ -23,7 +22,6 @@ export default {
     <div class="row main-container">
       <div class="col s6">
         <joc />
-        <teclat/>
       </div>
       <div class="col s6">
         <lletres />
