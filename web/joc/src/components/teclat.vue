@@ -26,8 +26,8 @@
         <div class="third-row">
             <button class="waves-effect waves-light btn">Del</button>
             <button v-on:click="select($event)" class="waves-effect waves-light btn" id="z">z</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="x" >x</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="c" >c</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="x">x</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="c">c</button>
             <button v-on:click="select($event)" class="waves-effect waves-light btn" id="v">v</button>
             <button v-on:click="select($event)" class="waves-effect waves-light btn" id="b">b</button>
             <button v-on:click="select($event)" class="waves-effect waves-light btn" id="n">n</button>
