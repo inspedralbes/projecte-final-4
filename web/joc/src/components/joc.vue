@@ -179,7 +179,7 @@
         </button>
       </div>
       <div class="third-row">
-        <button class="waves-effect waves-light btn">Del</button>
+        <button class="waves-effect waves-light btn red">Del</button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
@@ -229,7 +229,7 @@
         >
           m
         </button>
-        <button class="waves-effect waves-light btn">Enter</button>
+        <button class="waves-effect waves-light btn green">Enter</button>
       </div>
     </div>
   </div>
