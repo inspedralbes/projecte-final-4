@@ -9,6 +9,7 @@ export default {
   components: {
     lletres,
     joc,
+    teclat
   },
 
   
@@ -22,7 +23,7 @@ export default {
     <div class="row main-container">
       <div class="col s6">
         <joc />
-        <teclat />
+        <teclat/>
       </div>
       <div class="col s6">
         <lletres />
