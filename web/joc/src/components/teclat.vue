@@ -1,37 +1,37 @@
 <template>
   <div id="keyboard-cont">
         <div class="first-row">
-            <button class="waves-effect waves-light btn">q</button>
-            <button class="waves-effect waves-light btn">w</button>
-            <button class="waves-effect waves-light btn">e</button>
-            <button class="waves-effect waves-light btn">r</button>
-            <button class="waves-effect waves-light btn">t</button>
-            <button class="waves-effect waves-light btn">y</button>
-            <button class="waves-effect waves-light btn">u</button>
-            <button class="waves-effect waves-light btn">i</button>
-            <button class="waves-effect waves-light btn">o</button>
-            <button class="waves-effect waves-light btn">p</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="q">q</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="w">w</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="e">e</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="r">r</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="t">t</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="y">y</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="u">u</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="i">i</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="o">o</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="p">p</button>
         </div>
         <div class="second-row">
-            <button class="waves-effect waves-light btn">a</button>
-            <button class="waves-effect waves-light btn">s</button>
-            <button class="waves-effect waves-light btn">d</button>
-            <button class="waves-effect waves-light btn">f</button>
-            <button class="waves-effect waves-light btn">g</button>
-            <button class="waves-effect waves-light btn">h</button>
-            <button class="waves-effect waves-light btn">j</button>
-            <button class="waves-effect waves-light btn">k</button>
-            <button class="waves-effect waves-light btn">l</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="a">a</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="s">s</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="d">d</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="f">f</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="g">g</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="h">h</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="j">j</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="k">k</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="l">l</button>
         </div>
         <div class="third-row">
             <button class="waves-effect waves-light btn">Del</button>
-            <button class="waves-effect waves-light btn">z</button>
-            <button class="waves-effect waves-light btn">x</button>
-            <button class="waves-effect waves-light btn">c</button>
-            <button class="waves-effect waves-light btn">v</button>
-            <button class="waves-effect waves-light btn">b</button>
-            <button class="waves-effect waves-light btn">n</button>
-            <button class="waves-effect waves-light btn">m</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="z">z</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="x" >x</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="c" >c</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="v">v</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="b">b</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="n">n</button>
+            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="m">m</button>
             <button class="waves-effect waves-light btn">Enter</button>
         </div>
     </div>
@@ -40,7 +40,12 @@
 <script>
 export default {
 
-
+methods:{
+select: function(event) {
+            targetId = event.currentTarget.id;
+            console.log(targetId); // returns 'foo'
+        }
+}
 
 }
 </script>
