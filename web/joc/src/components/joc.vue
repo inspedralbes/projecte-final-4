@@ -40,41 +40,39 @@
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
     </div>
-  <button @click="apretar">S</button>
-  <button @click="comprova">COMPROVAR</button>
   <div id="keyboard-cont">
         <div class="first-row">
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="q">q</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="w">w</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="e">e</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="r">r</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="t">t</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="y">y</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="u">u</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="i">i</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="o">o</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="p">p</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="q">q</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="w">w</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="e">e</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="r">r</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="t">t</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="y">y</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="u">u</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="i">i</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="o">o</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="p">p</button>
         </div>
         <div class="second-row">
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="a">a</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="s">s</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="d">d</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="f">f</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="g">g</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="h">h</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="j">j</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="k">k</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="l">l</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="a">a</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="s">s</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="d">d</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="f">f</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="g">g</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="h">h</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="j">j</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="k">k</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="l">l</button>
         </div>
         <div class="third-row">
             <button class="waves-effect waves-light btn">Del</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="z">z</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="x">x</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="c">c</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="v">v</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="b">b</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="n">n</button>
-            <button v-on:click="select($event)" class="waves-effect waves-light btn" id="m">m</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="z">z</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="x">x</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="c">c</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="v">v</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="b">b</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="n">n</button>
+            <button v-on:click="apretar($event)" class="waves-effect waves-light btn" name="m">m</button>
             <button class="waves-effect waves-light btn">Enter</button>
         </div>
     </div>
@@ -89,12 +87,17 @@ export default {
     return {
       paraula1: ["-","-","-","-","-"],
       estatParaula1: [1,1,0,0,0],
-      solucio: ["C","A","M","I","O"]
+      solucio: ["C","A","M","I","O"],
+      letra:""
     }   
   },
    methods: {
-      apretar() {
-        this.paraula1[0]="S";
+      apretar(e) {
+      this.letra = e.target.name
+      console.log(e.target.name);
+
+    
+        this.paraula1[0]=this.letra;
       }
     },
 }
