@@ -179,7 +179,12 @@
         </button>
       </div>
       <div class="third-row">
-        <button class="waves-effect waves-light btn red">Del</button>
+        <button
+          class="waves-effect waves-light btn red"
+          v-on:click="deleteLetter()"
+        >
+          Del
+        </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
@@ -239,7 +244,7 @@
 export default {
   data() {
     return {
-      paraula1: ["-", "-", "-", "-", "-"],
+      paraula1: ["", "", "", "", ""],
       estatParaula1: [1, 1, 0, 0, 0],
       solucio: ["C", "A", "M", "I", "O"],
       letra: "",
@@ -250,9 +255,27 @@ export default {
     apretar(e) {
       this.letra = e.target.name;
       console.log(e.target.name);
+      console.log("Posicion", this.count);
 
       this.paraula1[this.count] = this.letra;
       this.count++;
+    },
+    deleteLetter() {
+      
+      if(this.count==0){
+        this.paraula1[this.count] = "";
+      }
+        if (this.paraula1[this.count] === "" && this.count>0) {
+          this.count = this.count - 1;
+          this.paraula1[this.count] = "";
+          this.count = this.count - 1;
+        } else if(this.count>0) {
+          this.paraula1[this.count] = "";
+
+          this.count = this.count - 1;
+        }
+        console.log("Posicion", this.count);
+      
     },
   },
 };
