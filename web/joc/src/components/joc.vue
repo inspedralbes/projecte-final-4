@@ -2,19 +2,19 @@
   <div>
     <h2>1 Paraula</h2>
     <div class="row">
-      <div class="col-grid col m2">
+      <div id="1div0" class="col-grid col m2">
         <h1>{{ this.paraula1[0] }}</h1>
       </div>
-      <div class="col-grid col m2">
+      <div id="1div1" class="col-grid col m2">
         <h1>{{ this.paraula1[1] }}</h1>
       </div>
-      <div class="col-grid col m2">
+      <div id="1div2" class="col-grid col m2">
         <h1>{{ this.paraula1[2] }}</h1>
       </div>
-      <div class="col-grid col m2">
+      <div id="1div3" class="col-grid col m2">
         <h1>{{ this.paraula1[3] }}</h1>
       </div>
-      <div class="col-grid col m2">
+      <div id="1div4" class="col-grid col m2">
         <h1>{{ this.paraula1[4] }}</h1>
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar()"
@@ -293,16 +293,19 @@ export default {
 
     comprovar() {
       for (var i = 0; i < 5; i++) {
-        console.log("Paraula",this.paraula1[i])
-        console.log("Solucio",this.solucio[i])
+        console.log("Paraula", this.paraula1[i]);
+        console.log("Solucio", this.solucio[i]);
         if (this.paraula1[i] === this.solucio[i]) {
-                  
-
           this.estatParaula1[i] = 0;
-        }else{
+          document.getElementById("1div" + i).classList.remove("incorrecte");
+
+          document.getElementById("1div" + i).classList.add("correcte");
+        } else {
           this.estatParaula1[i] = 1;
+          document.getElementById("1div" + i).classList.remove("correcte");
+          document.getElementById("1div" + i).classList.add("incorrecte");
         }
-        console.log(this.estatParaula1[i])
+        console.log(this.estatParaula1[i]);
       }
     },
   },
@@ -310,6 +313,13 @@ export default {
 </script>
 
 <style>
+.correcte {
+  background-color: green;
+}
+
+.incorrecte {
+  background-color: red;
+}
 #keyboard-cont {
   margin: 1rem 0;
   display: flex;
