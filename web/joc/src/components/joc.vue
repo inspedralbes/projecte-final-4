@@ -2,11 +2,11 @@
   <div>
     <h2>1 Paraula</h2>
     <div class="row">
-      <div class="col-grid col m2">{{ this.paraula1[0] }}</div>
-      <div class="col-grid col m2">{{ this.paraula1[1] }}</div>
-      <div class="col-grid col m2">{{ this.paraula1[2] }}</div>
-      <div class="col-grid col m2">{{ this.paraula1[3] }}</div>
-      <div class="col-grid col m2">{{ this.paraula1[4] }}</div>
+      <div class="col-grid col m2"><h1>{{ this.paraula1[0] }}</h1></div>
+      <div class="col-grid col m2"><h1>{{ this.paraula1[1] }}</h1></div>
+      <div class="col-grid col m2"><h1>{{ this.paraula1[2] }}</h1></div>
+      <div class="col-grid col m2"><h1>{{ this.paraula1[3] }}</h1></div>
+      <div class="col-grid col m2"><h1>{{ this.paraula1[4] }}</h1></div>
     </div>
     <h2>2 Paraula</h2>
     <div class="row">
