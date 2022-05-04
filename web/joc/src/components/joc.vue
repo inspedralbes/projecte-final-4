@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>1 Paraula</h2>
+    <h2>1 Paraula {{this.palabrasjson.palabra}}</h2>
     <div class="row">
       <div id="1div0" class="col-grid col m2">
         <h1>{{ this.paraula1[0] }}</h1>
@@ -303,9 +303,11 @@
 </template>
 
 <script>
+import JSONLETRAS from "./json/palabras.js"
 export default {
   data() {
     return {
+      palabrasjson: JSONLETRAS,
       paraula1: ["", "", "", "", ""],
       estatParaula1: ["", "", "", "", ""],
       solucio: ["B", "A", "L", "O", "N"],
