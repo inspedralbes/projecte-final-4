@@ -259,7 +259,7 @@ export default {
     return {
       paraula1: ["", "", "", "", ""],
       estatParaula1: ["", "", "", "", ""],
-      solucio: ["C", "A", "M", "I", "O"],
+      solucio: ["B", "A", "L", "O", "N"],
       letra: "",
       count: 0,
     };
