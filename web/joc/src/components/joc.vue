@@ -2,11 +2,24 @@
   <div>
     <h2>1 Paraula</h2>
     <div class="row">
-      <div class="col-grid col m2"><h1>{{ this.paraula1[0] }}</h1></div>
-      <div class="col-grid col m2"><h1>{{ this.paraula1[1] }}</h1></div>
-      <div class="col-grid col m2"><h1>{{ this.paraula1[2] }}</h1></div>
-      <div class="col-grid col m2"><h1>{{ this.paraula1[3] }}</h1></div>
-      <div class="col-grid col m2"><h1>{{ this.paraula1[4] }}</h1></div>
+      <div class="col-grid col m2">
+        <h1>{{ this.paraula1[0] }}</h1>
+      </div>
+      <div class="col-grid col m2">
+        <h1>{{ this.paraula1[1] }}</h1>
+      </div>
+      <div class="col-grid col m2">
+        <h1>{{ this.paraula1[2] }}</h1>
+      </div>
+      <div class="col-grid col m2">
+        <h1>{{ this.paraula1[3] }}</h1>
+      </div>
+      <div class="col-grid col m2">
+        <h1>{{ this.paraula1[4] }}</h1>
+      </div>
+      <a class="waves-effect waves-light btn" v-on:click="comprovar()"
+        >Comprovar</a
+      >
     </div>
     <h2>2 Paraula</h2>
     <div class="row">
@@ -45,137 +58,137 @@
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="q"
+          name="Q"
         >
-          q
+          Q
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="w"
+          name="W"
         >
-          w
+          W
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="e"
+          name="E"
         >
-          e
+          E
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="r"
+          name="R"
         >
-          r
+          R
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="t"
+          name="T"
         >
-          t
+          T
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="y"
+          name="Y"
         >
-          y
+          Y
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="u"
+          name="U"
         >
-          u
+          U
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="i"
+          name="I"
         >
-          i
+          I
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="o"
+          name="O"
         >
-          o
+          O
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="p"
+          name="P"
         >
-          p
+          P
         </button>
       </div>
       <div class="second-row">
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="a"
+          name="A"
         >
-          a
+          A
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="s"
+          name="S"
         >
-          s
+          S
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="d"
+          name="D"
         >
-          d
+          D
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="f"
+          name="F"
         >
-          f
+          F
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="g"
+          name="G"
         >
-          g
+          G
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="h"
+          name="H"
         >
-          h
+          H
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="j"
+          name="J"
         >
-          j
+          J
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="k"
+          name="K"
         >
-          k
+          K
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="l"
+          name="L"
         >
-          l
+          L
         </button>
       </div>
       <div class="third-row">
@@ -188,51 +201,51 @@
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="z"
+          name="Z"
         >
-          z
+          Z
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="x"
+          name="X"
         >
-          x
+          X
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="c"
+          name="C"
         >
-          c
+          C
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="v"
+          name="V"
         >
-          v
+          V
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="b"
+          name="B"
         >
-          b
+          B
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="n"
+          name="N"
         >
-          n
+          N
         </button>
         <button
           v-on:click="apretar($event)"
           class="waves-effect waves-light btn"
-          name="m"
+          name="M"
         >
-          m
+          M
         </button>
         <button class="waves-effect waves-light btn green">Enter</button>
       </div>
@@ -245,7 +258,7 @@ export default {
   data() {
     return {
       paraula1: ["", "", "", "", ""],
-      estatParaula1: [1, 1, 0, 0, 0],
+      estatParaula1: ["", "", "", "", ""],
       solucio: ["C", "A", "M", "I", "O"],
       letra: "",
       count: 0,
@@ -255,31 +268,42 @@ export default {
     apretar(e) {
       this.letra = e.target.name;
       console.log(e.target.name);
-if(this.count<5){
-      this.paraula1[this.count] = this.letra;
-      this.count++;
-            console.log("Posicion", this.count);
-
-}
-if(this.count<5){
-  
-}
+      if (this.count < 5) {
+        this.paraula1[this.count] = this.letra;
+        this.count++;
+        console.log("Posicion", this.count);
+      }
+      if (this.count < 5) {
+      }
     },
     deleteLetter() {
-      
-      if(this.count==0){
+      if (this.count == 0) {
         this.paraula1[this.count] = "";
       }
-        if (this.paraula1[this.count] === "" && this.count>0) {
-          this.count = this.count - 1;
-          this.paraula1[this.count] = "";
-        } else if(!(this.paraula1[this.count] === "") && this.count>0) {
-          this.paraula1[this.count] = "";
+      if (this.paraula1[this.count] === "" && this.count > 0) {
+        this.count = this.count - 1;
+        this.paraula1[this.count] = "";
+      } else if (!(this.paraula1[this.count] === "") && this.count > 0) {
+        this.paraula1[this.count] = "";
 
-          this.count = this.count - 1;
+        this.count = this.count - 1;
+      }
+      console.log("Posicion", this.count);
+    },
+
+    comprovar() {
+      for (var i = 0; i < 5; i++) {
+        console.log("Paraula",this.paraula1[i])
+        console.log("Solucio",this.solucio[i])
+        if (this.paraula1[i] === this.solucio[i]) {
+                  
+
+          this.estatParaula1[i] = 0;
+        }else{
+          this.estatParaula1[i] = 1;
         }
-        console.log("Posicion", this.count);
-      
+        console.log(this.estatParaula1[i])
+      }
     },
   },
 };
