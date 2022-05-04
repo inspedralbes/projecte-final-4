@@ -273,8 +273,7 @@ if(this.count<5){
         if (this.paraula1[this.count] === "" && this.count>0) {
           this.count = this.count - 1;
           this.paraula1[this.count] = "";
-          this.count = this.count - 1;
-        } else if(this.count>0) {
+        } else if(!(this.paraula1[this.count] === "") && this.count>0) {
           this.paraula1[this.count] = "";
 
           this.count = this.count - 1;
