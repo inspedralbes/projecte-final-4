@@ -255,10 +255,15 @@ export default {
     apretar(e) {
       this.letra = e.target.name;
       console.log(e.target.name);
-      console.log("Posicion", this.count);
-
+if(this.count<5){
       this.paraula1[this.count] = this.letra;
       this.count++;
+            console.log("Posicion", this.count);
+
+}
+if(this.count<5){
+  
+}
     },
     deleteLetter() {
       
