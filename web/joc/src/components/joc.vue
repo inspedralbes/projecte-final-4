@@ -54,22 +54,52 @@
       <div class="col-grid col m2"></div>
     </div>
 
-<!-- TECLAT 6 LLETRES -->
-<div class="row">
-      <button v-on:click="apretar($event)" name="" class="waves-effect waves-light btn" id="lletre-0"></button>
-      <button v-on:click="apretar($event)" name="" class="waves-effect waves-light btn" id="lletre-1"></button>
-      <button v-on:click="apretar($event)" name="" class="waves-effect waves-light btn" id="lletre-2"></button>
+    <!-- TECLAT 6 LLETRES -->
+    <div class="row">
+      <button
+        v-on:click="apretar($event)"
+        name=""
+        class="waves-effect waves-light btn"
+        id="lletre-0"
+      ></button>
+      <button
+        v-on:click="apretar($event)"
+        name=""
+        class="waves-effect waves-light btn"
+        id="lletre-1"
+      ></button>
+      <button
+        v-on:click="apretar($event)"
+        name=""
+        class="waves-effect waves-light btn"
+        id="lletre-2"
+      ></button>
     </div>
     <div class="row">
-      <button v-on:click="apretar($event)" name="" class="waves-effect waves-light btn" id="lletre-3"></button>
-      <button v-on:click="apretar($event)" name="" class="waves-effect waves-light btn" id="lletre-4"></button>
-      <button v-on:click="apretar($event)" name="" class="waves-effect waves-light btn" id="lletre-5"></button>
       <button
-          class="waves-effect waves-light btn red"
-          v-on:click="deleteLetter()"
-        >
-          Del
-        </button>
+        v-on:click="apretar($event)"
+        name=""
+        class="waves-effect waves-light btn"
+        id="lletre-3"
+      ></button>
+      <button
+        v-on:click="apretar($event)"
+        name=""
+        class="waves-effect waves-light btn"
+        id="lletre-4"
+      ></button>
+      <button
+        v-on:click="apretar($event)"
+        name=""
+        class="waves-effect waves-light btn"
+        id="lletre-5"
+      ></button>
+      <button
+        class="waves-effect waves-light btn red"
+        v-on:click="deleteLetter()"
+      >
+        Del
+      </button>
     </div>
     <!-- TECLAT COMPLET
     <div id="keyboard-cont">
@@ -287,10 +317,16 @@ export default {
     const text = [];
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+    fetch("src/components/json/palabras.json")
+      .then((response) => {
+        return response.json();
+      })
+      .then((jsondata) => console.log(jsondata));
+
     for (var i = 0; i < 6; i++) {
       text[i] = possible.charAt(Math.floor(Math.random() * possible.length));
       document.getElementById("lletre-" + i).innerHTML = text[i];
-      document.getElementById("lletre-" + i).setAttribute("name",text[i]);
+      document.getElementById("lletre-" + i).setAttribute("name", text[i]);
       console.log(i);
       console.log(text);
     }
