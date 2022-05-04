@@ -1,13 +1,11 @@
 <script>
 import "materialize-css";
-import lletres from "../components/lletres.vue";
 import joc from "../components/joc.vue";
 
 
 export default {
   components: {
-    lletres,
-    joc
+    joc,
   
   },
 
