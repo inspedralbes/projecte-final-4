@@ -1,6 +1,10 @@
 <template>
   <div>
+
     <h4>1 Paraula</h4>
+
+    <!-- <h4>1 Paraula {{ this.palabrasjson.palabra }}</h4> -->
+
     <div class="row center-align margin-celdas">
       <div id="1div0" class="col-grid col m2 z-depth-4">
         <h3>{{ this.paraula1[0] }}</h3>
@@ -19,9 +23,8 @@
       </div>
     </div>
     <a class="waves-effect waves-light btn" v-on:click="comprovar()"
-      >Comprovar Paraula 1</a
-    >
-    <h4>2 Paraula</h4>
+      >Comprovar Paraula 1</a>
+    <!-- <h4>2 Paraula</h4> -->
     <div class="row center-align margin-celdas">
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
@@ -29,7 +32,9 @@
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
     </div>
-    <h4>3 Paraula</h4>
+     <a class="waves-effect waves-light btn" v-on:click="comprovar()"
+      >Comprovar Paraula 2</a>
+    <!-- <h4>3 Paraula</h4> -->
     <div class="row center-align margin-celdas">
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
@@ -37,7 +42,9 @@
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
     </div>
-    <h4>4 Paraula</h4>
+     <a class="waves-effect waves-light btn" v-on:click="comprovar()"
+      >Comprovar Paraula 3</a>
+    <!-- <h4>4 Paraula</h4> -->
     <div class="row center-align margin-celdas">
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
@@ -45,7 +52,9 @@
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
     </div>
-    <h4>5 Paraula</h4>
+     <a class="waves-effect waves-light btn" v-on:click="comprovar()"
+      >Comprovar Paraula 4</a>
+    <!-- <h4>5 Paraula</h4> -->
     <div class="row center-align margin-celdas">
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
@@ -53,6 +62,8 @@
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
     </div>
+     <a class="waves-effect waves-light btn" v-on:click="comprovar()"
+      >Comprovar Paraula 5</a> <br><br>
 
     <!-- TECLAT 6 LLETRES -->
     <div class="row">
