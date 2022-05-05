@@ -17,13 +17,11 @@ export default {
   <main>
     <h1>Joc</h1>
     <h1 id="lletres"></h1>
-    <div class="row main-container">
-      <div class="col s6">
+    <div class="row main-container center-align">
+      <div class="col s12 center-align">
         <joc />
       </div>
-      <div class="col s6">
-        <lletres />
-      </div>
+
     </div>
   </main>
 </template>
@@ -32,7 +30,8 @@ export default {
 .col-grid {
   border: 2px solid black;
   height: 150px;
-  width: 150px;
+  width: 100px;
+
 }
 
 

@@ -1,28 +1,28 @@
 <template>
   <div>
     <h2>1 Paraula {{this.palabrasjson.palabra}}</h2>
-    <div class="row">
-      <div id="1div0" class="col-grid col m2">
+    <div class="row center-align margin-celdas">
+      <div id="1div0" class="col-grid col m2 z-depth-4">
         <h1>{{ this.paraula1[0] }}</h1>
       </div>
-      <div id="1div1" class="col-grid col m2">
+      <div id="1div1" class="col-grid col m2 z-depth-4">
         <h1>{{ this.paraula1[1] }}</h1>
       </div>
-      <div id="1div2" class="col-grid col m2">
+      <div id="1div2" class="col-grid col m2 z-depth-4">
         <h1>{{ this.paraula1[2] }}</h1>
       </div>
-      <div id="1div3" class="col-grid col m2">
+      <div id="1div3" class="col-grid col m2 z-depth-4">
         <h1>{{ this.paraula1[3] }}</h1>
       </div>
-      <div id="1div4" class="col-grid col m2">
+      <div id="1div4" class="col-grid col m2 z-depth-4">
         <h1>{{ this.paraula1[4] }}</h1>
       </div>
-      <a class="waves-effect waves-light btn" v-on:click="comprovar()"
-        >Comprovar</a
+      
+    </div><a class="waves-effect waves-light btn" v-on:click="comprovar()"
+        >Comprovar Paraula 1</a
       >
-    </div>
     <h2>2 Paraula</h2>
-    <div class="row">
+    <div class="row center-align margin-celdas">
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
@@ -30,7 +30,7 @@
       <div class="col-grid col m2"></div>
     </div>
     <h2>3 Paraula</h2>
-    <div class="row">
+    <div class="row center-align margin-celdas">
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
@@ -38,7 +38,7 @@
       <div class="col-grid col m2"></div>
     </div>
     <h2>4 Paraula</h2>
-    <div class="row">
+    <div class="row center-align margin-celdas">
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
@@ -46,7 +46,7 @@
       <div class="col-grid col m2"></div>
     </div>
     <h2>5 Paraula</h2>
-    <div class="row">
+    <div class="row center-align margin-celdas">
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
@@ -411,5 +411,9 @@ export default {
   margin: 0 2px;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+.margin-celdas{
+  padding-left: 14%;
 }
 </style>
