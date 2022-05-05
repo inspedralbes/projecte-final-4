@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4>1 Paraula {{ this.palabrasjson.palabra }}</h4>
+    <h4>1 Paraula</h4>
     <div class="row center-align margin-celdas">
       <div id="1div0" class="col-grid col m2 z-depth-4">
         <h3>{{ this.paraula1[0] }}</h3>
@@ -303,12 +303,9 @@
 </template>
 
 <script>
-import JSONLETRAS from "./json/palabras.json";
-import axios from "axios";
 export default {
   data() {
     return {
-      palabrasjson: JSONLETRAS,
       paraula1: ["", "", "", "", ""],
       estatParaula1: ["", "", "", "", ""],
       solucio: ["B", "A", "L", "O", "N"],
@@ -323,14 +320,8 @@ export default {
 
     fetch("src/components/json/palabras.json")
     .then(response => response.json())
-    .then(data => console.log(data));
-    /*axios
-      .get("src/components/json/palabras.json")
-      .then((response) => response)
-      .then((data) => {
-        this.paraulaJson = (data.data.datos);
-        console.log("Paraula " + this.paraulaJson);
-      });*/
+    .then(data => console.log(data.datos));
+    
 
     for (var i = 0; i < 6; i++) {
       text[i] = possible.charAt(Math.floor(Math.random() * possible.length));
