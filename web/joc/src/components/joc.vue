@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>1 Paraula {{this.palabrasjson.palabra}}</h2>
+    <h2>1 Paraula {{ this.palabrasjson.palabra }}</h2>
     <div class="row center-align margin-celdas">
       <div id="1div0" class="col-grid col m2 z-depth-4">
         <h1>{{ this.paraula1[0] }}</h1>
@@ -17,10 +17,10 @@
       <div id="1div4" class="col-grid col m2 z-depth-4">
         <h1>{{ this.paraula1[4] }}</h1>
       </div>
-      
-    </div><a class="waves-effect waves-light btn" v-on:click="comprovar()"
-        >Comprovar Paraula 1</a
-      >
+    </div>
+    <a class="waves-effect waves-light btn" v-on:click="comprovar()"
+      >Comprovar Paraula 1</a
+    >
     <h2>2 Paraula</h2>
     <div class="row center-align margin-celdas">
       <div class="col-grid col m2"></div>
@@ -303,7 +303,8 @@
 </template>
 
 <script>
-import JSONLETRAS from "./json/palabras.json"
+import JSONLETRAS from "./json/palabras.json";
+import axios from "axios";
 export default {
   data() {
     return {
@@ -313,17 +314,20 @@ export default {
       solucio: ["B", "A", "L", "O", "N"],
       letra: "",
       count: 0,
+      paraulaJson: [],
     };
   },
   mounted() {
     const text = [];
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    fetch("src/components/json/palabras.json")
-      .then((response) => {
-        return response.json();
-      })
-      .then((jsondata) => console.log(jsondata));
+    axios
+      .get("src/components/json/palabras.json")
+      .then((response) => response)
+      .then((data) => {
+        this.paraulaJson = (data.data);
+        console.log("Paraula " + this.paraulaJson);
+      });
 
     for (var i = 0; i < 6; i++) {
       text[i] = possible.charAt(Math.floor(Math.random() * possible.length));
@@ -413,7 +417,7 @@ export default {
   text-transform: uppercase;
 }
 
-.margin-celdas{
+.margin-celdas {
   padding-left: 14%;
 }
 </style>
