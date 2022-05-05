@@ -321,13 +321,16 @@ export default {
     const text = [];
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    axios
+    fetch("src/components/json/palabras.json")
+    .then(response => response.json())
+    .then(data => console.log(data));
+    /*axios
       .get("src/components/json/palabras.json")
       .then((response) => response)
       .then((data) => {
-        this.paraulaJson = (data.data);
+        this.paraulaJson = (data.data.datos);
         console.log("Paraula " + this.paraulaJson);
-      });
+      });*/
 
     for (var i = 0; i < 6; i++) {
       text[i] = possible.charAt(Math.floor(Math.random() * possible.length));

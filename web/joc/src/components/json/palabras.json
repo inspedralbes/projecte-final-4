@@ -1,4 +1,4 @@
-[
+{"datos": [
   {
     "palabra": "ASILO",
     "letras": "A-S-I-L-O",
@@ -29,4 +29,4 @@
       "letras": ["H", "O", "G", "A", "R"],
       "definicion": "lorem impudasddasdasdasdasdasdasdasdasd"
     }
-]
+]}
