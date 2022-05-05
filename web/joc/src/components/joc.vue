@@ -1,6 +1,9 @@
 <template>
   <div>
+<<<<<<< Updated upstream
     <h4>1 Paraula</h4>
+=======
+>>>>>>> Stashed changes
     <div class="row center-align margin-celdas">
       <div id="1div0" class="col-grid col m2 z-depth-4">
         <h3>{{ this.paraula1[0] }}</h3>
