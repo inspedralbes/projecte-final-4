@@ -3,19 +3,19 @@
     <h2>1 Paraula {{ this.palabrasjson.palabra }}</h2>
     <div class="row center-align margin-celdas">
       <div id="1div0" class="col-grid col m2 z-depth-4">
-        <h1>{{ this.paraula1[0] }}</h1>
+        <h3>{{ this.paraula1[0] }}</h3>
       </div>
       <div id="1div1" class="col-grid col m2 z-depth-4">
-        <h1>{{ this.paraula1[1] }}</h1>
+        <h3>{{ this.paraula1[1] }}</h3>
       </div>
       <div id="1div2" class="col-grid col m2 z-depth-4">
-        <h1>{{ this.paraula1[2] }}</h1>
+        <h3>{{ this.paraula1[2] }}</h3>
       </div>
       <div id="1div3" class="col-grid col m2 z-depth-4">
-        <h1>{{ this.paraula1[3] }}</h1>
+        <h3>{{ this.paraula1[3] }}</h3>
       </div>
       <div id="1div4" class="col-grid col m2 z-depth-4">
-        <h1>{{ this.paraula1[4] }}</h1>
+        <h3>{{ this.paraula1[4] }}</h3>
       </div>
     </div>
     <a class="waves-effect waves-light btn" v-on:click="comprovar()"
