@@ -303,7 +303,7 @@
 </template>
 
 <script>
-import JSONLETRAS from "./json/palabras.js"
+import JSONLETRAS from "./json/palabras.json"
 export default {
   data() {
     return {
