@@ -1,27 +1,27 @@
 <template>
   <div>
-    <h2>1 Paraula {{this.palabrasjson.palabra}}</h2>
+    <h4>1 Paraula {{this.palabrasjson.palabra}}</h4>
     <div class="row center-align margin-celdas">
       <div id="1div0" class="col-grid col m2 z-depth-4">
-        <h1>{{ this.paraula1[0] }}</h1>
+        <h3>{{ this.paraula1[0] }}</h3>
       </div>
       <div id="1div1" class="col-grid col m2 z-depth-4">
-        <h1>{{ this.paraula1[1] }}</h1>
+        <h3>{{ this.paraula1[1] }}</h3>
       </div>
       <div id="1div2" class="col-grid col m2 z-depth-4">
-        <h1>{{ this.paraula1[2] }}</h1>
+        <h3>{{ this.paraula1[2] }}</h3>
       </div>
       <div id="1div3" class="col-grid col m2 z-depth-4">
-        <h1>{{ this.paraula1[3] }}</h1>
+        <h3>{{ this.paraula1[3] }}</h3>
       </div>
       <div id="1div4" class="col-grid col m2 z-depth-4">
-        <h1>{{ this.paraula1[4] }}</h1>
+        <h3>{{ this.paraula1[4] }}</h3>
       </div>
       
-    </div><a class="waves-effect waves-light btn" v-on:click="comprovar()"
-        >Comprovar Paraula 1</a
-      >
-    <h2>2 Paraula</h2>
+    </div>
+    <a class="waves-effect waves-light btn" v-on:click="comprovar()"
+        >Comprovar Paraula 1</a>
+    <h4>2 Paraula</h4>
     <div class="row center-align margin-celdas">
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
@@ -29,7 +29,7 @@
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
     </div>
-    <h2>3 Paraula</h2>
+    <h4>3 Paraula</h4>
     <div class="row center-align margin-celdas">
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
@@ -37,7 +37,7 @@
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
     </div>
-    <h2>4 Paraula</h2>
+    <h4>4 Paraula</h4>
     <div class="row center-align margin-celdas">
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
@@ -45,7 +45,7 @@
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
     </div>
-    <h2>5 Paraula</h2>
+    <h4>5 Paraula</h4>
     <div class="row center-align margin-celdas">
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
