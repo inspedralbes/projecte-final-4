@@ -331,9 +331,8 @@ export default {
 
     fetch("src/components/json/palabras.json")
     .then(response => response.json())
-    .then(data => console.log(data.datos));
+    .then(data => this.paraulaJson=(data.datos));    
     
-
     for (var i = 0; i < 6; i++) {
       text[i] = possible.charAt(Math.floor(Math.random() * possible.length));
       document.getElementById("lletre-" + i).innerHTML = text[i];
@@ -370,6 +369,7 @@ export default {
     },
 
     comprovar() {
+      console.log(this.paraulaJson)
       for (var i = 0; i < 5; i++) {
         console.log("Paraula", this.paraula1[i]);
         console.log("Solucio", this.solucio[i]);
