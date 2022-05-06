@@ -322,8 +322,7 @@ export default {
       solucio: ["B", "A", "L", "O", "N"],
       letra: "",
       count: 0,
-      paraulaJson: [{palabra:"hola"}],
-      randomNumber: "",
+      paraulaJson: [],
     };
   },
   mounted() {
@@ -331,14 +330,9 @@ export default {
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     fetch("src/components/json/palabras.json")
-      .then((res) => res.json())
-      .then((data) => (this.paraulaJson = data.datos));
-
-    console.log("variable ", this.paraulaJson);
-    this.randomNumber = Math.floor(Math.random() * 4);
-  
-    console.log("Number", this.randomNumber);
-    console.log("Paraula", this.paraulaJson);
+    .then(response => response.json())
+    .then(data => console.log(data.datos));
+    
 
     for (var i = 0; i < 6; i++) {
       text[i] = possible.charAt(Math.floor(Math.random() * possible.length));
