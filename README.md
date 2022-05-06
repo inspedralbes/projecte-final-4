@@ -12,7 +12,7 @@ Un cop comenceu heu de canviar aquesta explicació amb la corresponent al vostre
  * Alvaro Pol
  * Nom del projecte
  * Joc entre el paraulogic y el wordle
- * URL de producció (quan la tingueu)
+ * URL de producció paraudl.alumnes.inspedralbes.cat
  * Figma: https://www.figma.com/file/MCxMgehmv22vuDgz8z2NQM/Untitled?node-id=1%3A4
  * Trello: https://trello.com/invite/b/nMfXusNG/65c9f1fe2670de4da2c9b891f2348428/joc
  * Estat: (explicació de en quin punt està)
