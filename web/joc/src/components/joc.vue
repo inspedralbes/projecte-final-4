@@ -23,7 +23,7 @@
       </div>
     </div>
     <a class="waves-effect waves-light btn" v-on:click="comprovar()"
-      >Comprovar Paraula 1</a>
+      >Comprovar Paraula 1</a><h2>Intents</h2><a class="btn-floating btn-large waves-effect waves-light red">{{this.intents1}}</a>
     <!-- <h4>2 Paraula</h4> -->
     <div class="row center-align margin-celdas">
       <div class="col-grid col m2"></div>
@@ -112,204 +112,6 @@
         Del
       </button>
     </div>
-    <!-- TECLAT COMPLET
-    <div id="keyboard-cont">
-      <div class="first-row">
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="Q"
-        >
-          Q
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="W"
-        >
-          W
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="E"
-        >
-          E
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="R"
-        >
-          R
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="T"
-        >
-          T
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="Y"
-        >
-          Y
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="U"
-        >
-          U
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="I"
-        >
-          I
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="O"
-        >
-          O
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="P"
-        >
-          P
-        </button>
-      </div>
-      <div class="second-row">
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="A"
-        >
-          A
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="S"
-        >
-          S
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="D"
-        >
-          D
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="F"
-        >
-          F
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="G"
-        >
-          G
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="H"
-        >
-          H
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="J"
-        >
-          J
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="K"
-        >
-          K
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="L"
-        >
-          L
-        </button>
-      </div>
-      <div class="third-row">
-        <button
-          class="waves-effect waves-light btn red"
-          v-on:click="deleteLetter()"
-        >
-          Del
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="Z"
-        >
-          Z
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="X"
-        >
-          X
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="C"
-        >
-          C
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="V"
-        >
-          V
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="B"
-        >
-          B
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="N"
-        >
-          N
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          class="waves-effect waves-light btn"
-          name="M"
-        >
-          M
-        </button>
-        <button class="waves-effect waves-light btn green">Enter</button>
-      </div>
-    </div> -->
   </div>
 </template>
 
@@ -324,6 +126,7 @@ export default {
       count: 0,
       paraulaJson: [],
       randomNumber:"",
+      intents1:0,
     };
   },
   mounted() {
@@ -387,6 +190,7 @@ export default {
         }
         console.log(this.estatParaula1[i]);
       }
+      this.intents1++;
     },
   },
 };
