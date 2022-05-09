@@ -1,32 +1,32 @@
 {"datos": [
   {
     "palabra": "ASILO",
-    "letras": "A-S-I-L-O",
     "letras": ["A", "S", "I", "L", "O"],
-    "definicion": "lorem impudasddasdasdasdasdasdasdasdasd"
+    "definicion": "ASILO impudasddasdasdasdasdasdasdasdasd"
+  },
+  {
+    "palabra": "BALON",
+    "letras": ["B", "A", "L", "O", "N"],
+    "definicion": "BALON impudasddasdasdasdasdasdasdasdasd"
   },
   {
       "palabra": "CESTA",
-      "letras": "C-E-S-T-A",
       "letras": ["C", "E", "S", "T", "A"],
-      "definicion": "lorem impudasddasdasdasdasdasdasdasdasd"
+      "definicion": "CESTA impudasddasdasdasdasdasdasdasdasd"
     },
     {
       "palabra": "FLOTA",
-      "letras": "F-L-O-T-A",
       "letras": ["F", "L", "O", "T", "A"],
-      "definicion": "lorem impudasddasdasdasdasdasdasdasdasd"
+      "definicion": "FLOTA impudasddasdasdasdasdasdasdasdasd"
     },
     {
       "palabra": "GENTE",
-      "letras": "G-E-N-T-E",
       "letras": ["G", "E", "N", "T", "E"],
-      "definicion": "lorem impudasddasdasdasdasdasdasdasdasd"
+      "definicion": "GENTE impudasddasdasdasdasdasdasdasdasd"
     },
     {
       "palabra": "HOGAR",
-      "letras": "H-O-G-A-R",
       "letras": ["H", "O", "G", "A", "R"],
-      "definicion": "lorem impudasddasdasdasdasdasdasdasdasd"
+      "definicion": "HOGAR impudasddasdasdasdasdasdasdasdasd"
     }
 ]}
