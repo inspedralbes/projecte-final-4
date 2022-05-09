@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <h4>1 Paraula</h4>
 
     <!-- <h4>1 Paraula {{ this.palabrasjson.palabra }}</h4> -->
@@ -23,17 +22,23 @@
       </div>
     </div>
     <a class="waves-effect waves-light btn" v-on:click="comprovar()"
-      >Comprovar Paraula 1</a><h2>Intents</h2><a class="btn-floating btn-large waves-effect waves-light red">{{this.intents1}}</a>
+      >Comprovar Paraula 1</a
+    >
+    <h2>Intents</h2>
+    <a class="btn-floating btn-large waves-effect waves-light red">{{
+      this.intents1
+    }}</a>
     <!-- <h4>2 Paraula</h4> -->
     <div class="row center-align margin-celdas">
-      <div class="col-grid col m2"></div>
-      <div class="col-grid col m2"></div>
-      <div class="col-grid col m2"></div>
-      <div class="col-grid col m2"></div>
-      <div class="col-grid col m2"></div>
+      <div id="2div0" class="col-grid col m2"></div>
+      <div id="2div1" class="col-grid col m2"></div>
+      <div id="2div2" class="col-grid col m2"></div>
+      <div id="2div3" class="col-grid col m2"></div>
+      <div id="2div4" class="col-grid col m2"></div>
     </div>
-     <a class="waves-effect waves-light btn" v-on:click="comprovar()"
-      >Comprovar Paraula 2</a>
+    <a class="waves-effect waves-light btn" v-on:click="comprovar2()"
+      >Comprovar Paraula 2</a
+    >
     <!-- <h4>3 Paraula</h4> -->
     <div class="row center-align margin-celdas">
       <div class="col-grid col m2"></div>
@@ -42,8 +47,9 @@
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
     </div>
-     <a class="waves-effect waves-light btn" v-on:click="comprovar()"
-      >Comprovar Paraula 3</a>
+    <a class="waves-effect waves-light btn" v-on:click="comprovar()"
+      >Comprovar Paraula 3</a
+    >
     <!-- <h4>4 Paraula</h4> -->
     <div class="row center-align margin-celdas">
       <div class="col-grid col m2"></div>
@@ -52,8 +58,9 @@
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
     </div>
-     <a class="waves-effect waves-light btn" v-on:click="comprovar()"
-      >Comprovar Paraula 4</a>
+    <a class="waves-effect waves-light btn" v-on:click="comprovar()"
+      >Comprovar Paraula 4</a
+    >
     <!-- <h4>5 Paraula</h4> -->
     <div class="row center-align margin-celdas">
       <div class="col-grid col m2"></div>
@@ -62,8 +69,10 @@
       <div class="col-grid col m2"></div>
       <div class="col-grid col m2"></div>
     </div>
-     <a class="waves-effect waves-light btn" v-on:click="comprovar()"
-      >Comprovar Paraula 5</a> <br><br>
+    <a class="waves-effect waves-light btn" v-on:click="comprovar()"
+      >Comprovar Paraula 5</a
+    >
+    <br /><br />
 
     <!-- TECLAT 6 LLETRES -->
     <div class="row">
@@ -120,13 +129,15 @@ export default {
   data() {
     return {
       paraula1: ["", "", "", "", ""],
+      paraula2: ["", "", "", "", ""],
       estatParaula1: ["", "", "", "", ""],
-      solucio: ["B", "A", "L", "O", "N"],
+      solucio1: ["B", "A", "L", "O", "N"],
+      solucio2: ["C", "E", "S", "T", "A"],
       letra: "",
       count: 0,
       paraulaJson: [],
-      randomNumber:"",
-      intents1:0,
+      randomNumber: "",
+      intents1: 0,
     };
   },
   mounted() {
@@ -134,9 +145,9 @@ export default {
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     fetch("src/components/json/palabras.json")
-    .then(response => response.json())
-    .then(data => this.paraulaJson=(data.datos));    
-    this.randomNumber=Math.floor(Math.random() * 5);
+      .then((response) => response.json())
+      .then((data) => (this.paraulaJson = data.datos));
+    this.randomNumber = Math.floor(Math.random() * 5);
     for (var i = 0; i < 6; i++) {
       text[i] = possible.charAt(Math.floor(Math.random() * possible.length));
       document.getElementById("lletre-" + i).innerHTML = text[i];
@@ -173,12 +184,12 @@ export default {
     },
 
     comprovar() {
-      console.log(this.paraulaJson[this.randomNumber])
-      console.log("number random ",this.randomNumber)
+      console.log(this.paraulaJson[this.randomNumber]);
+      console.log("number random ", this.randomNumber);
       for (var i = 0; i < 5; i++) {
         console.log("Paraula", this.paraula1[i]);
-        console.log("Solucio", this.solucio[i]);
-        if (this.paraula1[i] === this.solucio[i]) {
+        console.log("Solucio", this.solucio1[i]);
+        if (this.paraula1[i] === this.solucio1[i]) {
           this.estatParaula1[i] = 0;
           document.getElementById("1div" + i).classList.remove("incorrecte");
 
@@ -187,6 +198,26 @@ export default {
           this.estatParaula1[i] = 1;
           document.getElementById("1div" + i).classList.remove("correcte");
           document.getElementById("1div" + i).classList.add("incorrecte");
+        }
+        console.log(this.estatParaula1[i]);
+      }
+      this.intents1++;
+    },
+    comprovar2() {
+      console.log(this.paraulaJson[this.randomNumber]);
+      console.log("number random ", this.randomNumber);
+      for (var i = 0; i < 5; i++) {
+        console.log("Paraula", this.paraula1[i]);
+        console.log("Solucio", this.solucio1[i]);
+        if (this.paraula1[i] === this.solucio1[i]) {
+          this.estatParaula1[i] = 0;
+          document.getElementById("2div" + i).classList.remove("incorrecte");
+
+          document.getElementById("2div" + i).classList.add("correcte");
+        } else {
+          this.estatParaula1[i] = 1;
+          document.getElementById("2div" + i).classList.remove("correcte");
+          document.getElementById("2div" + i).classList.add("incorrecte");
         }
         console.log(this.estatParaula1[i]);
       }
