@@ -490,11 +490,11 @@ export default {
         if (this.solucio5Count >= 5) {
           this.count = 0;
           this.partida++;
+          document.getElementById("Felizitarpartida").innerHTML = "Felicidades!!";
+        document.getElementById("botonfinalizar").style.display = "block";
         }
         this.intents5++;
-        document.getElementById("Felizitarpartida").innerHTML = "Felicidades!!";
-        // document.getElementById("Finalitzarpartida").innerHTML = " <RouterLink :to=''/puntuacions''>Comprar</RouterLink>";
-        document.getElementById("botonfinalizar").style.display = "block";
+        
       }
     },
   },
