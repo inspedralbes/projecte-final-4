@@ -83,7 +83,7 @@
       >Comprovar Paraula 5</a
     ><p id="Felizitarpartida"></p><p id="Finalitzarpartida"></p>
 
-    <br /><br />
+    <br />
 
     <!-- TECLAT 6 LLETRES -->
     <div class="row">
@@ -489,7 +489,7 @@ export default {
         }
         this.intents5++;
         document.getElementById("Felizitarpartida").innerHTML = "Felicidades!!";
-        document.getElementById("Finalitzarpartida").innerHTML = "<button>Finalitza partida</button>";
+        document.getElementById("Finalitzarpartida").innerHTML = " <button class='btn waves-effect waves-light' type='submit' name='action'>Finalitza Partida</button>";
 
       }
     },
