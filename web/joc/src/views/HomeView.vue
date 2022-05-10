@@ -1,11 +1,13 @@
 <script>
 import "materialize-css";
 import joc from "../components/joc.vue";
+import Header from '../components/Header.vue';
 
 
 export default {
   components: {
     joc,
+    Header,
   
   },
 
@@ -25,16 +27,7 @@ function countUpTimer() {
 
 <template>
 <div>
-  <nav class="#66bb6a green lighten-1">
-    <div class="nav-wrapper">
-      <img src="./img/logo2.png" alt="Girl in a jacket" width="100" height="70">
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#">Estadistiques</a></li>
-        <li><a href="#">Ajustes</a></li>
-        <li><a href="#">Puntuacións</a></li>
-      </ul>
-    </div>
-  </nav>
+  <Header/>
     <main>
     <div class="row">
     
