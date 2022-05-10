@@ -287,11 +287,11 @@ export default {
 
 <style>
 .correcte {
-  background-color: green;
+  background-color: #02FF19;
 }
 
 .incorrecte {
-  background-color: red;
+  background-color: #FF2A2A;
 }
 #keyboard-cont {
   margin: 1rem 0;
