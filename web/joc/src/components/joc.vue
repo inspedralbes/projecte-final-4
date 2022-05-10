@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4>1 Paraula</h4>
+    <!-- <h4>1 Paraula</h4> -->
 
     <!-- <h4>1 Paraula {{ this.palabrasjson.palabra }}</h4> -->
 
@@ -24,10 +24,10 @@
     <a class="waves-effect waves-light btn" v-on:click="comprovar()"
       >Comprovar Paraula 1</a
     >
-    <h2>Intents</h2>
+    <!-- <h2>Intents</h2>
     <a class="btn-floating btn-large waves-effect waves-light red">{{
       this.intents1
-    }}</a>
+    }}</a> -->
     <!-- <h4>2 Paraula</h4> -->
     <div class="row center-align margin-celdas">
       <div id="2div0" class="col-grid col m2">
