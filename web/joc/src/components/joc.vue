@@ -81,7 +81,8 @@
     </div>
     <a class="waves-effect waves-light btn" v-on:click="comprovar5()"
       >Comprovar Paraula 5</a
-    >
+    ><p id="Felizitarpartida"></p><p id="Finalitzarpartida"></p>
+
     <br /><br />
 
     <!-- TECLAT 6 LLETRES -->
@@ -487,6 +488,9 @@ export default {
           this.partida++;
         }
         this.intents5++;
+        document.getElementById("Felizitarpartida").innerHTML = "Felicidades!!";
+        document.getElementById("Finalitzarpartida").innerHTML = "<button>Finalitza partida</button>";
+
       }
     },
   },
