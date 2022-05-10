@@ -17,7 +17,7 @@ mounted () {
 
 <style>
 
-header{
-  background-color: rgb(144, 96, 233);
+body{
+  background-color: rgba(96, 233, 130, 0.589);
 }
 </style>
