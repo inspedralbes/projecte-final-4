@@ -154,7 +154,10 @@ export default {
 
       //PARAULA 2
       paraula2: ["", "", "", "", ""],
-      solucio2: ["C", "E", "S", "T", "A"],
+      estatParaula2: ["", "", "", "", ""],
+      solucio2: ["B", "B", "B", "B", "B"],
+      solucio2Count: 0,
+      intents2: 0,
     };
   },
   mounted() {
@@ -216,33 +219,68 @@ export default {
     comprovar() {
       console.log(this.paraulaJson[this.randomNumber]);
       console.log("number random ", this.randomNumber);
-      for (var i = 0; i < 5; i++) {
-        console.log("Paraula", this.paraula1[i]);
-        console.log("Solucio", this.solucio1[i]);
-        if (this.paraula1[i] === this.solucio1[i]) {
-          this.estatParaula1[i] = 0;
-          document.getElementById("1div" + i).classList.remove("incorrecte");
+      //PARAULA 1
+      if (this.partida == 1) {
+        for (var i = 0; i < 5; i++) {
+          console.log("Paraula", this.paraula1[i]);
+          console.log("Solucio", this.solucio1[i]);
+          if (this.paraula1[i] === this.solucio1[i]) {
+            this.estatParaula1[i] = 0;
+            document.getElementById("1div" + i).classList.remove("incorrecte");
 
-          document.getElementById("1div" + i).classList.add("correcte");
-        } else {
-          this.estatParaula1[i] = 1;
-          document.getElementById("1div" + i).classList.remove("correcte");
-          document.getElementById("1div" + i).classList.add("incorrecte");
+            document.getElementById("1div" + i).classList.add("correcte");
+          } else {
+            this.estatParaula1[i] = 1;
+            document.getElementById("1div" + i).classList.remove("correcte");
+            document.getElementById("1div" + i).classList.add("incorrecte");
+          }
+          console.log(this.estatParaula1[i]);
+          if (this.estatParaula1[i] == this.estatSolucio[i]) {
+            this.solucio1Count++;
+          }
+          console.log("estatParaula1: ", this.estatParaula1[i]);
+          console.log("estatSolucio: ", this.estatSolucio[i]);
+          console.log("Counter correctes: ", this.solucio1Count);
         }
-        console.log(this.estatParaula1[i]);
-        if (this.estatParaula1[i] == this.estatSolucio[i]) {
-          this.solucio1Count++;
+        if (this.solucio1Count >= 5) {
+          this.count = 0;
+          this.partida++;
         }
-        console.log("estatParaula1: ", this.estatParaula1[i]);
-        console.log("estatSolucio: ", this.estatSolucio[i]);
-        console.log("Counter correctes: ", this.solucio1Count);
+        this.intents1++;
       }
-      if (this.solucio1Count >= 5) {
-        this.count = 0;
-        this.partida++;
-      }
-      this.intents1++;
+      
     },
+    comprovar2() {
+//PARAULA 2
+      if (this.partida == 2) {
+        for (var i = 0; i < 5; i++) {
+          console.log("Paraula", this.paraula2[i]);
+          console.log("Solucio", this.solucio2[i]);
+          if (this.paraula2[i] === this.solucio2[i]) {
+            this.estatParaula2[i] = 0;
+            document.getElementById("2div" + i).classList.remove("incorrecte");
+
+            document.getElementById("2div" + i).classList.add("correcte");
+          } else {
+            this.estatParaula2[i] = 1;
+            document.getElementById("2div" + i).classList.remove("correcte");
+            document.getElementById("2div" + i).classList.add("incorrecte");
+          }
+          console.log(this.estatParaula2[i]);
+          if (this.estatParaula2[i] == this.estatSolucio[i]) {
+            this.solucio2Count++;
+          }
+          console.log("estatParaula1: ", this.estatParaula2[i]);
+          console.log("estatSolucio: ", this.estatSolucio[i]);
+          console.log("Counter correctes: ", this.solucio2Count);
+        }
+        if (this.solucio2Count >= 5) {
+          this.count = 0;
+          this.partida++;
+        }
+        this.intents2++;
+      }
+    }
   },
 };
 </script>
