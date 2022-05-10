@@ -30,11 +30,21 @@
     }}</a>
     <!-- <h4>2 Paraula</h4> -->
     <div class="row center-align margin-celdas">
-      <div id="2div0" class="col-grid col m2"></div>
-      <div id="2div1" class="col-grid col m2"></div>
-      <div id="2div2" class="col-grid col m2"></div>
-      <div id="2div3" class="col-grid col m2"></div>
-      <div id="2div4" class="col-grid col m2"></div>
+      <div id="2div0" class="col-grid col m2">
+        <h3>{{ this.paraula2[0] }}</h3>
+      </div>
+      <div id="2div1" class="col-grid col m2">
+        <h3>{{ this.paraula2[1] }}</h3>
+      </div>
+      <div id="2div2" class="col-grid col m2">
+        <h3>{{ this.paraula2[2] }}</h3>
+      </div>
+      <div id="2div3" class="col-grid col m2">
+        <h3>{{ this.paraula2[3] }}</h3>
+      </div>
+      <div id="2div4" class="col-grid col m2">
+        <h3>{{ this.paraula2[4] }}</h3>
+      </div>
     </div>
     <a class="waves-effect waves-light btn" v-on:click="comprovar2()"
       >Comprovar Paraula 2</a
@@ -131,13 +141,16 @@ export default {
       paraula1: ["", "", "", "", ""],
       paraula2: ["", "", "", "", ""],
       estatParaula1: ["", "", "", "", ""],
-      solucio1: ["B", "A", "L", "O", "N"],
+      solucio1: ["B", "B", "B", "B", "B"],
+      solucio1Count: 0,
       solucio2: ["C", "E", "S", "T", "A"],
+      estatSolucio: ["0", "0", "0", "0", "0"],
       letra: "",
       count: 0,
       paraulaJson: [],
       randomNumber: "",
       intents1: 0,
+      partida: 1,
     };
   },
   mounted() {
@@ -160,12 +173,25 @@ export default {
     apretar(e) {
       this.letra = e.target.name;
       console.log(e.target.name);
-      if (this.count < 5) {
-        this.paraula1[this.count] = this.letra;
-        this.count++;
-        console.log("Posicion", this.count);
+      this.solucio1Count = 0;
+      console.log("Partida: ", this.partida);
+      if (this.partida == 1) {
+        if (this.count < 5) {
+          this.paraula1[this.count] = this.letra;
+          this.count++;
+          console.log("Posicion", this.count);
+        }
+        if (this.count < 5) {
+        }
       }
-      if (this.count < 5) {
+      if (this.partida == 2) {
+        if (this.count < 5) {
+          this.paraula2[this.count] = this.letra;
+          this.count++;
+          console.log("Posicion", this.count);
+        }
+        if (this.count < 5) {
+        }
       }
     },
     deleteLetter() {
@@ -200,26 +226,16 @@ export default {
           document.getElementById("1div" + i).classList.add("incorrecte");
         }
         console.log(this.estatParaula1[i]);
-      }
-      this.intents1++;
-    },
-    comprovar2() {
-      console.log(this.paraulaJson[this.randomNumber]);
-      console.log("number random ", this.randomNumber);
-      for (var i = 0; i < 5; i++) {
-        console.log("Paraula", this.paraula1[i]);
-        console.log("Solucio", this.solucio1[i]);
-        if (this.paraula1[i] === this.solucio1[i]) {
-          this.estatParaula1[i] = 0;
-          document.getElementById("2div" + i).classList.remove("incorrecte");
-
-          document.getElementById("2div" + i).classList.add("correcte");
-        } else {
-          this.estatParaula1[i] = 1;
-          document.getElementById("2div" + i).classList.remove("correcte");
-          document.getElementById("2div" + i).classList.add("incorrecte");
+        if (this.estatParaula1[i] == this.estatSolucio[i]) {
+          this.solucio1Count++;
         }
-        console.log(this.estatParaula1[i]);
+        console.log("estatParaula1: ", this.estatParaula1[i]);
+        console.log("estatSolucio: ", this.estatSolucio[i]);
+        console.log("Counter correctes: ", this.solucio1Count);
+      }
+      if (this.solucio1Count >= 5) {
+        this.count = 0;
+        this.partida++;
       }
       this.intents1++;
     },
