@@ -3,7 +3,7 @@
     <!-- <h4>1 Paraula</h4> -->
 
     <!-- <h4>1 Paraula {{ this.palabrasjson.palabra }}</h4> -->
-
+<button class="waves-effect waves-light btn-large" v-on:click="iniciarPartida()">Començar Partida</button>
     <div class="row center-align margin-celdas">
       <div id="1div0" class="col-grid col m2 z-depth-4">
         <h3>{{ this.paraula1[0] }}</h3>
@@ -203,6 +203,9 @@ export default {
     }
   },
   methods: {
+    iniciarPartida(){
+      console.log(this.paraulaJson[0])
+    },
     apretar(e) {
       this.letra = e.target.name;
       console.log(e.target.name);
