@@ -202,18 +202,36 @@ export default {
       }
     },
     deleteLetter() {
-      if (this.count == 0) {
-        this.paraula1[this.count] = "";
-      }
-      if (this.paraula1[this.count] === "" && this.count > 0) {
-        this.count = this.count - 1;
-        this.paraula1[this.count] = "";
-      } else if (!(this.paraula1[this.count] === "") && this.count > 0) {
-        this.paraula1[this.count] = "";
+      //PARAULA 1
+      if (this.partida == 1) {
+        if (this.count == 0) {
+          this.paraula1[this.count] = "";
+        }
+        if (this.paraula1[this.count] === "" && this.count > 0) {
+          this.count = this.count - 1;
+          this.paraula1[this.count] = "";
+        } else if (!(this.paraula1[this.count] === "") && this.count > 0) {
+          this.paraula1[this.count] = "";
 
-        this.count = this.count - 1;
+          this.count = this.count - 1;
+        }
+        console.log("Posicion", this.count);
       }
-      console.log("Posicion", this.count);
+      //PARAULA 2
+      if (this.partida == 2) {
+        if (this.count == 0) {
+          this.paraula2[this.count] = "";
+        }
+        if (this.paraula2[this.count] === "" && this.count > 0) {
+          this.count = this.count - 1;
+          this.paraula2[this.count] = "";
+        } else if (!(this.paraula2[this.count] === "") && this.count > 0) {
+          this.paraula2[this.count] = "";
+
+          this.count = this.count - 1;
+        }
+        console.log("Posicion", this.count);
+      }
     },
 
     comprovar() {
@@ -248,10 +266,9 @@ export default {
         }
         this.intents1++;
       }
-      
     },
     comprovar2() {
-//PARAULA 2
+      //PARAULA 2
       if (this.partida == 2) {
         for (var i = 0; i < 5; i++) {
           console.log("Paraula", this.paraula2[i]);
@@ -280,7 +297,7 @@ export default {
         }
         this.intents2++;
       }
-    }
+    },
   },
 };
 </script>
