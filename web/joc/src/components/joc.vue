@@ -138,19 +138,24 @@
 export default {
   data() {
     return {
-      paraula1: ["", "", "", "", ""],
-      paraula2: ["", "", "", "", ""],
-      estatParaula1: ["", "", "", "", ""],
-      solucio1: ["B", "B", "B", "B", "B"],
-      solucio1Count: 0,
-      solucio2: ["C", "E", "S", "T", "A"],
+      //GENERAL
       estatSolucio: ["0", "0", "0", "0", "0"],
       letra: "",
       count: 0,
       paraulaJson: [],
       randomNumber: "",
-      intents1: 0,
       partida: 1,
+
+      //PARAULA 1
+      paraula1: ["", "", "", "", ""],
+      estatParaula1: ["", "", "", "", ""],
+      solucio1: ["B", "B", "B", "B", "B"],
+      solucio1Count: 0,
+      intents1: 0,
+
+      //PARAULA 2
+      paraula2: ["", "", "", "", ""],
+      solucio2: ["C", "E", "S", "T", "A"],
     };
   },
   mounted() {
