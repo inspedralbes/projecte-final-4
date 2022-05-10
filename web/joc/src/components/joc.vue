@@ -153,7 +153,7 @@ export default {
       //PARAULA 1
       paraula1: ["", "", "", "", ""],
       estatParaula1: ["", "", "", "", ""],
-      solucio1: ["B", "B", "B", "B", "B"],
+      solucio1: ["", "", "", "", ""],
       solucio1Count: 0,
       intents1: 0,
 
@@ -204,7 +204,9 @@ export default {
   },
   methods: {
     iniciarPartida(){
-      console.log(this.paraulaJson[0])
+      console.log(this.paraulaJson[this.randomNumber].palabra)
+      this.solucio1 = this.paraulaJson[this.randomNumber].palabra.split('');
+      console.log(this.solucio1)
     },
     apretar(e) {
       this.letra = e.target.name;
