@@ -30,7 +30,7 @@
     }}</a> -->
     <!-- <h4>2 Paraula</h4> -->
     <div class="row center-align margin-celdas">
-      <div id="2div0" class="col-grid col m2">
+      <div id="2div0" class="col-grid col m2 z-depth-4">
         <h3>{{ this.paraula2[0] }}</h3>
       </div>
       <div id="2div1" class="col-grid col m2 z-depth-4">
@@ -51,35 +51,35 @@
     >
     <!-- <h4>3 Paraula</h4> -->
     <div class="row center-align margin-celdas">
-      <div class="col-grid col m2 z-depth-4"></div>
-      <div class="col-grid col m2 z-depth-4"></div>
-      <div class="col-grid col m2 z-depth-4"></div>
-      <div class="col-grid col m2 z-depth-4"></div>
-      <div class="col-grid col m2 z-depth-4"></div>
+      <div id="3div0" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula3[0] }}</h3></div>
+      <div id="3div1" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula3[1] }}</h3></div>
+      <div id="3div2" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula3[2] }}</h3></div>
+      <div id="3div3" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula3[3] }}</h3></div>
+      <div id="3div4" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula3[4] }}</h3></div>
     </div>
-    <a class="waves-effect waves-light btn" v-on:click="comprovar()"
+    <a class="waves-effect waves-light btn" v-on:click="comprovar3()"
       >Comprovar Paraula 3</a
     >
     <!-- <h4>4 Paraula</h4> -->
     <div class="row center-align margin-celdas">
-      <div class="col-grid col m2 z-depth-4"></div>
-      <div class="col-grid col m2 z-depth-4"></div>
-      <div class="col-grid col m2 z-depth-4"></div>
-      <div class="col-grid col m2 z-depth-4"></div>
-      <div class="col-grid col m2 z-depth-4"></div>
+      <div id="4div0" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula4[0] }}</h3></div>
+      <div id="4div1" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula4[1] }}</h3></div>
+      <div id="4div2" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula4[2] }}</h3></div>
+      <div id="4div3" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula4[3] }}</h3></div>
+      <div id="4div4" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula4[4] }}</h3></div>
     </div>
-    <a class="waves-effect waves-light btn" v-on:click="comprovar()"
+    <a class="waves-effect waves-light btn" v-on:click="comprovar4()"
       >Comprovar Paraula 4</a
     >
     <!-- <h4>5 Paraula</h4> -->
     <div class="row center-align margin-celdas">
-      <div class="col-grid col m2 z-depth-4"></div>
-      <div class="col-grid col m2 z-depth-4"></div>
-      <div class="col-grid col m2 z-depth-4"></div>
-      <div class="col-grid col m2 z-depth-4"></div>
-      <div class="col-grid col m2 z-depth-4"></div>
+      <div id="5div0" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula5[0] }}</h3></div>
+      <div id="5div1" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula5[1] }}</h3></div>
+      <div id="5div2" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula5[2] }}</h3></div>
+      <div id="5div3" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula5[3] }}</h3></div>
+      <div id="5div4" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula5[4] }}</h3></div>
     </div>
-    <a class="waves-effect waves-light btn" v-on:click="comprovar()"
+    <a class="waves-effect waves-light btn" v-on:click="comprovar5()"
       >Comprovar Paraula 5</a
     >
     <br /><br />
@@ -158,6 +158,27 @@ export default {
       solucio2: ["B", "B", "B", "B", "B"],
       solucio2Count: 0,
       intents2: 0,
+
+      //PARAULA 3
+      paraula3: ["", "", "", "", ""],
+      estatParaula3: ["", "", "", "", ""],
+      solucio3: ["B", "B", "B", "B", "B"],
+      solucio3Count: 0,
+      intents3: 0,
+
+      //PARAULA 4
+      paraula4: ["", "", "", "", ""],
+      estatParaula4: ["", "", "", "", ""],
+      solucio4: ["B", "B", "B", "B", "B"],
+      solucio4Count: 0,
+      intents4: 0,
+
+      //PARAULA 5
+      paraula5: ["", "", "", "", ""],
+      estatParaula5: ["", "", "", "", ""],
+      solucio5: ["B", "B", "B", "B", "B"],
+      solucio5Count: 0,
+      intents5: 0,
     };
   },
   mounted() {
@@ -182,6 +203,7 @@ export default {
       console.log(e.target.name);
       this.solucio1Count = 0;
       console.log("Partida: ", this.partida);
+      //PARAULA 1
       if (this.partida == 1) {
         if (this.count < 5) {
           this.paraula1[this.count] = this.letra;
@@ -191,9 +213,40 @@ export default {
         if (this.count < 5) {
         }
       }
+      //PARAULA 2
       if (this.partida == 2) {
         if (this.count < 5) {
           this.paraula2[this.count] = this.letra;
+          this.count++;
+          console.log("Posicion", this.count);
+        }
+        if (this.count < 5) {
+        }
+      }
+      //PARAULA 3
+      if (this.partida == 3) {
+        if (this.count < 5) {
+          this.paraula3[this.count] = this.letra;
+          this.count++;
+          console.log("Posicion", this.count);
+        }
+        if (this.count < 5) {
+        }
+      }
+      //PARAULA 4
+      if (this.partida == 4) {
+        if (this.count < 5) {
+          this.paraula4[this.count] = this.letra;
+          this.count++;
+          console.log("Posicion", this.count);
+        }
+        if (this.count < 5) {
+        }
+      }
+      //PARAULA 5
+      if (this.partida == 5) {
+        if (this.count < 5) {
+          this.paraula5[this.count] = this.letra;
           this.count++;
           console.log("Posicion", this.count);
         }
@@ -227,6 +280,51 @@ export default {
           this.paraula2[this.count] = "";
         } else if (!(this.paraula2[this.count] === "") && this.count > 0) {
           this.paraula2[this.count] = "";
+
+          this.count = this.count - 1;
+        }
+        console.log("Posicion", this.count);
+      }
+      //PARAULA 3
+      if (this.partida == 3) {
+        if (this.count == 0) {
+          this.paraula3[this.count] = "";
+        }
+        if (this.paraula3[this.count] === "" && this.count > 0) {
+          this.count = this.count - 1;
+          this.paraula3[this.count] = "";
+        } else if (!(this.paraula3[this.count] === "") && this.count > 0) {
+          this.paraula3[this.count] = "";
+
+          this.count = this.count - 1;
+        }
+        console.log("Posicion", this.count);
+      }
+      //PARAULA 4
+      if (this.partida == 4) {
+        if (this.count == 0) {
+          this.paraula4[this.count] = "";
+        }
+        if (this.paraula4[this.count] === "" && this.count > 0) {
+          this.count = this.count - 1;
+          this.paraula4[this.count] = "";
+        } else if (!(this.paraula4[this.count] === "") && this.count > 0) {
+          this.paraula4[this.count] = "";
+
+          this.count = this.count - 1;
+        }
+        console.log("Posicion", this.count);
+      }
+      //PARAULA 5
+      if (this.partida == 5) {
+        if (this.count == 0) {
+          this.paraula5[this.count] = "";
+        }
+        if (this.paraula5[this.count] === "" && this.count > 0) {
+          this.count = this.count - 1;
+          this.paraula5[this.count] = "";
+        } else if (!(this.paraula5[this.count] === "") && this.count > 0) {
+          this.paraula5[this.count] = "";
 
           this.count = this.count - 1;
         }
@@ -296,6 +394,99 @@ export default {
           this.partida++;
         }
         this.intents2++;
+      }
+    },
+    comprovar3() {
+      //PARAULA 3
+      if (this.partida == 3) {
+        for (var i = 0; i < 5; i++) {
+          console.log("Paraula", this.paraula3[i]);
+          console.log("Solucio", this.solucio3[i]);
+          if (this.paraula3[i] === this.solucio3[i]) {
+            this.estatParaula3[i] = 0;
+            document.getElementById("3div" + i).classList.remove("incorrecte");
+
+            document.getElementById("3div" + i).classList.add("correcte");
+          } else {
+            this.estatParaula3[i] = 1;
+            document.getElementById("3div" + i).classList.remove("correcte");
+            document.getElementById("3div" + i).classList.add("incorrecte");
+          }
+          console.log(this.estatParaula3[i]);
+          if (this.estatParaula3[i] == this.estatSolucio[i]) {
+            this.solucio3Count++;
+          }
+          console.log("estatParaula1: ", this.estatParaula3[i]);
+          console.log("estatSolucio: ", this.estatSolucio[i]);
+          console.log("Counter correctes: ", this.solucio3Count);
+        }
+        if (this.solucio3Count >= 5) {
+          this.count = 0;
+          this.partida++;
+        }
+        this.intents3++;
+      }
+    },
+    comprovar4() {
+      //PARAULA 4
+      if (this.partida == 4) {
+        for (var i = 0; i < 5; i++) {
+          console.log("Paraula", this.paraula4[i]);
+          console.log("Solucio", this.solucio4[i]);
+          if (this.paraula4[i] === this.solucio4[i]) {
+            this.estatParaula4[i] = 0;
+            document.getElementById("4div" + i).classList.remove("incorrecte");
+
+            document.getElementById("4div" + i).classList.add("correcte");
+          } else {
+            this.estatParaula4[i] = 1;
+            document.getElementById("4div" + i).classList.remove("correcte");
+            document.getElementById("4div" + i).classList.add("incorrecte");
+          }
+          console.log(this.estatParaula4[i]);
+          if (this.estatParaula4[i] == this.estatSolucio[i]) {
+            this.solucio4Count++;
+          }
+          console.log("estatParaula1: ", this.estatParaula4[i]);
+          console.log("estatSolucio: ", this.estatSolucio[i]);
+          console.log("Counter correctes: ", this.solucio4Count);
+        }
+        if (this.solucio4Count >= 5) {
+          this.count = 0;
+          this.partida++;
+        }
+        this.intents4++;
+      }
+    },
+    comprovar5() {
+      //PARAULA 5
+      if (this.partida == 5) {
+        for (var i = 0; i < 5; i++) {
+          console.log("Paraula", this.paraula5[i]);
+          console.log("Solucio", this.solucio5[i]);
+          if (this.paraula5[i] === this.solucio5[i]) {
+            this.estatParaula5[i] = 0;
+            document.getElementById("5div" + i).classList.remove("incorrecte");
+
+            document.getElementById("5div" + i).classList.add("correcte");
+          } else {
+            this.estatParaula5[i] = 1;
+            document.getElementById("5div" + i).classList.remove("correcte");
+            document.getElementById("5div" + i).classList.add("incorrecte");
+          }
+          console.log(this.estatParaula5[i]);
+          if (this.estatParaula5[i] == this.estatSolucio[i]) {
+            this.solucio5Count++;
+          }
+          console.log("estatParaula1: ", this.estatParaula5[i]);
+          console.log("estatSolucio: ", this.estatSolucio[i]);
+          console.log("Counter correctes: ", this.solucio5Count);
+        }
+        if (this.solucio5Count >= 5) {
+          this.count = 0;
+          this.partida++;
+        }
+        this.intents5++;
       }
     },
   },
