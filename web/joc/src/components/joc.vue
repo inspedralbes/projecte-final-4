@@ -104,8 +104,7 @@
         class="waves-effect waves-light btn"
         id="lletre-2"
       ></button>
-    </div>
-    <div class="row">
+
       <button
         v-on:click="apretar($event)"
         name=""
