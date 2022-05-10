@@ -81,7 +81,10 @@
     </div>
     <a class="waves-effect waves-light btn" v-on:click="comprovar5()"
       >Comprovar Paraula 5</a
-    ><p id="Felizitarpartida"></p><p id="Finalitzarpartida"></p>
+    ><p id="Felizitarpartida"></p>    
+    <div id="botonfinalizar" style="display:none;">
+      <RouterLink :to="'/puntuacions'" class="waves-effect waves-light btn" >Finalitza Partida</RouterLink>
+      </div>
 
     <br />
 
@@ -130,6 +133,7 @@
       >
         Del
       </button>
+
     </div>
   </div>
 </template>
@@ -489,8 +493,8 @@ export default {
         }
         this.intents5++;
         document.getElementById("Felizitarpartida").innerHTML = "Felicidades!!";
-        document.getElementById("Finalitzarpartida").innerHTML = " <button class='btn waves-effect waves-light' type='submit' name='action'>Finalitza Partida</button>";
-
+        // document.getElementById("Finalitzarpartida").innerHTML = " <RouterLink :to=''/puntuacions''>Comprar</RouterLink>";
+        document.getElementById("botonfinalizar").style.display = "block";
       }
     },
   },
