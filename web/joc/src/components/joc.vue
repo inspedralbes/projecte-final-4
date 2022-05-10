@@ -33,16 +33,16 @@
       <div id="2div0" class="col-grid col m2">
         <h3>{{ this.paraula2[0] }}</h3>
       </div>
-      <div id="2div1" class="col-grid col m2">
+      <div id="2div1" class="col-grid col m2 z-depth-4">
         <h3>{{ this.paraula2[1] }}</h3>
       </div>
-      <div id="2div2" class="col-grid col m2">
+      <div id="2div2" class="col-grid col m2 z-depth-4">
         <h3>{{ this.paraula2[2] }}</h3>
       </div>
-      <div id="2div3" class="col-grid col m2">
+      <div id="2div3" class="col-grid col m2 z-depth-4">
         <h3>{{ this.paraula2[3] }}</h3>
       </div>
-      <div id="2div4" class="col-grid col m2">
+      <div id="2div4" class="col-grid col m2 z-depth-4">
         <h3>{{ this.paraula2[4] }}</h3>
       </div>
     </div>
@@ -51,33 +51,33 @@
     >
     <!-- <h4>3 Paraula</h4> -->
     <div class="row center-align margin-celdas">
-      <div class="col-grid col m2"></div>
-      <div class="col-grid col m2"></div>
-      <div class="col-grid col m2"></div>
-      <div class="col-grid col m2"></div>
-      <div class="col-grid col m2"></div>
+      <div class="col-grid col m2 z-depth-4"></div>
+      <div class="col-grid col m2 z-depth-4"></div>
+      <div class="col-grid col m2 z-depth-4"></div>
+      <div class="col-grid col m2 z-depth-4"></div>
+      <div class="col-grid col m2 z-depth-4"></div>
     </div>
     <a class="waves-effect waves-light btn" v-on:click="comprovar()"
       >Comprovar Paraula 3</a
     >
     <!-- <h4>4 Paraula</h4> -->
     <div class="row center-align margin-celdas">
-      <div class="col-grid col m2"></div>
-      <div class="col-grid col m2"></div>
-      <div class="col-grid col m2"></div>
-      <div class="col-grid col m2"></div>
-      <div class="col-grid col m2"></div>
+      <div class="col-grid col m2 z-depth-4"></div>
+      <div class="col-grid col m2 z-depth-4"></div>
+      <div class="col-grid col m2 z-depth-4"></div>
+      <div class="col-grid col m2 z-depth-4"></div>
+      <div class="col-grid col m2 z-depth-4"></div>
     </div>
     <a class="waves-effect waves-light btn" v-on:click="comprovar()"
       >Comprovar Paraula 4</a
     >
     <!-- <h4>5 Paraula</h4> -->
     <div class="row center-align margin-celdas">
-      <div class="col-grid col m2"></div>
-      <div class="col-grid col m2"></div>
-      <div class="col-grid col m2"></div>
-      <div class="col-grid col m2"></div>
-      <div class="col-grid col m2"></div>
+      <div class="col-grid col m2 z-depth-4"></div>
+      <div class="col-grid col m2 z-depth-4"></div>
+      <div class="col-grid col m2 z-depth-4"></div>
+      <div class="col-grid col m2 z-depth-4"></div>
+      <div class="col-grid col m2 z-depth-4"></div>
     </div>
     <a class="waves-effect waves-light btn" v-on:click="comprovar()"
       >Comprovar Paraula 5</a
