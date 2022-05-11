@@ -11,17 +11,15 @@
       Començar Partida
     </button>
     <div id="normasjuego">
-      <h3>Normas Juego</h3>
+      <h3>Normativa del joc</h3>
       <h4 style="padding: 50px">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos,
-        doloremque aut! Dolores fugiat odio aut voluptas repellendus voluptate
-        expedita ea minima. Rerum minus ea odit dolorem sint omnis autem fuga?
+       <b>OBJECTIU DEL JOC</b><br><br>
+El obectiu del joc es conseguir les 5 paraules que necesitem en el menys temps posible.<br><br>
+Contra mes rapid conseguiexis les 5 paraules , mes punts y mes alt en el ranking estaras.<br><br>
+<b>NORMATIVA DEL JOC</b><br><br>
+Nomes es podra escriure les paraules amb les lletres que nosaltres donem , si introdueixes alguna lletra que no esta en la part dreta de la pantalla automaticament estara malament
       </h4>
-      <h4 style="padding: 50px">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos,
-        doloremque aut! Dolores fugiat odio aut voluptas repellendus voluptate
-        expedita ea minima. Rerum minus ea odit dolorem sint omnis autem fuga?
-      </h4>
+      
     </div>
     <div id="mostrarjuego" style="display: none" onload="countUpTimer()">
       <div class="row center-align margin-celdas">
