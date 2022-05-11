@@ -3,144 +3,190 @@
     <!-- <h4>1 Paraula</h4> -->
 
     <!-- <h4>1 Paraula {{ this.palabrasjson.palabra }}</h4> -->
-<button id="buttonpartida" class="waves-effect waves-light btn-large" v-on:click="iniciarPartida()">Començar Partida</button>
-<div id="normasjuego">
-  <h3>Normas Juego</h3>
-<h4 style="padding:50px">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, doloremque aut! Dolores fugiat odio aut voluptas repellendus voluptate expedita ea minima. Rerum minus ea odit dolorem sint omnis autem fuga?</h4>
-<h4 style="padding:50px">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, doloremque aut! Dolores fugiat odio aut voluptas repellendus voluptate expedita ea minima. Rerum minus ea odit dolorem sint omnis autem fuga?</h4>
-
-</div>
-<div id="mostrarjuego" style="display:none;"  onload="countUpTimer()"> 
-    <div class="row center-align margin-celdas">
-      <div id="1div0" class="col-grid col m2 z-depth-4">
-        <h3>{{ this.paraula1[0] }}</h3>
-      </div>
-      <div id="1div1" class="col-grid col m2 z-depth-4">
-        <h3>{{ this.paraula1[1] }}</h3>
-      </div>
-      <div id="1div2" class="col-grid col m2 z-depth-4">
-        <h3>{{ this.paraula1[2] }}</h3>
-      </div>
-      <div id="1div3" class="col-grid col m2 z-depth-4">
-        <h3>{{ this.paraula1[3] }}</h3>
-      </div>
-      <div id="1div4" class="col-grid col m2 z-depth-4">
-        <h3>{{ this.paraula1[4] }}</h3>
-      </div>
-    </div>
-    <a class="waves-effect waves-light btn" v-on:click="comprovar()"
-      >Comprovar Paraula 1</a
+    <button
+      id="buttonpartida"
+      class="waves-effect waves-light btn-large"
+      v-on:click="iniciarPartida()"
     >
-    <!-- <h2>Intents</h2>
+      Començar Partida
+    </button>
+    <div id="normasjuego">
+      <h3>Normas Juego</h3>
+      <h4 style="padding: 50px">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos,
+        doloremque aut! Dolores fugiat odio aut voluptas repellendus voluptate
+        expedita ea minima. Rerum minus ea odit dolorem sint omnis autem fuga?
+      </h4>
+      <h4 style="padding: 50px">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos,
+        doloremque aut! Dolores fugiat odio aut voluptas repellendus voluptate
+        expedita ea minima. Rerum minus ea odit dolorem sint omnis autem fuga?
+      </h4>
+    </div>
+    <div id="mostrarjuego" style="display: none" onload="countUpTimer()">
+      <div class="row center-align margin-celdas">
+        <div id="1div0" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula1[0] }}</h3>
+        </div>
+        <div id="1div1" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula1[1] }}</h3>
+        </div>
+        <div id="1div2" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula1[2] }}</h3>
+        </div>
+        <div id="1div3" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula1[3] }}</h3>
+        </div>
+        <div id="1div4" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula1[4] }}</h3>
+        </div>
+      </div>
+      <a class="waves-effect waves-light btn" v-on:click="comprovar()"
+        >Comprovar Paraula 1</a
+      >
+      <!-- <h2>Intents</h2>
     <a class="btn-floating btn-large waves-effect waves-light red">{{
       this.intents1
     }}</a> -->
-    <!-- <h4>2 Paraula</h4> -->
-    <div class="row center-align margin-celdas">
-      <div id="2div0" class="col-grid col m2 z-depth-4">
-        <h3>{{ this.paraula2[0] }}</h3>
+      <!-- <h4>2 Paraula</h4> -->
+      <div class="row center-align margin-celdas">
+        <div id="2div0" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula2[0] }}</h3>
+        </div>
+        <div id="2div1" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula2[1] }}</h3>
+        </div>
+        <div id="2div2" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula2[2] }}</h3>
+        </div>
+        <div id="2div3" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula2[3] }}</h3>
+        </div>
+        <div id="2div4" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula2[4] }}</h3>
+        </div>
       </div>
-      <div id="2div1" class="col-grid col m2 z-depth-4">
-        <h3>{{ this.paraula2[1] }}</h3>
-      </div>
-      <div id="2div2" class="col-grid col m2 z-depth-4">
-        <h3>{{ this.paraula2[2] }}</h3>
-      </div>
-      <div id="2div3" class="col-grid col m2 z-depth-4">
-        <h3>{{ this.paraula2[3] }}</h3>
-      </div>
-      <div id="2div4" class="col-grid col m2 z-depth-4">
-        <h3>{{ this.paraula2[4] }}</h3>
-      </div>
-    </div>
-    <a class="waves-effect waves-light btn" v-on:click="comprovar2()"
-      >Comprovar Paraula 2</a
-    >
-    <!-- <h4>3 Paraula</h4> -->
-    <div class="row center-align margin-celdas">
-      <div id="3div0" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula3[0] }}</h3></div>
-      <div id="3div1" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula3[1] }}</h3></div>
-      <div id="3div2" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula3[2] }}</h3></div>
-      <div id="3div3" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula3[3] }}</h3></div>
-      <div id="3div4" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula3[4] }}</h3></div>
-    </div>
-    <a class="waves-effect waves-light btn" v-on:click="comprovar3()"
-      >Comprovar Paraula 3</a
-    >
-    <!-- <h4>4 Paraula</h4> -->
-    <div class="row center-align margin-celdas">
-      <div id="4div0" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula4[0] }}</h3></div>
-      <div id="4div1" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula4[1] }}</h3></div>
-      <div id="4div2" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula4[2] }}</h3></div>
-      <div id="4div3" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula4[3] }}</h3></div>
-      <div id="4div4" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula4[4] }}</h3></div>
-    </div>
-    <a class="waves-effect waves-light btn" v-on:click="comprovar4()"
-      >Comprovar Paraula 4</a
-    >
-    <!-- <h4>5 Paraula</h4> -->
-    <div class="row center-align margin-celdas">
-      <div id="5div0" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula5[0] }}</h3></div>
-      <div id="5div1" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula5[1] }}</h3></div>
-      <div id="5div2" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula5[2] }}</h3></div>
-      <div id="5div3" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula5[3] }}</h3></div>
-      <div id="5div4" class="col-grid col m2 z-depth-4"><h3>{{ this.paraula5[4] }}</h3></div>
-    </div>
-    <a class="waves-effect waves-light btn" v-on:click="comprovar5()"
-      >Comprovar Paraula 5</a
-    ><p id="Felizitarpartida"></p>    
-    <div id="botonfinalizar" style="display:none;">
-      <RouterLink :to="'/puntuacions'" class="waves-effect waves-light btn" >Finalitza Partida</RouterLink>
-      </div>
-
-    <br />
-
-    <!-- TECLAT 6 LLETRES -->
-    <div class="row">
-      <button
-        v-on:click="apretar($event)"
-        name=""
-        class="waves-effect waves-light btn"
-        id="lletre-0"
-      ></button>
-      <button
-        v-on:click="apretar($event)"
-        name=""
-        class="waves-effect waves-light btn"
-        id="lletre-1"
-      ></button>
-      <button
-        v-on:click="apretar($event)"
-        name=""
-        class="waves-effect waves-light btn"
-        id="lletre-2"
-      ></button>
-
-      <button
-        v-on:click="apretar($event)"
-        name=""
-        class="waves-effect waves-light btn"
-        id="lletre-3"
-      ></button>
-      <button
-        v-on:click="apretar($event)"
-        name=""
-        class="waves-effect waves-light btn"
-        id="lletre-4"
-      ></button>
-      <button
-        v-on:click="apretar($event)"
-        name=""
-        class="waves-effect waves-light btn"
-        id="lletre-5"
-      ></button>
-      <button
-        class="waves-effect waves-light btn red"
-        v-on:click="deleteLetter()"
+      <a class="waves-effect waves-light btn" v-on:click="comprovar2()"
+        >Comprovar Paraula 2</a
       >
-        Del
-      </button>
-</div>
+      <!-- <h4>3 Paraula</h4> -->
+      <div class="row center-align margin-celdas">
+        <div id="3div0" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula3[0] }}</h3>
+        </div>
+        <div id="3div1" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula3[1] }}</h3>
+        </div>
+        <div id="3div2" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula3[2] }}</h3>
+        </div>
+        <div id="3div3" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula3[3] }}</h3>
+        </div>
+        <div id="3div4" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula3[4] }}</h3>
+        </div>
+      </div>
+      <a class="waves-effect waves-light btn" v-on:click="comprovar3()"
+        >Comprovar Paraula 3</a
+      >
+      <!-- <h4>4 Paraula</h4> -->
+      <div class="row center-align margin-celdas">
+        <div id="4div0" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula4[0] }}</h3>
+        </div>
+        <div id="4div1" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula4[1] }}</h3>
+        </div>
+        <div id="4div2" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula4[2] }}</h3>
+        </div>
+        <div id="4div3" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula4[3] }}</h3>
+        </div>
+        <div id="4div4" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula4[4] }}</h3>
+        </div>
+      </div>
+      <a class="waves-effect waves-light btn" v-on:click="comprovar4()"
+        >Comprovar Paraula 4</a
+      >
+      <!-- <h4>5 Paraula</h4> -->
+      <div class="row center-align margin-celdas">
+        <div id="5div0" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula5[0] }}</h3>
+        </div>
+        <div id="5div1" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula5[1] }}</h3>
+        </div>
+        <div id="5div2" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula5[2] }}</h3>
+        </div>
+        <div id="5div3" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula5[3] }}</h3>
+        </div>
+        <div id="5div4" class="col-grid col m2 z-depth-4">
+          <h3>{{ this.paraula5[4] }}</h3>
+        </div>
+      </div>
+      <a class="waves-effect waves-light btn" v-on:click="comprovar5()"
+        >Comprovar Paraula 5</a
+      >
+      <p id="Felizitarpartida"></p>
+      <div id="botonfinalizar" style="display: none">
+        <RouterLink :to="'/puntuacions'" class="waves-effect waves-light btn"
+          >Finalitza Partida</RouterLink
+        >
+      </div>
+
+      <br />
+
+      <!-- TECLAT 6 LLETRES -->
+      <div class="row">
+        <button
+          v-on:click="apretar($event)"
+          name=""
+          class="waves-effect waves-light btn"
+          id="lletre-0"
+        ></button>
+        <button
+          v-on:click="apretar($event)"
+          name=""
+          class="waves-effect waves-light btn"
+          id="lletre-1"
+        ></button>
+        <button
+          v-on:click="apretar($event)"
+          name=""
+          class="waves-effect waves-light btn"
+          id="lletre-2"
+        ></button>
+
+        <button
+          v-on:click="apretar($event)"
+          name=""
+          class="waves-effect waves-light btn"
+          id="lletre-3"
+        ></button>
+        <button
+          v-on:click="apretar($event)"
+          name=""
+          class="waves-effect waves-light btn"
+          id="lletre-4"
+        ></button>
+        <button
+          v-on:click="apretar($event)"
+          name=""
+          class="waves-effect waves-light btn"
+          id="lletre-5"
+        ></button>
+        <button
+          class="waves-effect waves-light btn red"
+          v-on:click="deleteLetter()"
+        >
+          Del
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -203,20 +249,22 @@ export default {
     this.randomNumber = Math.floor(Math.random() * 5);
     for (var i = 0; i < 6; i++) {
       text[i] = possible.charAt(Math.floor(Math.random() * possible.length));
+      possible=possible.replace(text[i], "");
       document.getElementById("lletre-" + i).innerHTML = text[i];
       document.getElementById("lletre-" + i).setAttribute("name", text[i]);
       console.log(i);
-      console.log(text);
+      console.log("Lletre: ", text[i]);
+      console.log("Posible: ", possible);
     }
   },
   methods: {
-    iniciarPartida(){
+    iniciarPartida() {
       document.getElementById("buttonpartida").style.display = "none";
       document.getElementById("mostrarjuego").style.display = "block";
       document.getElementById("normasjuego").style.display = "none";
-      console.log(this.paraulaJson[this.randomNumber].palabra)
-      this.solucio1 = this.paraulaJson[this.randomNumber].palabra.split('');
-      console.log(this.solucio1)
+      console.log(this.paraulaJson[this.randomNumber].palabra);
+      this.solucio1 = this.paraulaJson[this.randomNumber].palabra.split("");
+      console.log(this.solucio1);
     },
     apretar(e) {
       this.letra = e.target.name;
@@ -505,11 +553,11 @@ export default {
         if (this.solucio5Count >= 5) {
           this.count = 0;
           this.partida++;
-          document.getElementById("Felizitarpartida").innerHTML = "Felicidades!!";
-        document.getElementById("botonfinalizar").style.display = "block";
+          document.getElementById("Felizitarpartida").innerHTML =
+            "Felicidades!!";
+          document.getElementById("botonfinalizar").style.display = "block";
         }
         this.intents5++;
-        
       }
     },
   },
@@ -518,11 +566,11 @@ export default {
 
 <style>
 .correcte {
-  background-color: #02FF19;
+  background-color: #02ff19;
 }
 
 .incorrecte {
-  background-color: #FF2A2A;
+  background-color: #ff2a2a;
 }
 #keyboard-cont {
   margin: 1rem 0;
