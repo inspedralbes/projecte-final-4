@@ -3,14 +3,14 @@
     <!-- <h4>1 Paraula</h4> -->
 
     <!-- <h4>1 Paraula {{ this.palabrasjson.palabra }}</h4> -->
-<button class="waves-effect waves-light btn-large" v-on:click="iniciarPartida()">Començar Partida</button>
-<div id="normasjuego" style="display:block;">
+<button id="buttonpartida" class="waves-effect waves-light btn-large" v-on:click="iniciarPartida()">Començar Partida</button>
+<div id="normasjuego">
   <h3>Normas Juego</h3>
 <h4 style="padding:50px">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, doloremque aut! Dolores fugiat odio aut voluptas repellendus voluptate expedita ea minima. Rerum minus ea odit dolorem sint omnis autem fuga?</h4>
 <h4 style="padding:50px">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, doloremque aut! Dolores fugiat odio aut voluptas repellendus voluptate expedita ea minima. Rerum minus ea odit dolorem sint omnis autem fuga?</h4>
 
 </div>
-<div id="mostrarjuego" style="display:none;"> 
+<div id="mostrarjuego" style="display:none;"  onload="countUpTimer()"> 
     <div class="row center-align margin-celdas">
       <div id="1div0" class="col-grid col m2 z-depth-4">
         <h3>{{ this.paraula1[0] }}</h3>
@@ -211,6 +211,7 @@ export default {
   },
   methods: {
     iniciarPartida(){
+      document.getElementById("buttonpartida").style.display = "none";
       document.getElementById("mostrarjuego").style.display = "block";
       document.getElementById("normasjuego").style.display = "none";
       console.log(this.paraulaJson[this.randomNumber].palabra)
