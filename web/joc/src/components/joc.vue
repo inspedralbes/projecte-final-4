@@ -4,6 +4,7 @@
 
     <!-- <h4>1 Paraula {{ this.palabrasjson.palabra }}</h4> -->
 <button class="waves-effect waves-light btn-large" v-on:click="iniciarPartida()">Començar Partida</button>
+<div id="mostrarjuego" style="display:none;"> 
     <div class="row center-align margin-celdas">
       <div id="1div0" class="col-grid col m2 z-depth-4">
         <h3>{{ this.paraula1[0] }}</h3>
@@ -133,7 +134,7 @@
       >
         Del
       </button>
-
+</div>
     </div>
   </div>
 </template>
@@ -204,6 +205,7 @@ export default {
   },
   methods: {
     iniciarPartida(){
+      document.getElementById("mostrarjuego").style.display = "block";
       console.log(this.paraulaJson[this.randomNumber].palabra)
       this.solucio1 = this.paraulaJson[this.randomNumber].palabra.split('');
       console.log(this.solucio1)
