@@ -241,9 +241,9 @@ export default {
     const text = [];
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    fetch("Access-Control-Allow-Origin","http://localhost:3001/api/todos")
+    fetch("http://localhost:3001/api/todos")
       .then((response) => response.json())
-      .then((data) => (this.paraulaJson = data.datos));
+      .then((data) => (this.paraulaJson = data));
     this.randomNumber = Math.floor(Math.random() * 5);
     for (var i = 0; i < 6; i++) {
       text[i] = possible.charAt(Math.floor(Math.random() * possible.length));
