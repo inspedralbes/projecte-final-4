@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import PuntuacionsVue from '../components/Puntuacions.vue'
 import HomeView from '../views/HomeView.vue'
+import AdminView from '../views/adminView.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,6 +16,12 @@ const router = createRouter({
       path: "/puntuacions",
       name: "puntuacions",
       component: PuntuacionsVue
+    
+    },
+    {
+      path: "/admin",
+      name: "admin",
+      component: AdminView
     
     },
   ]
