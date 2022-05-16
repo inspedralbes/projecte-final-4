@@ -241,7 +241,7 @@ export default {
     const text = [];
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    fetch("http://localhost:3001/api/todos")
+    fetch("Access-Control-Allow-Origin","http://localhost:3001/api/todos")
       .then((response) => response.json())
       .then((data) => (this.paraulaJson = data.datos));
     this.randomNumber = Math.floor(Math.random() * 5);
