@@ -198,7 +198,7 @@ export default {
       letra: "",
       count: 0,
       paraulaJson: [],
-      randomNumber: "",
+      randomNumber: [],
       partida: 1,
 
       //PARAULA 1
@@ -244,7 +244,11 @@ export default {
     fetch("http://localhost:3001/api/todos")
       .then((response) => response.json())
       .then((data) => (this.paraulaJson = data));
-    this.randomNumber = Math.floor(Math.random() * 5);
+          for (var j = 0; j < 6; j++) {
+
+    this.randomNumber[j] = Math.floor(Math.random() * 7);
+    console.log("Number",j," ",this.randomNumber)
+          }
     for (var i = 0; i < 6; i++) {
       text[i] = possible.charAt(Math.floor(Math.random() * possible.length));
       possible=possible.replace(text[i], "");
@@ -257,12 +261,31 @@ export default {
   },
   methods: {
     iniciarPartida() {
+                console.log("LENGHT",this.paraulaJson.length)
+
       document.getElementById("buttonpartida").style.display = "none";
       document.getElementById("mostrarjuego").style.display = "block";
       document.getElementById("normasjuego").style.display = "none";
-      console.log(this.paraulaJson[this.randomNumber].palabra);
-      this.solucio1 = this.paraulaJson[this.randomNumber].palabra.split("");
+      //PARAULA 1
+      console.log(this.paraulaJson[this.randomNumber[0]].palabra);
+      this.solucio1 = this.paraulaJson[this.randomNumber[0]].palabra.split("");
       console.log(this.solucio1);
+      //PARAULA 2
+      console.log(this.paraulaJson[this.randomNumber[1]].palabra);
+      this.solucio2 = this.paraulaJson[this.randomNumber[1]].palabra.split("");
+      console.log(this.solucio2);
+      //PARAULA 3
+      console.log(this.paraulaJson[this.randomNumber[2]].palabra);
+      this.solucio3 = this.paraulaJson[this.randomNumber[2]].palabra.split("");
+      console.log(this.solucio3);
+      //PARAULA 4
+      console.log(this.paraulaJson[this.randomNumber[3]].palabra);
+      this.solucio4 = this.paraulaJson[this.randomNumber[3]].palabra.split("");
+      console.log(this.solucio4);
+      //PARAULA 5
+      console.log(this.paraulaJson[this.randomNumber[4]].palabra);
+      this.solucio5 = this.paraulaJson[this.randomNumber[4]].palabra.split("");
+      console.log(this.solucio5);
     },
     apretar(e) {
       this.letra = e.target.name;
