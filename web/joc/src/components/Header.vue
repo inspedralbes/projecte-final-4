@@ -8,15 +8,29 @@
         <li><RouterLink :to="'/puntuacions'"  >Puntuacions</RouterLink></li>
         <li><a href="#">Ajustes</a></li>
         <li><a href="#">Estadistiques</a></li>
-        <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a></li>
+        <li><a class="modal-trigger" href="#modal1">Admin</a></li>
       </ul>
     </div>
      <div class="container">
             <!-- Modal Structure -->
             <div id="modal1" class="modal">
                 <div class="modal-content">
-                    <h4>Modal Header</h4>
-                    <p>A bunch of text</p>
+                      <div class="row">
+                            <form class="col s12">
+                              <div class="row">
+                                <div class="input-field col s6">
+                                  <i class="material-icons prefix">account_circle</i>
+                                  <input id="icon_prefix" type="text" class="validate">
+                                  <label for="icon_prefix">Usuario</label>
+                                </div>
+                                <div class="input-field col s6">
+                                  <i class="material-icons prefix">phone</i>
+                                  <input id="icon_telephone" type="password" class="validate">
+                                  <label for="icon_telephone">Contraseña</label>
+                                </div>
+                              </div>
+                            </form>
+                        </div>
                 </div>
                 <div class="modal-footer">
                     <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
