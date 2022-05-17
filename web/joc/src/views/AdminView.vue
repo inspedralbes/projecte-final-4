@@ -20,7 +20,7 @@
         >
       </div>
       <div class="col s6">
-        <a class="waves-effect waves-light btn-large">Ver Palabras</a>
+        <a class="waves-effect waves-light btn-large" v-on:click="mostrarPalabras()">Ver Palabras</a>
       </div>
     </div>
   </div>
@@ -28,6 +28,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      palabraView: [],
+    };
+  },
   methods: {
     añadirPalabra() {
       const data = { palabra: paraula };
@@ -50,6 +55,12 @@ export default {
         .catch((error) => {
           console.error("Error:", error);
         });
+    },
+    mostrarPalabras() {
+      fetch("http://localhost:3001/api/todos")
+        .then((response) => response.json())
+        .then((data) => (this.palabraView = data));
+        console.log(this.palabraView)
     },
   },
 };
