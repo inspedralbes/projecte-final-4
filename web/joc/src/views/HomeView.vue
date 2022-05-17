@@ -10,9 +10,7 @@ export default {
     Header,
   
   },
-
-  
-};
+mounted(){
 var timerVariable = setInterval(countUpTimer, 1000);
 var totalSeconds = 0;
 
@@ -23,6 +21,11 @@ function countUpTimer() {
   var seconds = totalSeconds - (hour * 3600 + minute * 60);
   document.getElementById("count_up_timer").innerHTML = minute + ":" + seconds;
 }
+
+}
+  
+};
+
 </script>
 
 <template>
