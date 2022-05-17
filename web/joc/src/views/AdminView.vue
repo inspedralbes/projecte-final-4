@@ -20,8 +20,13 @@
         >
       </div>
       <div class="col s6">
-        <a class="waves-effect waves-light btn-large" v-on:click="mostrarPalabras()">Ver Palabras</a>
+        <a
+          class="waves-effect waves-light btn-large"
+          v-on:click="mostrarPalabras()"
+          >Ver Palabras</a
+        >
       </div>
+      <div id="todotable"></div>
     </div>
   </div>
 </template>
@@ -60,7 +65,23 @@ export default {
       fetch("http://localhost:3001/api/todos")
         .then((response) => response.json())
         .then((data) => (this.palabraView = data));
-        console.log(this.palabraView)
+      console.log(this.palabraView);
+
+      let tab = `<tr>
+    <th>Name</th>
+    <th>Completed</th>
+    <th>Data</th>
+    </tr>`;
+
+      for (var j = 0; j < 6; j++) {
+        tab += `<tr>
+<td></td>
+<td></td>
+<td></td>
+</td>
+</tr>`;
+      }
+      document.getElementById("todotable").innerHTML = tab;
     },
   },
 };
