@@ -10,20 +10,7 @@ export default {
     Header,
   
   },
-mounted(){
-var timerVariable = setInterval(countUpTimer, 1000);
-var totalSeconds = 0;
 
-function countUpTimer() {
-  ++totalSeconds;
-  var hour = Math.floor(totalSeconds / 3600);
-  var minute = Math.floor((totalSeconds - hour * 3600) / 60);
-  var seconds = totalSeconds - (hour * 3600 + minute * 60);
-  document.getElementById("count_up_timer").innerHTML = minute + ":" + seconds;
-}
-
-}
-  
 };
 
 </script>
@@ -33,12 +20,6 @@ function countUpTimer() {
   <Header/>
     <main>
     <div class="row">
-    
-    <div class="col s12 m4 l2"> 
-      <div id="count_up_timer">00:00</div>
-      <!-- <button id="stop_count_up_timer" onclick="clearInterval(timerVariable)">Stop Time</button> -->
-    
-      </div>
 
     <div class="col s12 m4 l8">
      <h1 id="lletres"></h1>
