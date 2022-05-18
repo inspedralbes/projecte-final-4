@@ -19,13 +19,19 @@ export default {
 <div>
   <Header/>
     <main>
-    <div class="row">
+    <div class="row center-align">
 
-    <div class="col s12 m4 l8">
+    <div class="col s12 center-align">
      <h1 id="lletres"></h1>
     <div class="row main-container center-align">
-      <div class="col s12 center-align">
+      <div class="col s3 center-align">
+       
+      </div>
+      <div class="col s6 center-align">
         <joc />
+      </div>
+      <div class="col s3 center-align">
+       
       </div>
 
     </div>
