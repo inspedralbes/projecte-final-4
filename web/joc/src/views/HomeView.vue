@@ -20,7 +20,8 @@ export default {
   <Header/>
     <main>
     <div class="row">
-
+<div class="col s12 m4 l2"> 
+</div>
     <div class="col s12 m4 l8">
      <h1 id="lletres"></h1>
     <div class="row main-container center-align">
