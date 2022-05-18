@@ -26,7 +26,7 @@
           >Ver Palabras</a
         >
       </div>
-      <div id="todotable"></div>
+      <table id="todotable"></table>
     </div>
   </div>
 </template>
@@ -65,25 +65,26 @@ export default {
     mostrarPalabras() {
       fetch("http://localhost:3001/api/todos")
         .then((response) => response.json())
-        .then((data) => (this.palabraView = data));
-      console.log(this.palabraView);
+        .then((data) => {
+          console.log(data);
+                    console.log("lenght",data.length);
 
-      let tab = `<tr>
-    <th>Name</th>
-    <th>Completed</th>
-    <th>Data</th>
+          let tab = `<tr>
+    <th>Palabra</th>
     </tr>`;
 
-      for (var j = 0; j < 6; j++) {
+      for (var j = 0; j < data.length; j++) {
         tab += `<tr>
-<td></td>
-<td></td>
-<td></td>
-</td>
+<td>${data[j].palabra}</td>
 </tr>`;
       }
       document.getElementById("todotable").innerHTML = tab;
+
+        });
+
+      
     },
+
   },
 };
 </script>
