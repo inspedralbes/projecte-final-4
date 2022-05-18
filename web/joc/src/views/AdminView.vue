@@ -1,5 +1,10 @@
 <template>
   <div>
+    <a
+          class="waves-effect waves-light btn-large"
+          href="/"
+          >HOME</a
+        >
     <br />
     <div class="row">
       <div class="col s12">

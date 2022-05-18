@@ -13,7 +13,7 @@
     </div>
      <div class="container">
             <!-- Modal Structure -->
-            <div id="modal1" class="modal">
+            <div id="modal1" class="modal #66bb6a green lighten-1">
                 <div class="modal-content">
                       <div class="row">
                             <form class="col s12">
@@ -33,8 +33,11 @@
                             </form>
                         </div>
                 </div>
-                <div class="modal-footer">
-                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Continuar</a>
+                <div class="modal-footer #66bb6a green lighten-1">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-light btn">Iniciar Sesión</a>
+                </div>
+                <div class="modal-footer #66bb6a green lighten-1">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-light btn">Continuar</a>
                 </div>
             </div>
        </div>
