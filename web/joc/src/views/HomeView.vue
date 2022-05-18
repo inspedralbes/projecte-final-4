@@ -30,13 +30,6 @@ export default {
 
     </div>
     </div>
-    <div class="col s12 m4 l2">
-<h2>Intents</h2>
-    <a class="btn-floating btn-large waves-effect waves-light red">{{
-      this.intents1
-    }}</a>
-
-    </div>
   </div>
    
   </main>

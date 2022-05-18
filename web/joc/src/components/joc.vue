@@ -25,7 +25,9 @@
       </h4>
     </div>
     <div class="oculta" id="cronoTimer">
-    <h1 class="waves-effect waves-light btn-large blue">TIEMPO: {{ timerMinuto }}:{{ timerZero }}{{ timerCount }}</h1>
+      <h1 class="waves-effect waves-light btn-large blue">
+        TIEMPO: {{ timerMinuto }}:{{ timerZero }}{{ timerCount }}
+      </h1>
     </div>
     <div id="mostrarjuego" style="display: none" onload="countUpTimer()">
       <div class="row center-align margin-celdas">
@@ -43,6 +45,11 @@
         </div>
         <div id="1div4" class="col-grid col m2 z-depth-4">
           <h3>{{ this.paraula1[4] }}</h3>
+        </div>
+        <div class="col m2">
+          <a class="btn-floating btn-large waves-effect waves-light red">{{
+            this.intents1
+          }}</a>
         </div>
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar()"
@@ -69,6 +76,11 @@
         <div id="2div4" class="col-grid col m2 z-depth-4">
           <h3>{{ this.paraula2[4] }}</h3>
         </div>
+        <div class="col m2">
+          <a class="btn-floating btn-large waves-effect waves-light red">{{
+            this.intents1
+          }}</a>
+        </div>
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar2()"
         >Comprovar Paraula 2</a
@@ -89,6 +101,11 @@
         </div>
         <div id="3div4" class="col-grid col m2 z-depth-4">
           <h3>{{ this.paraula3[4] }}</h3>
+        </div>
+        <div class="col m2">
+          <a class="btn-floating btn-large waves-effect waves-light red">{{
+            this.intents1
+          }}</a>
         </div>
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar3()"
@@ -111,6 +128,11 @@
         <div id="4div4" class="col-grid col m2 z-depth-4">
           <h3>{{ this.paraula4[4] }}</h3>
         </div>
+        <div class="col m2">
+          <a class="btn-floating btn-large waves-effect waves-light red">{{
+            this.intents1
+          }}</a>
+        </div>
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar4()"
         >Comprovar Paraula 4</a
@@ -131,6 +153,11 @@
         </div>
         <div id="5div4" class="col-grid col m2 z-depth-4">
           <h3>{{ this.paraula5[4] }}</h3>
+        </div>
+        <div class="col m2">
+          <a class="btn-floating btn-large waves-effect waves-light red">{{
+            this.intents1
+          }}</a>
         </div>
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar5()"
@@ -208,7 +235,7 @@ export default {
       partida: 1,
       timerCount: 0,
       timerMinuto: 0,
-      timerZero:0,
+      timerZero: 0,
 
       //PARAULA 1
       paraula1: ["", "", "", "", ""],
@@ -246,6 +273,7 @@ export default {
       intents5: 0,
     };
   },
+
   watch: {
     timerCount: {
       handler() {
@@ -256,8 +284,8 @@ export default {
           this.timerMinuto++;
           this.timerCount = 0;
         }
-        if(this.timerCount>=10){
-          this.timerZero=""
+        if (this.timerCount >= 10) {
+          this.timerZero = "";
         }
       },
       immediate: true, // This ensures the watcher is triggered upon creation
@@ -287,7 +315,7 @@ export default {
   methods: {
     iniciarPartida() {
       document.getElementById("cronoTimer").classList.remove("oculta");
-     
+
       console.log("LENGHT", this.paraulaJson.length);
 
       document.getElementById("buttonpartida").style.display = "none";
