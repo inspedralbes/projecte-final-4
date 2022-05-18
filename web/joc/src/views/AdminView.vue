@@ -1,6 +1,6 @@
 <template>
   <div>
-    <hr />
+    <br />
     <div class="row">
       <div class="col s12">
         <input
@@ -40,11 +40,12 @@ export default {
   },
   methods: {
     añadirPalabra() {
-      const data = { palabra: paraula };
-
       var paraula = document.getElementById("afegirPalabra").value;
 
+      const data = { palabra: paraula };
+
       console.log("paraula: ", paraula);
+      console.log("data: ", data);
 
       fetch("http://localhost:3001/api/todos", {
         method: "POST",
