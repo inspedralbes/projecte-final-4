@@ -17,6 +17,7 @@
                 <div class="modal-content">
                       <div class="row">
                             <form class="col s12">
+                              <h1 class="negro">Administrador</h1>
                               <div class="row">
                                 <div class="input-field col s6">
                                   <i class="material-icons prefix">account_circle</i>
@@ -33,7 +34,7 @@
                         </div>
                 </div>
                 <div class="modal-footer">
-                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Continuar</a>
                 </div>
             </div>
        </div>
@@ -54,5 +55,7 @@ mounted() {
 </script>
 
 <style>
-
+.negro{
+  color: black;
+}
 </style>
