@@ -78,7 +78,7 @@
         </div>
         <div class="col m2">
           <a class="btn-floating btn-large waves-effect waves-light red">{{
-            this.intents1
+            this.intents2
           }}</a>
         </div>
       </div>
@@ -104,7 +104,7 @@
         </div>
         <div class="col m2">
           <a class="btn-floating btn-large waves-effect waves-light red">{{
-            this.intents1
+            this.intents3
           }}</a>
         </div>
       </div>
@@ -130,7 +130,7 @@
         </div>
         <div class="col m2">
           <a class="btn-floating btn-large waves-effect waves-light red">{{
-            this.intents1
+            this.intents4
           }}</a>
         </div>
       </div>
@@ -156,7 +156,7 @@
         </div>
         <div class="col m2">
           <a class="btn-floating btn-large waves-effect waves-light red">{{
-            this.intents1
+            this.intents5
           }}</a>
         </div>
       </div>
