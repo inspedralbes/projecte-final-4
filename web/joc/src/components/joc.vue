@@ -278,15 +278,19 @@ export default {
     timerCount: {
       handler() {
         setTimeout(() => {
-          this.timerCount++;
+          if (this.timerCount != 60) {
+            this.timerCount++;
+          }
+          if (this.timerCount == 60) {
+            this.timerMinuto++;
+            this.timerCount = 0;
+          }
+          if (this.timerCount >= 10) {
+            this.timerZero = "";
+          } else {
+            this.timerZero = 0;
+          }
         }, 1000);
-        if (this.timerCount == 60) {
-          this.timerMinuto++;
-          this.timerCount = 0;
-        }
-        if (this.timerCount >= 10) {
-          this.timerZero = "";
-        }
       },
       immediate: true, // This ensures the watcher is triggered upon creation
     },
