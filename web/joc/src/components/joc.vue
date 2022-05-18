@@ -13,13 +13,19 @@
     <div id="normasjuego">
       <h3>Normativa del joc</h3>
       <h4 style="padding: 50px">
-       <b>OBJECTIU DEL JOC</b><br><br>
-El obectiu del joc es conseguir les 5 paraules que necesitem en el menys temps posible.<br><br>
-Contra mes rapid conseguiexis les 5 paraules , mes punts y mes alt en el ranking estaras.<br><br>
-<b>NORMATIVA DEL JOC</b><br><br>
-Nomes es podra escriure les paraules amb les lletres que nosaltres donem , si introdueixes alguna lletra que no esta en la part dreta de la pantalla automaticament estara malament
+        <b>OBJECTIU DEL JOC</b><br /><br />
+        El obectiu del joc es conseguir les 5 paraules que necesitem en el menys
+        temps posible.<br /><br />
+        Contra mes rapid conseguiexis les 5 paraules , mes punts y mes alt en el
+        ranking estaras.<br /><br />
+        <b>NORMATIVA DEL JOC</b><br /><br />
+        Nomes es podra escriure les paraules amb les lletres que nosaltres donem
+        , si introdueixes alguna lletra que no esta en la part dreta de la
+        pantalla automaticament estara malament
       </h4>
-      
+    </div>
+    <div class="oculta" id="cronoTimer">
+    <h1 class="waves-effect waves-light btn-large blue">TIEMPO: {{ timerMinuto }}:{{ timerZero }}{{ timerCount }}</h1>
     </div>
     <div id="mostrarjuego" style="display: none" onload="countUpTimer()">
       <div class="row center-align margin-celdas">
@@ -200,6 +206,9 @@ export default {
       paraulaJson: [],
       randomNumber: [],
       partida: 1,
+      timerCount: 0,
+      timerMinuto: 0,
+      timerZero:0,
 
       //PARAULA 1
       paraula1: ["", "", "", "", ""],
@@ -237,6 +246,23 @@ export default {
       intents5: 0,
     };
   },
+  watch: {
+    timerCount: {
+      handler() {
+        setTimeout(() => {
+          this.timerCount++;
+        }, 1000);
+        if (this.timerCount == 60) {
+          this.timerMinuto++;
+          this.timerCount = 0;
+        }
+        if(this.timerCount>=10){
+          this.timerZero=""
+        }
+      },
+      immediate: true, // This ensures the watcher is triggered upon creation
+    },
+  },
   mounted() {
     const text = [];
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -244,14 +270,13 @@ export default {
     fetch("http://localhost:3001/api/todos")
       .then((response) => response.json())
       .then((data) => (this.paraulaJson = data));
-          for (var j = 0; j < 6; j++) {
-
-    this.randomNumber[j] = Math.floor(Math.random() * 7);
-    console.log("Number",j," ",this.randomNumber)
-          }
+    for (var j = 0; j < 6; j++) {
+      this.randomNumber[j] = Math.floor(Math.random() * 7);
+      console.log("Number", j, " ", this.randomNumber);
+    }
     for (var i = 0; i < 6; i++) {
       text[i] = possible.charAt(Math.floor(Math.random() * possible.length));
-      possible=possible.replace(text[i], "");
+      possible = possible.replace(text[i], "");
       document.getElementById("lletre-" + i).innerHTML = text[i];
       document.getElementById("lletre-" + i).setAttribute("name", text[i]);
       console.log(i);
@@ -261,7 +286,9 @@ export default {
   },
   methods: {
     iniciarPartida() {
-                console.log("LENGHT",this.paraulaJson.length)
+      document.getElementById("cronoTimer").classList.remove("oculta");
+     
+      console.log("LENGHT", this.paraulaJson.length);
 
       document.getElementById("buttonpartida").style.display = "none";
       document.getElementById("mostrarjuego").style.display = "block";
@@ -588,6 +615,10 @@ export default {
 <style>
 .correcte {
   background-color: #02ff19;
+}
+
+.oculta {
+  display: none;
 }
 
 .incorrecte {
