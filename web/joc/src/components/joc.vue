@@ -53,7 +53,7 @@
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista1">
-        <div class="col m6">
+        <div class="col m10">
           <label for="textarea1">PISTA</label>
           <textarea readonly id="textarea1" class="materialize-textarea">{{
             this.definicion1
@@ -61,7 +61,7 @@
         </div>
       </div>
       <div class="row center-align margin-celdas">
-        <div class="col m6">
+        <div class="col m10">
           <a class="waves-effect waves-light btn" v-on:click="comprovar()"
             >Comprovar Paraula 1</a
           >
