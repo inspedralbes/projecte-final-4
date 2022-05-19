@@ -216,41 +216,65 @@
       <div class="row">
         <button
           v-on:click="apretar($event)"
-          name=""
+          name="Q"
           class="waves-effect waves-light btn"
           id="lletre-0"
-        ></button>
+        >Q</button>
         <button
           v-on:click="apretar($event)"
-          name=""
+          name="W"
           class="waves-effect waves-light btn"
           id="lletre-1"
-        ></button>
+        >W</button>
         <button
           v-on:click="apretar($event)"
-          name=""
+          name="E"
           class="waves-effect waves-light btn"
           id="lletre-2"
-        ></button>
+        >E</button>
 
         <button
           v-on:click="apretar($event)"
-          name=""
+          name="R"
           class="waves-effect waves-light btn"
           id="lletre-3"
-        ></button>
+        >R</button>
         <button
           v-on:click="apretar($event)"
-          name=""
+          name="T"
           class="waves-effect waves-light btn"
           id="lletre-4"
-        ></button>
+        >T</button>
         <button
           v-on:click="apretar($event)"
-          name=""
+          name="Y"
           class="waves-effect waves-light btn"
           id="lletre-5"
-        ></button>
+        >Y</button>
+        <button
+          v-on:click="apretar($event)"
+          name="U"
+          class="waves-effect waves-light btn"
+          id="lletre-5"
+        >U</button>
+        <button
+          v-on:click="apretar($event)"
+          name="I"
+          class="waves-effect waves-light btn"
+          id="lletre-5"
+        >I</button>
+        <button
+          v-on:click="apretar($event)"
+          name="O"
+          class="waves-effect waves-light btn"
+          id="lletre-5"
+        >O</button>
+        <button
+          v-on:click="apretar($event)"
+          name="P"
+          class="waves-effect waves-light btn"
+          id="lletre-5"
+        >P</button>
         <button
           class="waves-effect waves-light btn red"
           v-on:click="deleteLetter()"
@@ -258,6 +282,115 @@
           Del
         </button>
       </div>
+      <div class="row">
+        <button
+          v-on:click="apretar($event)"
+          name="A"
+          class="waves-effect waves-light btn"
+          id="lletre-0"
+        >A</button>
+        <button
+          v-on:click="apretar($event)"
+          name="S"
+          class="waves-effect waves-light btn"
+          id="lletre-1"
+        >S</button>
+        <button
+          v-on:click="apretar($event)"
+          name="D"
+          class="waves-effect waves-light btn"
+          id="lletre-2"
+        >D</button>
+
+        <button
+          v-on:click="apretar($event)"
+          name="F"
+          class="waves-effect waves-light btn"
+          id="lletre-3"
+        >F</button>
+        <button
+          v-on:click="apretar($event)"
+          name="G"
+          class="waves-effect waves-light btn"
+          id="lletre-4"
+        >G</button>
+        <button
+          v-on:click="apretar($event)"
+          name="H"
+          class="waves-effect waves-light btn"
+          id="lletre-5"
+        >H</button>
+        <button
+          v-on:click="apretar($event)"
+          name="J"
+          class="waves-effect waves-light btn"
+          id="lletre-5"
+        >J</button>
+        <button
+          v-on:click="apretar($event)"
+          name="K"
+          class="waves-effect waves-light btn"
+          id="lletre-5"
+        >K</button>
+        <button
+          v-on:click="apretar($event)"
+          name="L"
+          class="waves-effect waves-light btn"
+          id="lletre-5"
+        >L</button>
+        <button
+          v-on:click="apretar($event)"
+          name="Ñ"
+          class="waves-effect waves-light btn"
+          id="lletre-5"
+        >Ñ</button>
+      </div>
+      <div class="row">
+        <button
+          v-on:click="apretar($event)"
+          name="Z"
+          class="waves-effect waves-light btn"
+          id="lletre-0"
+        >Z</button>
+        <button
+          v-on:click="apretar($event)"
+          name="X"
+          class="waves-effect waves-light btn"
+          id="lletre-1"
+        >X</button>
+        <button
+          v-on:click="apretar($event)"
+          name="C"
+          class="waves-effect waves-light btn"
+          id="lletre-2"
+        >C</button>
+
+        <button
+          v-on:click="apretar($event)"
+          name="V"
+          class="waves-effect waves-light btn"
+          id="lletre-3"
+        >V</button>
+        <button
+          v-on:click="apretar($event)"
+          name="B"
+          class="waves-effect waves-light btn"
+          id="lletre-4"
+        >B</button>
+        <button
+          v-on:click="apretar($event)"
+          name="N"
+          class="waves-effect waves-light btn"
+          id="lletre-5"
+        >N</button>
+        <button
+          v-on:click="apretar($event)"
+          name="M"
+          class="waves-effect waves-light btn"
+          id="lletre-5"
+        >M</button>
+      </div>
+      
     </div>
   </div>
 </template>
@@ -341,8 +474,8 @@ export default {
     },
   },
   mounted() {
-    const text = [];
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    // const text = [];
+    // var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     fetch("http://localhost:3001/api/todos")
       .then((response) => response.json())
@@ -351,15 +484,15 @@ export default {
       this.randomNumber[j] = Math.floor(Math.random() * 7);
       console.log("Number", j, " ", this.randomNumber);
     }
-    for (var i = 0; i < 6; i++) {
-      text[i] = possible.charAt(Math.floor(Math.random() * possible.length));
-      possible = possible.replace(text[i], "");
-      document.getElementById("lletre-" + i).innerHTML = text[i];
-      document.getElementById("lletre-" + i).setAttribute("name", text[i]);
-      console.log(i);
-      console.log("Lletre: ", text[i]);
-      console.log("Posible: ", possible);
-    }
+    // for (var i = 0; i < 6; i++) {
+    //   text[i] = possible.charAt(Math.floor(Math.random() * possible.length));
+    //   possible = possible.replace(text[i], "");
+    //   document.getElementById("lletre-" + i).innerHTML = text[i];
+    //   document.getElementById("lletre-" + i).setAttribute("name", text[i]);
+    //   console.log(i);
+    //   console.log("Lletre: ", text[i]);
+    //   console.log("Posible: ", possible);
+    // }
   },
   methods: {
     iniciarPartida() {
