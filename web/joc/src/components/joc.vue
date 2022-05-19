@@ -55,7 +55,7 @@
       <div class="row center-align margin-celdas oculta" id="pista1">
         <div class="col m6">
           <label for="textarea1">PISTA</label>
-          <textarea id="textarea1" class="materialize-textarea">{{
+          <textarea readonly id="textarea1" class="materialize-textarea">{{
             this.definicion1
           }}</textarea>
         </div>
@@ -67,11 +67,7 @@
           >
         </div>
       </div>
-      <!-- <h2>Intents</h2>
-    <a class="btn-floating btn-large waves-effect waves-light red">{{
-      this.intents1
-    }}</a> -->
-      <!-- <h4>2 Paraula</h4> -->
+
       <div class="row center-align margin-celdas">
         <div id="2div0" class="col-grid col m2 z-depth-4">
           <h3>{{ this.paraula2[0] }}</h3>
@@ -92,6 +88,14 @@
           <a class="btn-floating btn-large waves-effect waves-light red">{{
             this.intents2
           }}</a>
+        </div>
+      </div>
+      <div class="row center-align margin-celdas oculta" id="pista2">
+        <div class="col m6">
+          <label for="textarea1">PISTA</label>
+          <textarea readonly id="textarea1" class="materialize-textarea">{{
+            this.definicion2
+          }}</textarea>
         </div>
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar2()"
@@ -120,6 +124,14 @@
           }}</a>
         </div>
       </div>
+      <div class="row center-align margin-celdas oculta" id="pista3">
+        <div class="col m6">
+          <label for="textarea1">PISTA</label>
+          <textarea readonly id="textarea1" class="materialize-textarea">{{
+            this.definicion3
+          }}</textarea>
+        </div>
+      </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar3()"
         >Comprovar Paraula 3</a
       >
@@ -146,6 +158,14 @@
           }}</a>
         </div>
       </div>
+      <div class="row center-align margin-celdas oculta" id="pista4">
+        <div class="col m6">
+          <label for="textarea1">PISTA</label>
+          <textarea readonly id="textarea1" class="materialize-textarea">{{
+            this.definicion4
+          }}</textarea>
+        </div>
+      </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar4()"
         >Comprovar Paraula 4</a
       >
@@ -170,6 +190,14 @@
           <a class="btn-floating btn-large waves-effect waves-light red">{{
             this.intents5
           }}</a>
+        </div>
+      </div>
+      <div class="row center-align margin-celdas oculta" id="pista5">
+        <div class="col m6">
+          <label for="textarea1">PISTA</label>
+          <textarea readonly id="textarea1" class="materialize-textarea">{{
+            this.definicion5
+          }}</textarea>
         </div>
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar5()"
@@ -263,6 +291,7 @@ export default {
       solucio2: ["B", "B", "B", "B", "B"],
       solucio2Count: 0,
       intents2: 0,
+      definicion2: "",
 
       //PARAULA 3
       paraula3: ["", "", "", "", ""],
@@ -270,6 +299,7 @@ export default {
       solucio3: ["B", "B", "B", "B", "B"],
       solucio3Count: 0,
       intents3: 0,
+      definicion3: "",
 
       //PARAULA 4
       paraula4: ["", "", "", "", ""],
@@ -277,6 +307,7 @@ export default {
       solucio4: ["B", "B", "B", "B", "B"],
       solucio4Count: 0,
       intents4: 0,
+      definicion4: "",
 
       //PARAULA 5
       paraula5: ["", "", "", "", ""],
@@ -284,6 +315,7 @@ export default {
       solucio5: ["B", "B", "B", "B", "B"],
       solucio5Count: 0,
       intents5: 0,
+      definicion5: "",
     };
   },
 
@@ -525,7 +557,7 @@ export default {
           this.partida++;
         }
         this.intents1++;
-        if(this.intents1>=10){
+        if (this.intents1 >= 10) {
           document.getElementById("pista1").classList.remove("oculta");
         }
       }
@@ -559,6 +591,9 @@ export default {
           this.partida++;
         }
         this.intents2++;
+        if (this.intents2 >= 10) {
+          document.getElementById("pista2").classList.remove("oculta");
+        }
       }
     },
     comprovar3() {
@@ -590,6 +625,9 @@ export default {
           this.partida++;
         }
         this.intents3++;
+        if (this.intents3 >= 10) {
+          document.getElementById("pista3").classList.remove("oculta");
+        }
       }
     },
     comprovar4() {
@@ -621,6 +659,9 @@ export default {
           this.partida++;
         }
         this.intents4++;
+        if (this.intents4 >= 10) {
+          document.getElementById("pista4").classList.remove("oculta");
+        }
       }
     },
     comprovar5() {
@@ -655,6 +696,9 @@ export default {
           document.getElementById("botonfinalizar").style.display = "block";
         }
         this.intents5++;
+        if (this.intents5 >= 10) {
+          document.getElementById("pista5").classList.remove("oculta");
+        }
       }
     },
   },
