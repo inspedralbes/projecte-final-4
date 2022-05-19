@@ -96,7 +96,7 @@ export default {
             tab += `<tr>
 <td>${data[j].palabra}</td>
 <td>${data[j].definicion}</td>
-<td><button class="btn-floating btn-large waves-effect waves-light red" onClick="deletePalabra(this.id)" id="${data[j]._id}" name="${data[j]._id}"><i class="material-icons">delete_forever</i></button></td>
+<td><button class="btn-floating btn-large waves-effect waves-light red" v-on:click="deletePalabra(this.id)" id="${data[j]._id}"><i class="material-icons">delete_forever</i></button></td>
 </tr>`;
           }
           document.getElementById("todotable").innerHTML = tab;
@@ -104,15 +104,15 @@ export default {
     },
     deletePalabra(clicked_id) {
       console.log("id: ", clicked_id);
-      //   fetch("http://localhost:3001/api/todos/" + clicked_id, {
-      //     method: "DELETE",
-      //   })
-      //     .then((res) => res.text())
-      //     .then((res) => console.log(res));
-      // },
+        fetch("http://localhost:3001/api/todos/" + clicked_id, {
+          method: "DELETE",
+        })
+          .then((res) => res.text())
+          .then((res) => console.log(res));
+      },
     },
-  },
-};
+  }
+
 </script>
 
 <style>
