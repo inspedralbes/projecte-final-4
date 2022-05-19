@@ -37,7 +37,18 @@
           >Ver Palabras</a
         >
       </div>
-      <table id="todotable"></table>
+      <table class="striped" id="todotable">
+        <tr>
+                <th>Palabra</th>
+                <th>Definición</th>
+                <th></th>
+                </tr>
+                <tr v-for="pal in listaPalabras">
+                    <td>{{pal.palabra}}</td>
+                    <td>{{pal.definicion}}</td>
+                    <td><button class="btn-floating btn-large waves-effect waves-light red" v-bind:id="pal._id" @click="deletePalabra(pal._id)"><i class="material-icons">delete_forever</i></button></td>
+              </tr>
+      </table>
     </div>
   </div>
 </template>
@@ -47,6 +58,7 @@ export default {
   data() {
     return {
       palabraView: [],
+      listaPalabras:[],
     };
   },
   methods: {
@@ -84,31 +96,33 @@ export default {
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
+          this.listaPalabras=data;
           console.log("lenght", data.length);
 
-          let tab = `<tr>
-    <th>Palabra</th>
-    <th>Definición</th>
-    <th></th>
-    </tr>`;
+         /* let tab = `<tr>
+                <th>Palabra</th>
+                <th>Definición</th>
+                <th></th>
+                </tr>`;
 
           for (var j = 0; j < data.length; j++) {
             tab += `<tr>
-<td>${data[j].palabra}</td>
-<td>${data[j].definicion}</td>
-<td><button class="btn-floating btn-large waves-effect waves-light red" v-on:click="deletePalabra(this.id)" id="${data[j]._id}"><i class="material-icons">delete_forever</i></button></td>
-</tr>`;
+            <td>${data[j].palabra}</td>
+            <td>${data[j].definicion}</td>
+            <td><button class="btn-floating btn-large waves-effect waves-light red" @click="deletePalabra(this.id)" id="${data[j]._id}"><i class="material-icons">delete_forever</i></button></td>
+            </tr>`;
           }
-          document.getElementById("todotable").innerHTML = tab;
+          document.getElementById("todotable").innerHTML = tab;*/
         });
     },
-    deletePalabra(clicked_id) {
-      console.log("id: ", clicked_id);
-        fetch("http://localhost:3001/api/todos/" + clicked_id, {
+    deletePalabra(id) {
+      console.log("id: ", id);
+        fetch("http://localhost:3001/api/todos/" + id, {
           method: "DELETE",
         })
           .then((res) => res.text())
           .then((res) => console.log(res));
+          this.mostrarPalabras();
       },
     },
   }
