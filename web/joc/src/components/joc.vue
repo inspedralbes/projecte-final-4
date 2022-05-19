@@ -52,9 +52,21 @@
           }}</a>
         </div>
       </div>
-      <a class="waves-effect waves-light btn" v-on:click="comprovar()"
-        >Comprovar Paraula 1</a
-      >
+      <div class="row center-align margin-celdas oculta" id="pista1">
+        <div class="col m6">
+          <label for="textarea1">PISTA</label>
+          <textarea id="textarea1" class="materialize-textarea">{{
+            this.definicion1
+          }}</textarea>
+        </div>
+      </div>
+      <div class="row center-align margin-celdas">
+        <div class="col m6">
+          <a class="waves-effect waves-light btn" v-on:click="comprovar()"
+            >Comprovar Paraula 1</a
+          >
+        </div>
+      </div>
       <!-- <h2>Intents</h2>
     <a class="btn-floating btn-large waves-effect waves-light red">{{
       this.intents1
@@ -243,6 +255,7 @@ export default {
       solucio1: ["", "", "", "", ""],
       solucio1Count: 0,
       intents1: 0,
+      definicion1: "",
 
       //PARAULA 2
       paraula2: ["", "", "", "", ""],
@@ -328,6 +341,7 @@ export default {
       //PARAULA 1
       console.log(this.paraulaJson[this.randomNumber[0]].palabra);
       this.solucio1 = this.paraulaJson[this.randomNumber[0]].palabra.split("");
+      this.definicion1 = this.paraulaJson[this.randomNumber[0]].definicion;
       console.log(this.solucio1);
       //PARAULA 2
       console.log(this.paraulaJson[this.randomNumber[1]].palabra);
@@ -511,6 +525,9 @@ export default {
           this.partida++;
         }
         this.intents1++;
+        if(this.intents1>=10){
+          document.getElementById("pista1").classList.remove("oculta");
+        }
       }
     },
     comprovar2() {
