@@ -53,11 +53,11 @@
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista1">
-        <div class="col m10">
+        <div class="col m10" style="border:2px solid black;">
           <label for="textarea1">PISTA</label>
-          <textarea readonly id="textarea1" class="materialize-textarea">{{
+          <p readonly id="textarea1"  class="materialize-textarea">{{
             this.definicion1
-          }}</textarea>
+          }}</p>
         </div>
       </div>
       <div class="row center-align margin-celdas">
@@ -91,11 +91,11 @@
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista2">
-        <div class="col m6">
+        <div class="col m10 " style="border:2px solid black;">
           <label for="textarea1">PISTA</label>
-          <textarea readonly id="textarea1" class="materialize-textarea">{{
+          <p readonly id="textarea1" class="materialize-textarea">{{
             this.definicion2
-          }}</textarea>
+          }}</p>
         </div>
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar2()"
@@ -125,11 +125,11 @@
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista3">
-        <div class="col m6">
+        <div class="col m10" style="border:2px solid black;">
           <label for="textarea1">PISTA</label>
-          <textarea readonly id="textarea1" class="materialize-textarea">{{
+          <p readonly id="textarea1" class="materialize-textarea">{{
             this.definicion3
-          }}</textarea>
+          }}</p>
         </div>
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar3()"
@@ -159,11 +159,11 @@
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista4">
-        <div class="col m6">
+        <div class="col m10" style="border:2px solid black;">
           <label for="textarea1">PISTA</label>
-          <textarea readonly id="textarea1" class="materialize-textarea">{{
+          <p readonly id="textarea1" class="materialize-textarea">{{
             this.definicion4
-          }}</textarea>
+          }}</p>
         </div>
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar4()"
@@ -193,11 +193,11 @@
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista5">
-        <div class="col m6">
+        <div class="col m10 " style="border:2px solid black;">
           <label for="textarea1">PISTA</label>
-          <textarea readonly id="textarea1" class="materialize-textarea">{{
+          <p readonly id="textarea1" class="materialize-textarea">{{
             this.definicion5
-          }}</textarea>
+          }}</p>
         </div>
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar5()"
