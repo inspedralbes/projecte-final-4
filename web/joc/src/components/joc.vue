@@ -53,7 +53,7 @@
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista1">
-        <div class="col m10">
+        <div class="col m12">
           <label for="textarea1">PISTA</label>
           <textarea readonly id="textarea1" class="materialize-textarea">{{
             this.definicion1
