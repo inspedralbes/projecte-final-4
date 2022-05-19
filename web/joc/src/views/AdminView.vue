@@ -1,10 +1,6 @@
 <template>
   <div>
-    <a
-          class="waves-effect waves-light btn-large"
-          href="/"
-          >HOME</a
-        >
+    <a class="waves-effect waves-light btn-large" href="/">HOME</a>
     <br />
     <div class="row">
       <div class="col s12">
@@ -58,10 +54,10 @@ export default {
       var paraula = document.getElementById("afegirPalabra").value;
       var defi = document.getElementById("afegirDefinicion").value;
 
-let data = {
-  definicion: defi,
-  palabra: paraula,
-}
+      let data = {
+        definicion: defi,
+        palabra: paraula,
+      };
       // const data = { palabra: paraula };
 
       console.log("paraula: ", paraula);
@@ -88,26 +84,33 @@ let data = {
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
-                    console.log("lenght",data.length);
+          console.log("lenght", data.length);
 
           let tab = `<tr>
     <th>Palabra</th>
     <th>Definición</th>
+    <th></th>
     </tr>`;
 
-      for (var j = 0; j < data.length; j++) {
-        tab += `<tr>
+          for (var j = 0; j < data.length; j++) {
+            tab += `<tr>
 <td>${data[j].palabra}</td>
 <td>${data[j].definicion}</td>
+<td><button class="btn-floating btn-large waves-effect waves-light red" onClick="deletePalabra(this.id)" id="${data[j]._id}" name="${data[j]._id}"><i class="material-icons">delete_forever</i></button></td>
 </tr>`;
-      }
-      document.getElementById("todotable").innerHTML = tab;
-
+          }
+          document.getElementById("todotable").innerHTML = tab;
         });
-
-      
     },
-
+    deletePalabra(clicked_id) {
+      console.log("id: ", clicked_id);
+      //   fetch("http://localhost:3001/api/todos/" + clicked_id, {
+      //     method: "DELETE",
+      //   })
+      //     .then((res) => res.text())
+      //     .then((res) => console.log(res));
+      // },
+    },
   },
 };
 </script>
