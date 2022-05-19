@@ -511,18 +511,26 @@ export default {
       //PARAULA 2
       console.log(this.paraulaJson[this.randomNumber[1]].palabra);
       this.solucio2 = this.paraulaJson[this.randomNumber[1]].palabra.split("");
+            this.definicion2 = this.paraulaJson[this.randomNumber[1]].definicion;
+
       console.log(this.solucio2);
       //PARAULA 3
       console.log(this.paraulaJson[this.randomNumber[2]].palabra);
       this.solucio3 = this.paraulaJson[this.randomNumber[2]].palabra.split("");
+            this.definicion3 = this.paraulaJson[this.randomNumber[2]].definicion;
+
       console.log(this.solucio3);
       //PARAULA 4
       console.log(this.paraulaJson[this.randomNumber[3]].palabra);
       this.solucio4 = this.paraulaJson[this.randomNumber[3]].palabra.split("");
+            this.definicion4 = this.paraulaJson[this.randomNumber[3]].definicion;
+
       console.log(this.solucio4);
       //PARAULA 5
       console.log(this.paraulaJson[this.randomNumber[4]].palabra);
       this.solucio5 = this.paraulaJson[this.randomNumber[4]].palabra.split("");
+            this.definicion5 = this.paraulaJson[this.randomNumber[4]].definicion;
+
       console.log(this.solucio5);
     },
     apretar(e) {
