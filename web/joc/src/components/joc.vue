@@ -688,6 +688,8 @@ export default {
         if (this.solucio1Count >= 5) {
           this.count = 0;
           this.partida++;
+        }else{
+          this.solucio1Count=0
         }
         this.intents1++;
         if (this.intents1 >= 10) {
@@ -722,6 +724,8 @@ export default {
         if (this.solucio2Count >= 5) {
           this.count = 0;
           this.partida++;
+        }else{
+          this.solucio2Count=0;
         }
         this.intents2++;
         if (this.intents2 >= 10) {
@@ -756,6 +760,8 @@ export default {
         if (this.solucio3Count >= 5) {
           this.count = 0;
           this.partida++;
+        }else{
+          this.solucio3Count=0
         }
         this.intents3++;
         if (this.intents3 >= 10) {
@@ -790,6 +796,8 @@ export default {
         if (this.solucio4Count >= 5) {
           this.count = 0;
           this.partida++;
+        }else{
+          this.solucio4Count=0
         }
         this.intents4++;
         if (this.intents4 >= 10) {
@@ -827,6 +835,8 @@ export default {
           document.getElementById("Felizitarpartida").innerHTML =
             "Felicidades!!";
           document.getElementById("botonfinalizar").style.display = "block";
+        }else{
+          this.solucio5Count=0
         }
         this.intents5++;
         if (this.intents5 >= 10) {
