@@ -17,6 +17,16 @@
       </div>
     </div>
     <div class="row">
+      <div class="col s12">
+        <input
+          placeholder="Definicion"
+          id="afegirDefinicion"
+          type="text"
+          class="validate"
+        />
+      </div>
+    </div>
+    <div class="row">
       <div class="col s6">
         <a
           class="waves-effect waves-light btn-large"
@@ -46,10 +56,16 @@ export default {
   methods: {
     añadirPalabra() {
       var paraula = document.getElementById("afegirPalabra").value;
+      var defi = document.getElementById("afegirDefinicion").value;
 
-      const data = { palabra: paraula };
+let data = {
+  definicion: defi,
+  palabra: paraula,
+}
+      // const data = { palabra: paraula };
 
       console.log("paraula: ", paraula);
+      console.log("paraula: ", defi);
       console.log("data: ", data);
 
       fetch("http://localhost:3001/api/todos", {
@@ -76,11 +92,13 @@ export default {
 
           let tab = `<tr>
     <th>Palabra</th>
+    <th>Definición</th>
     </tr>`;
 
       for (var j = 0; j < data.length; j++) {
         tab += `<tr>
 <td>${data[j].palabra}</td>
+<td>${data[j].definicion}</td>
 </tr>`;
       }
       document.getElementById("todotable").innerHTML = tab;
