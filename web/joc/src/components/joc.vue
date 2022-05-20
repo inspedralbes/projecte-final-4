@@ -506,30 +506,34 @@ export default {
     };
   },
 
-  watch: {
-    timerCount: {
-      handler() {
-        setTimeout(() => {
-          if (this.timerCount != 60) {
-            this.timerCount++;
-          }
-          if (this.timerCount == 60) {
-            this.timerMinuto++;
-            this.timerCount = 0;
-          }
-          if (this.timerCount >= 10) {
-            this.timerZero = "";
-          } else {
-            this.timerZero = 0;
-          }
-        }, 1000);
-      },
-      immediate: true, // This ensures the watcher is triggered upon creation
-    },
-  },
+  // watch: {
+  //   timerCount: {
+  //     handler() {
+  //       setTimeout(() => {
+  //         if (this.timerCount != 60) {
+  //           this.timerCount++;
+  //         }
+  //         if (this.timerCount == 60) {
+  //           this.timerMinuto++;
+  //           this.timerCount = 0;
+  //         }
+  //         if (this.timerCount >= 10) {
+  //           this.timerZero = "";
+  //         } else {
+  //           this.timerZero = 0;
+  //         }
+  //       }, 1000);
+  //     },
+  //     immediate: true, // This ensures the watcher is triggered upon creation
+  //   },
+  // },
   mounted() {
     // const text = [];
     // var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+            
+        
+    
 
     fetch("http://localhost:3001/api/todos")
       .then((response) => response.json())
@@ -546,6 +550,21 @@ export default {
     // }
   },
   methods: {
+    timer() {
+      if (this.timerCount != 60) {
+        this.timerCount++;
+      }
+      if (this.timerCount == 60) {
+        this.timerMinuto++;
+        this.timerCount = 0;
+      }
+      if (this.timerCount >= 10) {
+        this.timerZero = "";
+      } else {
+        this.timerZero = 0;
+      }
+    },
+
     generarRandNumero() {
       for (var i = 0; i < this.paraulaJson.length; i++) {
         this.vectorNumbers.push(i);
@@ -558,11 +577,13 @@ export default {
         this.randomNumber[j] = this.vectorNumbers[position];
         this.vectorNumbers.splice(position, 1);
         console.log("Vector", j, " ", this.vectorNumbers);
-              console.log("Number", j, " ", this.randomNumber);
-
+        console.log("Number", j, " ", this.randomNumber);
       }
     },
     iniciarPartida() {
+window.setInterval(() => {
+                this.timer();
+            },1000);
       document.getElementById("cronoTimer").classList.remove("oculta");
       this.generarRandNumero();
       console.log("LENGHT", this.paraulaJson.length);
