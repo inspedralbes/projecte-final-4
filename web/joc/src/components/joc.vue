@@ -535,7 +535,7 @@ export default {
         
     
 
-    fetch("http://localhost:3001/api/todos")
+    fetch("http://paraudl.back.alumnes.inspedralbes.cat:7099/api/todos")
       .then((response) => response.json())
       .then((data) => (this.paraulaJson = data));
 

@@ -76,7 +76,7 @@ export default {
       console.log("paraula: ", defi);
       console.log("data: ", data);
 
-      fetch("http://localhost:3001/api/todos", {
+      fetch("http://paraudl.back.alumnes.inspedralbes.cat:7099/api/todos", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -92,7 +92,7 @@ export default {
         });
     },
     mostrarPalabras() {
-      fetch("http://localhost:3001/api/todos")
+      fetch("http://paraudl.back.alumnes.inspedralbes.cat:7099/api/todos")
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
@@ -103,7 +103,7 @@ export default {
     },
     deletePalabra(id) {
       console.log("id: ", id);
-        fetch("http://localhost:3001/api/todos/" + id, {
+        fetch("http://paraudl.back.alumnes.inspedralbes.cat:7099/api/todos" + id, {
           method: "DELETE",
            headers: {
           "Content-Type": "application/json",
