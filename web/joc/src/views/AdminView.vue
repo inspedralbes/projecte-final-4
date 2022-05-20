@@ -98,27 +98,17 @@ export default {
           console.log(data);
           this.listaPalabras=data;
           console.log("lenght", data.length);
-
-         /* let tab = `<tr>
-                <th>Palabra</th>
-                <th>Definición</th>
-                <th></th>
-                </tr>`;
-
-          for (var j = 0; j < data.length; j++) {
-            tab += `<tr>
-            <td>${data[j].palabra}</td>
-            <td>${data[j].definicion}</td>
-            <td><button class="btn-floating btn-large waves-effect waves-light red" @click="deletePalabra(this.id)" id="${data[j]._id}"><i class="material-icons">delete_forever</i></button></td>
-            </tr>`;
-          }
-          document.getElementById("todotable").innerHTML = tab;*/
-        });
+-
+        
+    })
     },
     deletePalabra(id) {
       console.log("id: ", id);
         fetch("http://localhost:3001/api/todos/" + id, {
           method: "DELETE",
+           headers: {
+          "Content-Type": "application/json",
+        },
         })
           .then((res) => res.text())
           .then((res) => console.log(res));
