@@ -53,11 +53,11 @@
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista1">
-        <div class="col m10" style="border:2px solid black;">
+        <div class="col m10" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p readonly id="textarea1"  class="materialize-textarea">{{
-            this.definicion1
-          }}</p>
+          <p readonly id="textarea1" class="materialize-textarea">
+            {{ this.definicion1 }}
+          </p>
         </div>
       </div>
       <div class="row center-align margin-celdas">
@@ -91,11 +91,11 @@
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista2">
-        <div class="col m10 " style="border:2px solid black;">
+        <div class="col m10" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p readonly id="textarea1" class="materialize-textarea">{{
-            this.definicion2
-          }}</p>
+          <p readonly id="textarea1" class="materialize-textarea">
+            {{ this.definicion2 }}
+          </p>
         </div>
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar2()"
@@ -125,11 +125,11 @@
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista3">
-        <div class="col m10" style="border:2px solid black;">
+        <div class="col m10" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p readonly id="textarea1" class="materialize-textarea">{{
-            this.definicion3
-          }}</p>
+          <p readonly id="textarea1" class="materialize-textarea">
+            {{ this.definicion3 }}
+          </p>
         </div>
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar3()"
@@ -159,11 +159,11 @@
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista4">
-        <div class="col m10" style="border:2px solid black;">
+        <div class="col m10" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p readonly id="textarea1" class="materialize-textarea">{{
-            this.definicion4
-          }}</p>
+          <p readonly id="textarea1" class="materialize-textarea">
+            {{ this.definicion4 }}
+          </p>
         </div>
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar4()"
@@ -193,11 +193,11 @@
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista5">
-        <div class="col m10 " style="border:2px solid black;">
+        <div class="col m10" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p readonly id="textarea1" class="materialize-textarea">{{
-            this.definicion5
-          }}</p>
+          <p readonly id="textarea1" class="materialize-textarea">
+            {{ this.definicion5 }}
+          </p>
         </div>
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar5()"
@@ -219,62 +219,82 @@
           name="Q"
           class="waves-effect waves-light btn"
           id="lletre-0"
-        >Q</button>
+        >
+          Q
+        </button>
         <button
           v-on:click="apretar($event)"
           name="W"
           class="waves-effect waves-light btn"
           id="lletre-1"
-        >W</button>
+        >
+          W
+        </button>
         <button
           v-on:click="apretar($event)"
           name="E"
           class="waves-effect waves-light btn"
           id="lletre-2"
-        >E</button>
+        >
+          E
+        </button>
 
         <button
           v-on:click="apretar($event)"
           name="R"
           class="waves-effect waves-light btn"
           id="lletre-3"
-        >R</button>
+        >
+          R
+        </button>
         <button
           v-on:click="apretar($event)"
           name="T"
           class="waves-effect waves-light btn"
           id="lletre-4"
-        >T</button>
+        >
+          T
+        </button>
         <button
           v-on:click="apretar($event)"
           name="Y"
           class="waves-effect waves-light btn"
           id="lletre-5"
-        >Y</button>
+        >
+          Y
+        </button>
         <button
           v-on:click="apretar($event)"
           name="U"
           class="waves-effect waves-light btn"
           id="lletre-5"
-        >U</button>
+        >
+          U
+        </button>
         <button
           v-on:click="apretar($event)"
           name="I"
           class="waves-effect waves-light btn"
           id="lletre-5"
-        >I</button>
+        >
+          I
+        </button>
         <button
           v-on:click="apretar($event)"
           name="O"
           class="waves-effect waves-light btn"
           id="lletre-5"
-        >O</button>
+        >
+          O
+        </button>
         <button
           v-on:click="apretar($event)"
           name="P"
           class="waves-effect waves-light btn"
           id="lletre-5"
-        >P</button>
+        >
+          P
+        </button>
         <button
           class="waves-effect waves-light btn red"
           v-on:click="deleteLetter()"
@@ -288,62 +308,82 @@
           name="A"
           class="waves-effect waves-light btn"
           id="lletre-0"
-        >A</button>
+        >
+          A
+        </button>
         <button
           v-on:click="apretar($event)"
           name="S"
           class="waves-effect waves-light btn"
           id="lletre-1"
-        >S</button>
+        >
+          S
+        </button>
         <button
           v-on:click="apretar($event)"
           name="D"
           class="waves-effect waves-light btn"
           id="lletre-2"
-        >D</button>
+        >
+          D
+        </button>
 
         <button
           v-on:click="apretar($event)"
           name="F"
           class="waves-effect waves-light btn"
           id="lletre-3"
-        >F</button>
+        >
+          F
+        </button>
         <button
           v-on:click="apretar($event)"
           name="G"
           class="waves-effect waves-light btn"
           id="lletre-4"
-        >G</button>
+        >
+          G
+        </button>
         <button
           v-on:click="apretar($event)"
           name="H"
           class="waves-effect waves-light btn"
           id="lletre-5"
-        >H</button>
+        >
+          H
+        </button>
         <button
           v-on:click="apretar($event)"
           name="J"
           class="waves-effect waves-light btn"
           id="lletre-5"
-        >J</button>
+        >
+          J
+        </button>
         <button
           v-on:click="apretar($event)"
           name="K"
           class="waves-effect waves-light btn"
           id="lletre-5"
-        >K</button>
+        >
+          K
+        </button>
         <button
           v-on:click="apretar($event)"
           name="L"
           class="waves-effect waves-light btn"
           id="lletre-5"
-        >L</button>
+        >
+          L
+        </button>
         <button
           v-on:click="apretar($event)"
           name="Ñ"
           class="waves-effect waves-light btn"
           id="lletre-5"
-        >Ñ</button>
+        >
+          Ñ
+        </button>
       </div>
       <div class="row">
         <button
@@ -351,46 +391,59 @@
           name="Z"
           class="waves-effect waves-light btn"
           id="lletre-0"
-        >Z</button>
+        >
+          Z
+        </button>
         <button
           v-on:click="apretar($event)"
           name="X"
           class="waves-effect waves-light btn"
           id="lletre-1"
-        >X</button>
+        >
+          X
+        </button>
         <button
           v-on:click="apretar($event)"
           name="C"
           class="waves-effect waves-light btn"
           id="lletre-2"
-        >C</button>
+        >
+          C
+        </button>
 
         <button
           v-on:click="apretar($event)"
           name="V"
           class="waves-effect waves-light btn"
           id="lletre-3"
-        >V</button>
+        >
+          V
+        </button>
         <button
           v-on:click="apretar($event)"
           name="B"
           class="waves-effect waves-light btn"
           id="lletre-4"
-        >B</button>
+        >
+          B
+        </button>
         <button
           v-on:click="apretar($event)"
           name="N"
           class="waves-effect waves-light btn"
           id="lletre-5"
-        >N</button>
+        >
+          N
+        </button>
         <button
           v-on:click="apretar($event)"
           name="M"
           class="waves-effect waves-light btn"
           id="lletre-5"
-        >M</button>
+        >
+          M
+        </button>
       </div>
-      
     </div>
   </div>
 </template>
@@ -409,6 +462,7 @@ export default {
       timerCount: 0,
       timerMinuto: 0,
       timerZero: 0,
+      vectorNumbers: [],
 
       //PARAULA 1
       paraula1: ["", "", "", "", ""],
@@ -480,10 +534,7 @@ export default {
     fetch("http://localhost:3001/api/todos")
       .then((response) => response.json())
       .then((data) => (this.paraulaJson = data));
-    for (var j = 0; j < 6; j++) {
-      this.randomNumber[j] = Math.floor(Math.random() * 7);
-      console.log("Number", j, " ", this.randomNumber);
-    }
+
     // for (var i = 0; i < 6; i++) {
     //   text[i] = possible.charAt(Math.floor(Math.random() * possible.length));
     //   possible = possible.replace(text[i], "");
@@ -495,9 +546,25 @@ export default {
     // }
   },
   methods: {
+    generarRandNumero() {
+      for (var i = 0; i < this.paraulaJson.length; i++) {
+        this.vectorNumbers.push(i);
+        console.log("Vector", i, " ", this.vectorNumbers);
+        console.log("JSON", i, " ", this.paraulaJson.length);
+      }
+
+      for (var j = 0; j < 6; j++) {
+        let position = Math.floor(Math.random() * this.vectorNumbers.length);
+        this.randomNumber[j] = this.vectorNumbers[position];
+        this.vectorNumbers.splice(position, 1);
+        console.log("Vector", j, " ", this.vectorNumbers);
+              console.log("Number", j, " ", this.randomNumber);
+
+      }
+    },
     iniciarPartida() {
       document.getElementById("cronoTimer").classList.remove("oculta");
-
+      this.generarRandNumero();
       console.log("LENGHT", this.paraulaJson.length);
 
       document.getElementById("buttonpartida").style.display = "none";
@@ -511,25 +578,25 @@ export default {
       //PARAULA 2
       console.log(this.paraulaJson[this.randomNumber[1]].palabra);
       this.solucio2 = this.paraulaJson[this.randomNumber[1]].palabra.split("");
-            this.definicion2 = this.paraulaJson[this.randomNumber[1]].definicion;
+      this.definicion2 = this.paraulaJson[this.randomNumber[1]].definicion;
 
       console.log(this.solucio2);
       //PARAULA 3
       console.log(this.paraulaJson[this.randomNumber[2]].palabra);
       this.solucio3 = this.paraulaJson[this.randomNumber[2]].palabra.split("");
-            this.definicion3 = this.paraulaJson[this.randomNumber[2]].definicion;
+      this.definicion3 = this.paraulaJson[this.randomNumber[2]].definicion;
 
       console.log(this.solucio3);
       //PARAULA 4
       console.log(this.paraulaJson[this.randomNumber[3]].palabra);
       this.solucio4 = this.paraulaJson[this.randomNumber[3]].palabra.split("");
-            this.definicion4 = this.paraulaJson[this.randomNumber[3]].definicion;
+      this.definicion4 = this.paraulaJson[this.randomNumber[3]].definicion;
 
       console.log(this.solucio4);
       //PARAULA 5
       console.log(this.paraulaJson[this.randomNumber[4]].palabra);
       this.solucio5 = this.paraulaJson[this.randomNumber[4]].palabra.split("");
-            this.definicion5 = this.paraulaJson[this.randomNumber[4]].definicion;
+      this.definicion5 = this.paraulaJson[this.randomNumber[4]].definicion;
 
       console.log(this.solucio5);
     },
@@ -696,8 +763,8 @@ export default {
         if (this.solucio1Count >= 5) {
           this.count = 0;
           this.partida++;
-        }else{
-          this.solucio1Count=0
+        } else {
+          this.solucio1Count = 0;
         }
         this.intents1++;
         if (this.intents1 >= 10) {
@@ -732,8 +799,8 @@ export default {
         if (this.solucio2Count >= 5) {
           this.count = 0;
           this.partida++;
-        }else{
-          this.solucio2Count=0;
+        } else {
+          this.solucio2Count = 0;
         }
         this.intents2++;
         if (this.intents2 >= 10) {
@@ -768,8 +835,8 @@ export default {
         if (this.solucio3Count >= 5) {
           this.count = 0;
           this.partida++;
-        }else{
-          this.solucio3Count=0
+        } else {
+          this.solucio3Count = 0;
         }
         this.intents3++;
         if (this.intents3 >= 10) {
@@ -804,8 +871,8 @@ export default {
         if (this.solucio4Count >= 5) {
           this.count = 0;
           this.partida++;
-        }else{
-          this.solucio4Count=0
+        } else {
+          this.solucio4Count = 0;
         }
         this.intents4++;
         if (this.intents4 >= 10) {
@@ -843,8 +910,8 @@ export default {
           document.getElementById("Felizitarpartida").innerHTML =
             "Felicidades!!";
           document.getElementById("botonfinalizar").style.display = "block";
-        }else{
-          this.solucio5Count=0
+        } else {
+          this.solucio5Count = 0;
         }
         this.intents5++;
         if (this.intents5 >= 10) {
