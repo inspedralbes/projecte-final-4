@@ -97,10 +97,9 @@ export default {
         .then((data) => {
           console.log(data);
           this.listaPalabras=data;
-          console.log("lenght", data.length);
--
+          console.log("lenght", data.length);})
         
-    })
+    
     },
     deletePalabra(id) {
       console.log("id: ", id);
