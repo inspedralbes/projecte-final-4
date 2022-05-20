@@ -505,49 +505,13 @@ export default {
       definicion5: "",
     };
   },
-
-  // watch: {
-  //   timerCount: {
-  //     handler() {
-  //       setTimeout(() => {
-  //         if (this.timerCount != 60) {
-  //           this.timerCount++;
-  //         }
-  //         if (this.timerCount == 60) {
-  //           this.timerMinuto++;
-  //           this.timerCount = 0;
-  //         }
-  //         if (this.timerCount >= 10) {
-  //           this.timerZero = "";
-  //         } else {
-  //           this.timerZero = 0;
-  //         }
-  //       }, 1000);
-  //     },
-  //     immediate: true, // This ensures the watcher is triggered upon creation
-  //   },
-  // },
   mounted() {
-    // const text = [];
-    // var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-            
-        
-    
-
+  
     fetch("http://paraudl.back.alumnes.inspedralbes.cat:7099/api/todos")
       .then((response) => response.json())
       .then((data) => (this.paraulaJson = data));
 
-    // for (var i = 0; i < 6; i++) {
-    //   text[i] = possible.charAt(Math.floor(Math.random() * possible.length));
-    //   possible = possible.replace(text[i], "");
-    //   document.getElementById("lletre-" + i).innerHTML = text[i];
-    //   document.getElementById("lletre-" + i).setAttribute("name", text[i]);
-    //   console.log(i);
-    //   console.log("Lletre: ", text[i]);
-    //   console.log("Posible: ", possible);
-    // }
+    
   },
   methods: {
     timer() {
@@ -925,12 +889,14 @@ window.setInterval(() => {
           console.log("estatSolucio: ", this.estatSolucio[i]);
           console.log("Counter correctes: ", this.solucio5Count);
         }
+        //ESTA BIEN
         if (this.solucio5Count >= 5) {
           this.count = 0;
           this.partida++;
           document.getElementById("Felizitarpartida").innerHTML =
             "Felicidades!!";
           document.getElementById("botonfinalizar").style.display = "block";
+
         } else {
           this.solucio5Count = 0;
         }

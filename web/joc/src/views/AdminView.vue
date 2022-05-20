@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="body">
     <a class="waves-effect waves-light btn-large" href="/">HOME</a>
     <br />
     <div class="row">
@@ -103,7 +103,7 @@ export default {
     },
     deletePalabra(id) {
       console.log("id: ", id);
-        fetch("http://paraudl.back.alumnes.inspedralbes.cat:7099/api/todos" + id, {
+        fetch("http://paraudl.back.alumnes.inspedralbes.cat:7099/api/todos/" + id, {
           method: "DELETE",
            headers: {
           "Content-Type": "application/json",
@@ -119,4 +119,7 @@ export default {
 </script>
 
 <style>
+.body{
+  padding: 15px;
+}
 </style>
