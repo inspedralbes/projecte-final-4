@@ -67,6 +67,239 @@
           >
         </div>
       </div>
+      <div id="tecladoCompleto1">
+        <div class="row">
+          <button
+            v-on:click="apretar($event)"
+            name="Q"
+            class="waves-effect waves-light btn"
+            id="lletre-0"
+          >
+            Q
+          </button>
+          <button
+            v-on:click="apretar($event)"
+            name="W"
+            class="waves-effect waves-light btn"
+            id="lletre-1"
+          >
+            W
+          </button>
+          <button
+            v-on:click="apretar($event)"
+            name="E"
+            class="waves-effect waves-light btn"
+            id="lletre-2"
+          >
+            E
+          </button>
+
+          <button
+            v-on:click="apretar($event)"
+            name="R"
+            class="waves-effect waves-light btn"
+            id="lletre-3"
+          >
+            R
+          </button>
+          <button
+            v-on:click="apretar($event)"
+            name="T"
+            class="waves-effect waves-light btn"
+            id="lletre-4"
+          >
+            T
+          </button>
+          <button
+            v-on:click="apretar($event)"
+            name="Y"
+            class="waves-effect waves-light btn"
+            id="lletre-5"
+          >
+            Y
+          </button>
+          <button
+            v-on:click="apretar($event)"
+            name="U"
+            class="waves-effect waves-light btn"
+            id="lletre-5"
+          >
+            U
+          </button>
+          <button
+            v-on:click="apretar($event)"
+            name="I"
+            class="waves-effect waves-light btn"
+            id="lletre-5"
+          >
+            I
+          </button>
+          <button
+            v-on:click="apretar($event)"
+            name="O"
+            class="waves-effect waves-light btn"
+            id="lletre-5"
+          >
+            O
+          </button>
+          <button
+            v-on:click="apretar($event)"
+            name="P"
+            class="waves-effect waves-light btn"
+            id="lletre-5"
+          >
+            P
+          </button>
+          <button
+            class="waves-effect waves-light btn red"
+            v-on:click="deleteLetter()"
+          >
+            Del
+          </button>
+        </div>
+        <div class="row">
+          <button
+            v-on:click="apretar($event)"
+            name="A"
+            class="waves-effect waves-light btn"
+            id="lletre-0"
+          >
+            A
+          </button>
+          <button
+            v-on:click="apretar($event)"
+            name="S"
+            class="waves-effect waves-light btn"
+            id="lletre-1"
+          >
+            S
+          </button>
+          <button
+            v-on:click="apretar($event)"
+            name="D"
+            class="waves-effect waves-light btn"
+            id="lletre-2"
+          >
+            D
+          </button>
+
+          <button
+            v-on:click="apretar($event)"
+            name="F"
+            class="waves-effect waves-light btn"
+            id="lletre-3"
+          >
+            F
+          </button>
+          <button
+            v-on:click="apretar($event)"
+            name="G"
+            class="waves-effect waves-light btn"
+            id="lletre-4"
+          >
+            G
+          </button>
+          <button
+            v-on:click="apretar($event)"
+            name="H"
+            class="waves-effect waves-light btn"
+            id="lletre-5"
+          >
+            H
+          </button>
+          <button
+            v-on:click="apretar($event)"
+            name="J"
+            class="waves-effect waves-light btn"
+            id="lletre-5"
+          >
+            J
+          </button>
+          <button
+            v-on:click="apretar($event)"
+            name="K"
+            class="waves-effect waves-light btn"
+            id="lletre-5"
+          >
+            K
+          </button>
+          <button
+            v-on:click="apretar($event)"
+            name="L"
+            class="waves-effect waves-light btn"
+            id="lletre-5"
+          >
+            L
+          </button>
+          <button
+            v-on:click="apretar($event)"
+            name="Ñ"
+            class="waves-effect waves-light btn"
+            id="lletre-5"
+          >
+            Ñ
+          </button>
+        </div>
+        <div class="row">
+          <button
+            v-on:click="apretar($event)"
+            name="Z"
+            class="waves-effect waves-light btn"
+            id="lletre-0"
+          >
+            Z
+          </button>
+          <button
+            v-on:click="apretar($event)"
+            name="X"
+            class="waves-effect waves-light btn"
+            id="lletre-1"
+          >
+            X
+          </button>
+          <button
+            v-on:click="apretar($event)"
+            name="C"
+            class="waves-effect waves-light btn"
+            id="lletre-2"
+          >
+            C
+          </button>
+
+          <button
+            v-on:click="apretar($event)"
+            name="V"
+            class="waves-effect waves-light btn"
+            id="lletre-3"
+          >
+            V
+          </button>
+          <button
+            v-on:click="apretar($event)"
+            name="B"
+            class="waves-effect waves-light btn"
+            id="lletre-4"
+          >
+            B
+          </button>
+          <button
+            v-on:click="apretar($event)"
+            name="N"
+            class="waves-effect waves-light btn"
+            id="lletre-5"
+          >
+            N
+          </button>
+          <button
+            v-on:click="apretar($event)"
+            name="M"
+            class="waves-effect waves-light btn"
+            id="lletre-5"
+          >
+            M
+          </button>
+        </div>
+      </div>
 
       <div class="row center-align margin-celdas">
         <div id="2div0" class="col-grid col m2 z-depth-4">
@@ -101,6 +334,7 @@
       <a class="waves-effect waves-light btn" v-on:click="comprovar2()"
         >Comprovar Paraula 2</a
       >
+      <div id="tecladoCompleto2"></div>
       <!-- <h4>3 Paraula</h4> -->
       <div class="row center-align margin-celdas">
         <div id="3div0" class="col-grid col m2 z-depth-4">
@@ -135,6 +369,8 @@
       <a class="waves-effect waves-light btn" v-on:click="comprovar3()"
         >Comprovar Paraula 3</a
       >
+            <div id="tecladoCompleto3"></div>
+
       <!-- <h4>4 Paraula</h4> -->
       <div class="row center-align margin-celdas">
         <div id="4div0" class="col-grid col m2 z-depth-4">
@@ -169,6 +405,8 @@
       <a class="waves-effect waves-light btn" v-on:click="comprovar4()"
         >Comprovar Paraula 4</a
       >
+            <div id="tecladoCompleto4"></div>
+
       <!-- <h4>5 Paraula</h4> -->
       <div class="row center-align margin-celdas">
         <div id="5div0" class="col-grid col m2 z-depth-4">
@@ -203,6 +441,8 @@
       <a class="waves-effect waves-light btn" v-on:click="comprovar5()"
         >Comprovar Paraula 5</a
       >
+            <div id="tecladoCompleto5"></div>
+
       <p id="Felizitarpartida"></p>
       <div id="botonfinalizar" style="display: none">
         <RouterLink :to="'/puntuacions'" class="waves-effect waves-light btn"
@@ -213,237 +453,6 @@
       <br />
 
       <!-- TECLAT 6 LLETRES -->
-      <div class="row">
-        <button
-          v-on:click="apretar($event)"
-          name="Q"
-          class="waves-effect waves-light btn"
-          id="lletre-0"
-        >
-          Q
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          name="W"
-          class="waves-effect waves-light btn"
-          id="lletre-1"
-        >
-          W
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          name="E"
-          class="waves-effect waves-light btn"
-          id="lletre-2"
-        >
-          E
-        </button>
-
-        <button
-          v-on:click="apretar($event)"
-          name="R"
-          class="waves-effect waves-light btn"
-          id="lletre-3"
-        >
-          R
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          name="T"
-          class="waves-effect waves-light btn"
-          id="lletre-4"
-        >
-          T
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          name="Y"
-          class="waves-effect waves-light btn"
-          id="lletre-5"
-        >
-          Y
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          name="U"
-          class="waves-effect waves-light btn"
-          id="lletre-5"
-        >
-          U
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          name="I"
-          class="waves-effect waves-light btn"
-          id="lletre-5"
-        >
-          I
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          name="O"
-          class="waves-effect waves-light btn"
-          id="lletre-5"
-        >
-          O
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          name="P"
-          class="waves-effect waves-light btn"
-          id="lletre-5"
-        >
-          P
-        </button>
-        <button
-          class="waves-effect waves-light btn red"
-          v-on:click="deleteLetter()"
-        >
-          Del
-        </button>
-      </div>
-      <div class="row">
-        <button
-          v-on:click="apretar($event)"
-          name="A"
-          class="waves-effect waves-light btn"
-          id="lletre-0"
-        >
-          A
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          name="S"
-          class="waves-effect waves-light btn"
-          id="lletre-1"
-        >
-          S
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          name="D"
-          class="waves-effect waves-light btn"
-          id="lletre-2"
-        >
-          D
-        </button>
-
-        <button
-          v-on:click="apretar($event)"
-          name="F"
-          class="waves-effect waves-light btn"
-          id="lletre-3"
-        >
-          F
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          name="G"
-          class="waves-effect waves-light btn"
-          id="lletre-4"
-        >
-          G
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          name="H"
-          class="waves-effect waves-light btn"
-          id="lletre-5"
-        >
-          H
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          name="J"
-          class="waves-effect waves-light btn"
-          id="lletre-5"
-        >
-          J
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          name="K"
-          class="waves-effect waves-light btn"
-          id="lletre-5"
-        >
-          K
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          name="L"
-          class="waves-effect waves-light btn"
-          id="lletre-5"
-        >
-          L
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          name="Ñ"
-          class="waves-effect waves-light btn"
-          id="lletre-5"
-        >
-          Ñ
-        </button>
-      </div>
-      <div class="row">
-        <button
-          v-on:click="apretar($event)"
-          name="Z"
-          class="waves-effect waves-light btn"
-          id="lletre-0"
-        >
-          Z
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          name="X"
-          class="waves-effect waves-light btn"
-          id="lletre-1"
-        >
-          X
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          name="C"
-          class="waves-effect waves-light btn"
-          id="lletre-2"
-        >
-          C
-        </button>
-
-        <button
-          v-on:click="apretar($event)"
-          name="V"
-          class="waves-effect waves-light btn"
-          id="lletre-3"
-        >
-          V
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          name="B"
-          class="waves-effect waves-light btn"
-          id="lletre-4"
-        >
-          B
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          name="N"
-          class="waves-effect waves-light btn"
-          id="lletre-5"
-        >
-          N
-        </button>
-        <button
-          v-on:click="apretar($event)"
-          name="M"
-          class="waves-effect waves-light btn"
-          id="lletre-5"
-        >
-          M
-        </button>
-      </div>
     </div>
   </div>
 </template>
@@ -506,12 +515,9 @@ export default {
     };
   },
   mounted() {
-  
     fetch("http://paraudl.back.alumnes.inspedralbes.cat:7099/api/todos")
       .then((response) => response.json())
       .then((data) => (this.paraulaJson = data));
-
-    
   },
   methods: {
     timer() {
@@ -545,9 +551,9 @@ export default {
       }
     },
     iniciarPartida() {
-window.setInterval(() => {
-                this.timer();
-            },1000);
+      window.setInterval(() => {
+        this.timer();
+      }, 1000);
       document.getElementById("cronoTimer").classList.remove("oculta");
       this.generarRandNumero();
       console.log("LENGHT", this.paraulaJson.length);
@@ -745,9 +751,13 @@ window.setInterval(() => {
           console.log("estatSolucio: ", this.estatSolucio[i]);
           console.log("Counter correctes: ", this.solucio1Count);
         }
+        //Esta bien 
         if (this.solucio1Count >= 5) {
           this.count = 0;
           this.partida++;
+          document
+            .getElementById("tecladoCompleto2")
+            .appendChild(document.getElementById("tecladoCompleto1"));
         } else {
           this.solucio1Count = 0;
         }
@@ -784,6 +794,9 @@ window.setInterval(() => {
         if (this.solucio2Count >= 5) {
           this.count = 0;
           this.partida++;
+          document
+            .getElementById("tecladoCompleto3")
+            .appendChild(document.getElementById("tecladoCompleto1"));
         } else {
           this.solucio2Count = 0;
         }
@@ -820,6 +833,9 @@ window.setInterval(() => {
         if (this.solucio3Count >= 5) {
           this.count = 0;
           this.partida++;
+          document
+            .getElementById("tecladoCompleto4")
+            .appendChild(document.getElementById("tecladoCompleto1"));
         } else {
           this.solucio3Count = 0;
         }
@@ -856,6 +872,9 @@ window.setInterval(() => {
         if (this.solucio4Count >= 5) {
           this.count = 0;
           this.partida++;
+          document
+            .getElementById("tecladoCompleto5")
+            .appendChild(document.getElementById("tecladoCompleto1"));
         } else {
           this.solucio4Count = 0;
         }
@@ -896,7 +915,6 @@ window.setInterval(() => {
           document.getElementById("Felizitarpartida").innerHTML =
             "Felicidades!!";
           document.getElementById("botonfinalizar").style.display = "block";
-
         } else {
           this.solucio5Count = 0;
         }
