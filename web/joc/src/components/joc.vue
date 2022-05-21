@@ -60,13 +60,9 @@
           </p>
         </div>
       </div>
-      <div class="row center-align margin-celdas">
-        <div class="col m10">
           <a class="waves-effect waves-light btn" v-on:click="comprovar()"
             >Comprovar Paraula 1</a
           >
-        </div>
-      </div>
       <div id="tecladoCompleto1">
         <div class="row">
           <button
