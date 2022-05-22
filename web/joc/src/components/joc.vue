@@ -445,7 +445,7 @@
       <div id="modal2" class="modal">
         <div class="modal-content">
           <h4>Puntuación</h4>
-          <p>Tiempo: 00:00</p>
+          <p>Tiempo: {{this.timerFinalMinuto}}:{{this.timerZero}}{{this.timerFinal}}</p>
           <table>
             <thead>
               <tr>
@@ -511,6 +511,8 @@ export default {
   data() {
     return {
       //GENERAL
+      timerFinal:"",
+      timerFinalMinuto:"",
       estatSolucio: ["0", "0", "0", "0", "0"],
       letra: "",
       count: 0,
@@ -972,6 +974,8 @@ export default {
         }
         //ESTA BIEN
         if (this.solucio5Count >= 5) {
+          this.timerFinal=this.timerCount;
+          this.timerFinalMinuto=this.timerMinuto;
           this.count = 0;
           this.partida++;
           var elemento = document.getElementById("modal-verificacion");
