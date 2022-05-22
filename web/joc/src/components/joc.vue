@@ -438,7 +438,7 @@
         >Comprovar Paraula 5</a
       ><br><br>
       <!-- Modal partida finalizada -->
-  <div id="modal2" class="modal">
+  <div id="modal2" class="modal #66bb6a green lighten-1 " >
     <div class="modal-content">
       <h4>Puntuació</h4>
       <p>Tiempo: {{ timerMinuto }}:{{ timerZero }}{{ timerCount }}</p>
