@@ -923,7 +923,7 @@ export default {
           this.count = 0;
           this.partida++;
           var elemento = document.getElementById("modal-verificacion");
-    elemento.className += " waves-effect waves-light btn modal-trigger";
+          elemento.className += " waves-effect waves-light btn modal-trigger";
           document.getElementById("botonfinalizar").style.display = "block";
         } else {
           this.solucio5Count = 0;
