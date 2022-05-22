@@ -1,5 +1,5 @@
 <template>
-  <nav class="#66bb6a green lighten-1">
+  <nav class="#66bb6a green lighten-1 nav-header">
     <div class="nav-wrapper">
         <a href="/">
          <img alt="Qries" src="./img/logo2.png" width="100" height="70">
@@ -60,5 +60,9 @@ mounted() {
 <style>
 .negro{
   color: black;
+}
+
+.nav-header{
+ height: 80px;
 }
 </style>
