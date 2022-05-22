@@ -14,14 +14,12 @@
       <h3>Normativa del joc</h3>
       <h4 style="padding: 50px">
         <b>OBJECTIU DEL JOC</b><br /><br />
-        El obectiu del joc es conseguir les 5 paraules que necesitem en el menys
-        temps posible.<br /><br />
-        Contra mes rapid conseguiexis les 5 paraules , mes punts y mes alt en el
+        L'objectiu del joc es aconseguir les 5 paraules que necessitem en el menys temps posible.
+Contra mes rapid conseguiexis les 5 paraules , mes punts y mes alt en el ranking estaras.<br /><br />
+        Contra mes rapid i menys intents conseguiexis les 5 paraules , mes punts y mes alt en el
         ranking estaras.<br /><br />
         <b>NORMATIVA DEL JOC</b><br /><br />
-        Nomes es podra escriure les paraules amb les lletres que nosaltres donem
-        , si introdueixes alguna lletra que no esta en la part dreta de la
-        pantalla automaticament estara malament
+       Nomes es poden escriure les paraules amb les lletres que nosaltres donem , si introdueixes alguna lletra que no esta en la part dreta de la pantalla automaticament estara malament
       </h4>
     </div>
     <div class="oculta" id="cronoTimer">
