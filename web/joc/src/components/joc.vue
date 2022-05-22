@@ -482,6 +482,8 @@
               </tr>
             </tbody>
           </table>
+          <br><br>
+          <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fparaudl.alumnes.inspedralbes.cat%2F&layout=button&size=large&width=103&height=28&appId" width="103" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
         </div>
         <div class="modal-footer">
           <a href="#!" class="modal-close waves-effect waves-green btn-flat"
