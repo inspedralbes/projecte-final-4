@@ -62,7 +62,7 @@
       </div>
           <a class="waves-effect waves-light btn" v-on:click="comprovar()"
             >Comprovar Paraula 1</a
-          >
+          ><br><br>
       <div id="tecladoCompleto1">
         <div class="row">
           <button
@@ -329,7 +329,7 @@
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar2()"
         >Comprovar Paraula 2</a
-      >
+      ><br><br>
       <div id="tecladoCompleto2"></div>
       <!-- <h4>3 Paraula</h4> -->
       <div class="row center-align margin-celdas">
@@ -364,7 +364,7 @@
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar3()"
         >Comprovar Paraula 3</a
-      >
+      ><br><br>
             <div id="tecladoCompleto3"></div>
 
       <!-- <h4>4 Paraula</h4> -->
@@ -400,7 +400,7 @@
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar4()"
         >Comprovar Paraula 4</a
-      >
+      ><br><br>
             <div id="tecladoCompleto4"></div>
 
       <!-- <h4>5 Paraula</h4> -->
@@ -434,9 +434,23 @@
           </p>
         </div>
       </div>
-      <a class="waves-effect waves-light btn" v-on:click="comprovar5()"
+      <a id="modal-verificacion" class="waves-effect waves-light btn" href="#modal2" v-on:click="comprovar5()"
         >Comprovar Paraula 5</a
-      >
+      ><br><br>
+      <!-- Modal partida finalizada -->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <h4>Puntuació</h4>
+      <p>Tiempo: 00:00</p>
+      <p>xxxxxxxxx</p>
+      <p>xxxxxxxxx</p>
+      <p>xxxxxxxxx</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+     
             <div id="tecladoCompleto5"></div>
 
       <p id="Felizitarpartida"></p>
@@ -908,8 +922,8 @@ export default {
         if (this.solucio5Count >= 5) {
           this.count = 0;
           this.partida++;
-          document.getElementById("Felizitarpartida").innerHTML =
-            "Felicidades!!";
+          var elemento = document.getElementById("modal-verificacion");
+    elemento.className += " waves-effect waves-light btn modal-trigger";
           document.getElementById("botonfinalizar").style.display = "block";
         } else {
           this.solucio5Count = 0;
