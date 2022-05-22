@@ -441,13 +441,17 @@
   <div id="modal2" class="modal">
     <div class="modal-content">
       <h4>Puntuació</h4>
-      <p>Tiempo: 00:00</p>
-      <p>xxxxxxxxx</p>
-      <p>xxxxxxxxx</p>
-      <p>xxxxxxxxx</p>
+      <p>Tiempo: {{ timerMinuto }}:{{ timerZero }}{{ timerCount }}</p>
+      <p>Intentos Palabra 1: {{this.intents1}}</p>
+      <p>Intentos Palabra 2: {{this.intents2}}</p>
+      <p>Intentos Palabra 3: {{this.intents3}}</p>
+      <p>Intentos Palabra 4: {{this.intents4}}</p>
+      <p>Intentos Palabra 5: {{this.intents5}}</p>
+      <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fparaudl.alumnes.inspedralbes.cat%2F&layout=button&size=large&width=103&height=28&appId" width="103" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
     </div>
     <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK!</a>
     </div>
   </div>
      
@@ -468,6 +472,7 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
