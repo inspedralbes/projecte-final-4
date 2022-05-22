@@ -60,9 +60,9 @@
           </p>
         </div>
       </div>
-          <a class="waves-effect waves-light btn" v-on:click="comprovar()"
-            >Comprovar Paraula 1</a
-          ><br><br>
+      <a class="waves-effect waves-light btn" v-on:click="comprovar()"
+        >Comprovar Paraula 1</a
+      ><br /><br />
       <div id="tecladoCompleto1">
         <div class="row">
           <button
@@ -329,7 +329,7 @@
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar2()"
         >Comprovar Paraula 2</a
-      ><br><br>
+      ><br /><br />
       <div id="tecladoCompleto2"></div>
       <!-- <h4>3 Paraula</h4> -->
       <div class="row center-align margin-celdas">
@@ -364,8 +364,8 @@
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar3()"
         >Comprovar Paraula 3</a
-      ><br><br>
-            <div id="tecladoCompleto3"></div>
+      ><br /><br />
+      <div id="tecladoCompleto3"></div>
 
       <!-- <h4>4 Paraula</h4> -->
       <div class="row center-align margin-celdas">
@@ -400,8 +400,8 @@
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar4()"
         >Comprovar Paraula 4</a
-      ><br><br>
-            <div id="tecladoCompleto4"></div>
+      ><br /><br />
+      <div id="tecladoCompleto4"></div>
 
       <!-- <h4>5 Paraula</h4> -->
       <div class="row center-align margin-celdas">
@@ -434,24 +434,63 @@
           </p>
         </div>
       </div>
-      <a id="modal-verificacion" class="waves-effect waves-light btn" href="#modal2" v-on:click="comprovar5()"
+      <a
+        id="modal-verificacion"
+        class="waves-effect waves-light btn"
+        href="#modal2"
+        v-on:click="comprovar5()"
         >Comprovar Paraula 5</a
-      ><br><br>
+      ><br /><br />
       <!-- Modal partida finalizada -->
-  <div id="modal2" class="modal">
-    <div class="modal-content">
-      <h4>Puntuació</h4>
-      <p>Tiempo: 00:00</p>
-      <p>xxxxxxxxx</p>
-      <p>xxxxxxxxx</p>
-      <p>xxxxxxxxx</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
-     
-            <div id="tecladoCompleto5"></div>
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <h4>Puntuación</h4>
+          <p>Tiempo: 00:00</p>
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Palabra</th>
+                <th>Intentos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>{{ this.palabraCompleta1 }}</td>
+                <td>{{ this.intents1 }}</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>{{ this.palabraCompleta2 }}</td>
+                <td>{{ this.intents2 }}</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>{{ this.palabraCompleta3 }}</td>
+                <td>{{ this.intents3 }}</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>{{ this.palabraCompleta4 }}</td>
+                <td>{{ this.intents4 }}</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>{{ this.palabraCompleta5 }}</td>
+                <td>{{ this.intents5 }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat"
+            >Cerrar</a
+          >
+        </div>
+      </div>
+
+      <div id="tecladoCompleto5"></div>
 
       <p id="Felizitarpartida"></p>
       <div id="botonfinalizar" style="display: none">
@@ -484,6 +523,7 @@ export default {
       vectorNumbers: [],
 
       //PARAULA 1
+      palabraCompleta1: "",
       paraula1: ["", "", "", "", ""],
       estatParaula1: ["", "", "", "", ""],
       solucio1: ["", "", "", "", ""],
@@ -492,6 +532,7 @@ export default {
       definicion1: "",
 
       //PARAULA 2
+      palabraCompleta2: "",
       paraula2: ["", "", "", "", ""],
       estatParaula2: ["", "", "", "", ""],
       solucio2: ["B", "B", "B", "B", "B"],
@@ -500,6 +541,8 @@ export default {
       definicion2: "",
 
       //PARAULA 3
+      palabraCompleta3: "",
+
       paraula3: ["", "", "", "", ""],
       estatParaula3: ["", "", "", "", ""],
       solucio3: ["B", "B", "B", "B", "B"],
@@ -508,6 +551,8 @@ export default {
       definicion3: "",
 
       //PARAULA 4
+      palabraCompleta4: "",
+
       paraula4: ["", "", "", "", ""],
       estatParaula4: ["", "", "", "", ""],
       solucio4: ["B", "B", "B", "B", "B"],
@@ -516,6 +561,8 @@ export default {
       definicion4: "",
 
       //PARAULA 5
+      palabraCompleta5: "",
+
       paraula5: ["", "", "", "", ""],
       estatParaula5: ["", "", "", "", ""],
       solucio5: ["B", "B", "B", "B", "B"],
@@ -572,29 +619,34 @@ export default {
       document.getElementById("mostrarjuego").style.display = "block";
       document.getElementById("normasjuego").style.display = "none";
       //PARAULA 1
+      this.palabraCompleta1 = this.paraulaJson[this.randomNumber[0]].palabra;
       console.log(this.paraulaJson[this.randomNumber[0]].palabra);
       this.solucio1 = this.paraulaJson[this.randomNumber[0]].palabra.split("");
       this.definicion1 = this.paraulaJson[this.randomNumber[0]].definicion;
       console.log(this.solucio1);
       //PARAULA 2
+      this.palabraCompleta2 = this.paraulaJson[this.randomNumber[1]].palabra;
       console.log(this.paraulaJson[this.randomNumber[1]].palabra);
       this.solucio2 = this.paraulaJson[this.randomNumber[1]].palabra.split("");
       this.definicion2 = this.paraulaJson[this.randomNumber[1]].definicion;
 
       console.log(this.solucio2);
       //PARAULA 3
+      this.palabraCompleta3 = this.paraulaJson[this.randomNumber[2]].palabra;
       console.log(this.paraulaJson[this.randomNumber[2]].palabra);
       this.solucio3 = this.paraulaJson[this.randomNumber[2]].palabra.split("");
       this.definicion3 = this.paraulaJson[this.randomNumber[2]].definicion;
 
       console.log(this.solucio3);
       //PARAULA 4
+      this.palabraCompleta4 = this.paraulaJson[this.randomNumber[3]].palabra;
       console.log(this.paraulaJson[this.randomNumber[3]].palabra);
       this.solucio4 = this.paraulaJson[this.randomNumber[3]].palabra.split("");
       this.definicion4 = this.paraulaJson[this.randomNumber[3]].definicion;
 
       console.log(this.solucio4);
       //PARAULA 5
+      this.palabraCompleta5 = this.paraulaJson[this.randomNumber[4]].palabra;
       console.log(this.paraulaJson[this.randomNumber[4]].palabra);
       this.solucio5 = this.paraulaJson[this.randomNumber[4]].palabra.split("");
       this.definicion5 = this.paraulaJson[this.randomNumber[4]].definicion;
@@ -761,7 +813,7 @@ export default {
           console.log("estatSolucio: ", this.estatSolucio[i]);
           console.log("Counter correctes: ", this.solucio1Count);
         }
-        //Esta bien 
+        //Esta bien
         if (this.solucio1Count >= 5) {
           this.count = 0;
           this.partida++;
