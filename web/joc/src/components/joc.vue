@@ -1158,4 +1158,12 @@ console.log(data)
     margin-right: 16%;
   }
 }
+@media screen and (min-width: 200px) and (max-width: 800px) {
+  .btn-large {
+    height: 34px !important;
+    line-height: 34px !important;
+    font-size: 13px !important;
+    padding: 0 16px !important;
+  }
+}
 </style>
