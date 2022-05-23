@@ -14,12 +14,15 @@
       <h3>Normativa del joc</h3>
       <h4 style="padding: 50px">
         <b>OBJECTIU DEL JOC</b><br /><br />
-        L'objectiu del joc es aconseguir les 5 paraules que necessitem en el menys temps posible.
-Contra mes rapid conseguiexis les 5 paraules , mes punts y mes alt en el ranking estaras.<br /><br />
-        Contra mes rapid i menys intents conseguiexis les 5 paraules , mes punts y mes alt en el
-        ranking estaras.<br /><br />
+        L'objectiu del joc es aconseguir les 5 paraules que necessitem en el
+        menys temps posible. Contra mes rapid conseguiexis les 5 paraules , mes
+        punts y mes alt en el ranking estaras.<br /><br />
+        Contra mes rapid i menys intents conseguiexis les 5 paraules , mes punts
+        y mes alt en el ranking estaras.<br /><br />
         <b>NORMATIVA DEL JOC</b><br /><br />
-       Nomes es poden escriure les paraules amb les lletres que nosaltres donem , si introdueixes alguna lletra que no esta en la part dreta de la pantalla automaticament estara malament
+        Nomes es poden escriure les paraules amb les lletres que nosaltres donem
+        , si introdueixes alguna lletra que no esta en la part dreta de la
+        pantalla automaticament estara malament
       </h4>
     </div>
     <div class="oculta" id="cronoTimer">
@@ -443,13 +446,17 @@ Contra mes rapid conseguiexis les 5 paraules , mes punts y mes alt en el ranking
       <div id="modal2" class="modal">
         <div class="modal-content">
           <h4>Puntuación</h4>
-          <p>Tiempo: {{this.timerFinalMinuto}}:{{this.timerZero}}{{this.timerFinal}}</p>
+          <p>
+            Tiempo: {{ this.timerFinalMinuto }}:{{ this.timerZero
+            }}{{ this.timerFinal }}
+          </p>
           <table>
             <thead>
               <tr>
                 <th>#</th>
                 <th>Palabra</th>
                 <th>Intentos</th>
+                <th>Pista</th>
               </tr>
             </thead>
             <tbody>
@@ -457,31 +464,45 @@ Contra mes rapid conseguiexis les 5 paraules , mes punts y mes alt en el ranking
                 <td>1</td>
                 <td>{{ this.palabraCompleta1 }}</td>
                 <td>{{ this.intents1 }}</td>
+                <td>{{ this.UsaPista1 }}</td>
               </tr>
               <tr>
                 <td>2</td>
                 <td>{{ this.palabraCompleta2 }}</td>
                 <td>{{ this.intents2 }}</td>
+                <td>{{ this.UsaPista2 }}</td>
               </tr>
               <tr>
                 <td>3</td>
                 <td>{{ this.palabraCompleta3 }}</td>
                 <td>{{ this.intents3 }}</td>
+                <td>{{ this.UsaPista3 }}</td>
               </tr>
               <tr>
                 <td>4</td>
                 <td>{{ this.palabraCompleta4 }}</td>
                 <td>{{ this.intents4 }}</td>
+                <td>{{ this.UsaPista4 }}</td>
               </tr>
               <tr>
                 <td>5</td>
                 <td>{{ this.palabraCompleta5 }}</td>
                 <td>{{ this.intents5 }}</td>
+                <td>{{ this.UsaPista5 }}</td>
               </tr>
             </tbody>
           </table>
-          <br><br>
-          <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fparaudl.alumnes.inspedralbes.cat%2F&layout=button&size=large&width=103&height=28&appId" width="103" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+          <br /><br />
+          <iframe
+            src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fparaudl.alumnes.inspedralbes.cat%2F&layout=button&size=large&width=103&height=28&appId"
+            width="103"
+            height="28"
+            style="border: none; overflow: hidden"
+            scrolling="no"
+            frameborder="0"
+            allowfullscreen="true"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          ></iframe>
         </div>
         <div class="modal-footer">
           <a href="#!" class="modal-close waves-effect waves-green btn-flat"
@@ -511,8 +532,8 @@ export default {
   data() {
     return {
       //GENERAL
-      timerFinal:"",
-      timerFinalMinuto:"",
+      timerFinal: "",
+      timerFinalMinuto: "",
       estatSolucio: ["0", "0", "0", "0", "0"],
       letra: "",
       count: 0,
@@ -523,6 +544,7 @@ export default {
       timerMinuto: 0,
       timerZero: 0,
       vectorNumbers: [],
+      numeroPistas: 0,
 
       //PARAULA 1
       palabraCompleta1: "",
@@ -532,6 +554,7 @@ export default {
       solucio1Count: 0,
       intents1: 0,
       definicion1: "",
+      UsaPista1: "NO",
 
       //PARAULA 2
       palabraCompleta2: "",
@@ -541,6 +564,7 @@ export default {
       solucio2Count: 0,
       intents2: 0,
       definicion2: "",
+      UsaPista2: "NO",
 
       //PARAULA 3
       palabraCompleta3: "",
@@ -551,6 +575,7 @@ export default {
       solucio3Count: 0,
       intents3: 0,
       definicion3: "",
+      UsaPista3: "NO",
 
       //PARAULA 4
       palabraCompleta4: "",
@@ -561,16 +586,17 @@ export default {
       solucio4Count: 0,
       intents4: 0,
       definicion4: "",
+      UsaPista4: "NO",
 
       //PARAULA 5
       palabraCompleta5: "",
-
       paraula5: ["", "", "", "", ""],
       estatParaula5: ["", "", "", "", ""],
       solucio5: ["B", "B", "B", "B", "B"],
       solucio5Count: 0,
       intents5: 0,
       definicion5: "",
+      UsaPista5: "NO",
     };
   },
   mounted() {
@@ -826,8 +852,11 @@ export default {
           this.solucio1Count = 0;
         }
         this.intents1++;
+        //PISTA 1
         if (this.intents1 >= 10) {
           document.getElementById("pista1").classList.remove("oculta");
+          this.numeroPistas++;
+          this.UsaPista1 = "SI";
         }
       }
     },
@@ -865,8 +894,11 @@ export default {
           this.solucio2Count = 0;
         }
         this.intents2++;
+        //PISTA
         if (this.intents2 >= 10) {
           document.getElementById("pista2").classList.remove("oculta");
+          this.numeroPistas++;
+          this.UsaPista2 = "SI";
         }
       }
     },
@@ -904,8 +936,11 @@ export default {
           this.solucio3Count = 0;
         }
         this.intents3++;
+        //PISTA
         if (this.intents3 >= 10) {
           document.getElementById("pista3").classList.remove("oculta");
+          this.numeroPistas++;
+          this.UsaPista3 = "SI";
         }
       }
     },
@@ -943,8 +978,11 @@ export default {
           this.solucio4Count = 0;
         }
         this.intents4++;
+        //PISTA
         if (this.intents4 >= 10) {
           document.getElementById("pista4").classList.remove("oculta");
+          this.numeroPistas++;
+          this.UsaPista4 = "SI";
         }
       }
     },
@@ -974,8 +1012,8 @@ export default {
         }
         //ESTA BIEN
         if (this.solucio5Count >= 5) {
-          this.timerFinal=this.timerCount;
-          this.timerFinalMinuto=this.timerMinuto;
+          this.timerFinal = this.timerCount;
+          this.timerFinalMinuto = this.timerMinuto;
           this.count = 0;
           this.partida++;
           var elemento = document.getElementById("modal-verificacion");
@@ -985,8 +1023,11 @@ export default {
           this.solucio5Count = 0;
         }
         this.intents5++;
+        //PISTA
         if (this.intents5 >= 10) {
           document.getElementById("pista5").classList.remove("oculta");
+          this.numeroPistas++;
+          this.UsaPista5 = "SI";
         }
       }
     },
