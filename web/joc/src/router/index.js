@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import PuntuacionsVue from '../components/Puntuacions.vue'
+import PuntuacionsVue from '../views/PuntuacionsView.vue'
 import HomeView from '../views/HomeView.vue'
 import AdminView from '../views/adminView.vue'
 
