@@ -8,21 +8,22 @@
       class="waves-effect waves-light btn-large"
       v-on:click="iniciarPartida()"
     >
-      Començar Partida
+      Empezar Partida
+
     </button>
     <div id="normasjuego">
-      <h3>Normativa del joc</h3>
+      <h3>Normativa del juego</h3>
       <h4 style="padding: 50px">
-        <b>OBJECTIU DEL JOC</b><br /><br />
-        L'objectiu del joc es aconseguir les 5 paraules que necessitem en el
-        menys temps posible. Contra mes rapid conseguiexis les 5 paraules , mes
-        punts y mes alt en el ranking estaras.<br /><br />
-        Contra mes rapid i menys intents conseguiexis les 5 paraules , mes punts
-        y mes alt en el ranking estaras.<br /><br />
-        <b>NORMATIVA DEL JOC</b><br /><br />
-        Nomes es poden escriure les paraules amb les lletres que nosaltres donem
-        , si introdueixes alguna lletra que no esta en la part dreta de la
-        pantalla automaticament estara malament
+        <b>OBJETIVO DEL JUEGO</b><br /><br />
+       El objetivo del juego es conseguir las 5 palabras que necesitamos en el
+        menos tiempo posible. Contra más rápido consigue las 5 palabras , más
+        puntos y más alto en el ranking estarás.<br /><br />
+       Contra más rápido y menos intenso conseguirás las 5 palabras, más puntos y más alto en el ranking estarás.
+<br /><br />
+        <b>NORMATIVA DEL JUEGO</b><br /><br />
+        Solo se pueden escribir las palabras con las letras que nosotros damos
+        , si introduces alguna letra que no está en la parte derecha de la
+        pantalla automáticamente estará mal
       </h4>
     </div>
     <div class="oculta" id="cronoTimer">
