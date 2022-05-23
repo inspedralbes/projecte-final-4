@@ -56,7 +56,12 @@
       <div class="row center-align margin-celdas oculta" id="pista1">
         <div class="pista-responsive" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p readonly id="textarea1" class="materialize-textarea" style="padding: 5px;">
+          <p
+            readonly
+            id="textarea1"
+            class="materialize-textarea"
+            style="padding: 5px"
+          >
             {{ this.definicion1 }}
           </p>
         </div>
@@ -147,7 +152,6 @@
           >
             P
           </button>
-          
         </div>
         <div class="row">
           <button
@@ -324,7 +328,12 @@
       <div class="row center-align margin-celdas oculta" id="pista2">
         <div class="pista-responsive" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p readonly id="textarea1" class="materialize-textarea" style="padding: 5px;">
+          <p
+            readonly
+            id="textarea1"
+            class="materialize-textarea"
+            style="padding: 5px"
+          >
             {{ this.definicion2 }}
           </p>
         </div>
@@ -359,7 +368,12 @@
       <div class="row center-align margin-celdas oculta" id="pista3">
         <div class="pista-responsive" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p readonly id="textarea1" class="materialize-textarea" style="padding: 5px;">
+          <p
+            readonly
+            id="textarea1"
+            class="materialize-textarea"
+            style="padding: 5px"
+          >
             {{ this.definicion3 }}
           </p>
         </div>
@@ -395,7 +409,12 @@
       <div class="row center-align margin-celdas oculta" id="pista4">
         <div class="pista-responsive" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p readonly id="textarea1" class="materialize-textarea" style="padding: 5px;">
+          <p
+            readonly
+            id="textarea1"
+            class="materialize-textarea"
+            style="padding: 5px"
+          >
             {{ this.definicion4 }}
           </p>
         </div>
@@ -431,7 +450,12 @@
       <div class="row center-align margin-celdas oculta" id="pista5">
         <div class="pista-responsive" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p readonly id="textarea1" class="materialize-textarea" style="padding: 5px;">
+          <p
+            readonly
+            id="textarea1"
+            class="materialize-textarea"
+            style="padding: 5px"
+          >
             {{ this.definicion5 }}
           </p>
         </div>
@@ -508,21 +532,23 @@
         <div class="modal-footer">
           <div class="row">
             <div class="col s4">
-              <input id="user" type="text" class="validate">
-                  <label for="user">Usuario</label>
+              <input id="userPunt" type="text" class="validate" />
+              <label for="user">Usuario</label>
             </div>
             <div class="col s4">
-               <a href="#!" class="modal-close waves-effect waves-green btn-flat"
-            >Guardar puntuación</a
-          >
+              <button v-on:click="guardarPuntuacion()" class="modal-close waves-effect waves-green btn">
+                Guardar puntuación
+              </button>
             </div>
             <div class="col s4">
-               <a href="#!" class="modal-close waves-effect waves-green btn-flat"
-            >Cerrar</a
-          >
+              <button
+                href="#!"
+                class="modal-close waves-effect waves-green btn"
+              >
+                Cerrar
+              </button>
             </div>
           </div>
-         
         </div>
       </div>
 
@@ -649,6 +675,38 @@ export default {
         console.log("Vector", j, " ", this.vectorNumbers);
         console.log("Number", j, " ", this.randomNumber);
       }
+    },
+    guardarPuntuacion() {
+      var usuario = document.getElementById("userPunt").value;
+
+      let data = {
+        user: usuario,
+        tiempo: this.timerFinalMinuto+":"+this.timerZero+this.timerFinal,
+        pistas: this.numeroPistas,
+        intentos1: this.intents1,
+        intentos2: this.intents2,
+        intentos3: this.intents3,
+        intentos4: this.intents4,
+        intentos5: this.intents5,
+      };
+console.log(data)
+      fetch(
+        "http://paraudl.back.alumnes.inspedralbes.cat:7099/api/todos/puntuaciones",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Success:", data);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
     },
     iniciarPartida() {
       window.setInterval(() => {
@@ -1089,14 +1147,14 @@ export default {
 .margin-celdas {
   padding-left: 14%;
 }
-@media screen and (min-width: 800px) and (max-width: 2000px) { 
+@media screen and (min-width: 800px) and (max-width: 2000px) {
   .pista-responsive {
-  margin-right: 16%;
+    margin-right: 16%;
+  }
 }
- }
- @media screen and (min-width: 200px) and (max-width: 800px) { 
+@media screen and (min-width: 200px) and (max-width: 800px) {
   .pista-responsive {
-  margin-right: 16%;
+    margin-right: 16%;
+  }
 }
- }
 </style>
