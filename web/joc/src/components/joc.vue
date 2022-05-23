@@ -75,7 +75,7 @@
           <button
             v-on:click="apretar($event)"
             name="Q"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-0"
           >
             Q
@@ -83,7 +83,7 @@
           <button
             v-on:click="apretar($event)"
             name="W"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-1"
           >
             W
@@ -91,7 +91,7 @@
           <button
             v-on:click="apretar($event)"
             name="E"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-2"
           >
             E
@@ -100,7 +100,7 @@
           <button
             v-on:click="apretar($event)"
             name="R"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-3"
           >
             R
@@ -108,7 +108,7 @@
           <button
             v-on:click="apretar($event)"
             name="T"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-4"
           >
             T
@@ -116,7 +116,7 @@
           <button
             v-on:click="apretar($event)"
             name="Y"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-5"
           >
             Y
@@ -124,7 +124,7 @@
           <button
             v-on:click="apretar($event)"
             name="U"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-5"
           >
             U
@@ -132,7 +132,7 @@
           <button
             v-on:click="apretar($event)"
             name="I"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-5"
           >
             I
@@ -140,7 +140,7 @@
           <button
             v-on:click="apretar($event)"
             name="O"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-5"
           >
             O
@@ -148,7 +148,7 @@
           <button
             v-on:click="apretar($event)"
             name="P"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-5"
           >
             P
@@ -158,7 +158,7 @@
           <button
             v-on:click="apretar($event)"
             name="A"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-0"
           >
             A
@@ -166,7 +166,7 @@
           <button
             v-on:click="apretar($event)"
             name="S"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-1"
           >
             S
@@ -174,7 +174,7 @@
           <button
             v-on:click="apretar($event)"
             name="D"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-2"
           >
             D
@@ -183,7 +183,7 @@
           <button
             v-on:click="apretar($event)"
             name="F"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-3"
           >
             F
@@ -191,7 +191,7 @@
           <button
             v-on:click="apretar($event)"
             name="G"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-4"
           >
             G
@@ -199,7 +199,7 @@
           <button
             v-on:click="apretar($event)"
             name="H"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-5"
           >
             H
@@ -207,7 +207,7 @@
           <button
             v-on:click="apretar($event)"
             name="J"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-5"
           >
             J
@@ -215,7 +215,7 @@
           <button
             v-on:click="apretar($event)"
             name="K"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-5"
           >
             K
@@ -223,7 +223,7 @@
           <button
             v-on:click="apretar($event)"
             name="L"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-5"
           >
             L
@@ -231,7 +231,7 @@
           <button
             v-on:click="apretar($event)"
             name="Ñ"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-5"
           >
             Ñ
@@ -241,7 +241,7 @@
           <button
             v-on:click="apretar($event)"
             name="Z"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-0"
           >
             Z
@@ -249,7 +249,7 @@
           <button
             v-on:click="apretar($event)"
             name="X"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-1"
           >
             X
@@ -257,7 +257,7 @@
           <button
             v-on:click="apretar($event)"
             name="C"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-2"
           >
             C
@@ -266,7 +266,7 @@
           <button
             v-on:click="apretar($event)"
             name="V"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-3"
           >
             V
@@ -274,7 +274,7 @@
           <button
             v-on:click="apretar($event)"
             name="B"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-4"
           >
             B
@@ -282,7 +282,7 @@
           <button
             v-on:click="apretar($event)"
             name="N"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-5"
           >
             N
@@ -290,13 +290,13 @@
           <button
             v-on:click="apretar($event)"
             name="M"
-            class="waves-effect waves-light btn"
+            class="waves-effect waves-light btn-large"
             id="lletre-5"
           >
             M
           </button>
           <button
-            class="waves-effect waves-light btn red ocultar-del-movil"
+            class="waves-effect waves-light btn-large red ocultar-del-movil"
             v-on:click="deleteLetter()"
           >
             Del
