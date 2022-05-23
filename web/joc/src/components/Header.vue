@@ -13,8 +13,8 @@
         <li><a class="modal-trigger" href="#modal1">Admin</a></li>
       </ul>
     </div>
+    <!-- MODAL LOGIN ADMIN -->
     <div class="container">
-      <!-- Modal Structure -->
       <div id="modal1" class="modal #66bb6a green lighten-1">
         <div class="modal-content">
           <div class="row">

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- TAULA PUNTUACIONS DE LA BASE DE DADES -->
     <table class="striped" id="todotable">
       <thead>
         <tr>
@@ -40,6 +41,7 @@ export default {
     };
   },
   mounted() {
+    // PETICIÓ GET DE LES PUNTUACIONS A LA BASE DE DADES
     fetch("http://paraudl.back.alumnes.inspedralbes.cat:7099/api/todos/puntuaciones")
       .then((response) => response.json())
       .then((data) => {

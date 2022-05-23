@@ -1,37 +1,37 @@
 <template>
   <div>
-    <!-- <h4>1 Paraula</h4> -->
-
-    <!-- <h4>1 Paraula {{ this.palabrasjson.palabra }}</h4> -->
-    <button
-      id="buttonpartida"
-      class="waves-effect waves-light btn-large"
-      v-on:click="iniciarPartida()"
-    >
+    <!-- Botó que crida la funció per començar la partida -->
+    <button id="buttonpartida" class="waves-effect waves-light btn-large" v-on:click="iniciarPartida()">
       Empezar Partida
 
     </button>
+
     <div id="normasjuego">
       <h3>Normativa del juego</h3>
       <h4 style="padding: 50px">
         <b>OBJETIVO DEL JUEGO</b><br /><br />
-       El objetivo del juego es conseguir las 5 palabras que necesitamos en el
+        El objetivo del juego es conseguir las 5 palabras que necesitamos en el
         menos tiempo posible. Contra más rápido consigue las 5 palabras , más
         puntos y más alto en el ranking estarás.<br /><br />
-       Contra más rápido y menos intenso conseguirás las 5 palabras, más puntos y más alto en el ranking estarás.
-<br /><br />
+        Contra más rápido y menos intenso conseguirás las 5 palabras, más puntos y más alto en el ranking estarás.
+        <br /><br />
         <b>NORMATIVA DEL JUEGO</b><br /><br />
         Solo se pueden escribir las palabras con las letras que nosotros damos
         , si introduces alguna letra que no está en la parte derecha de la
         pantalla automáticamente estará mal
       </h4>
     </div>
+
+    <!-- Cronòmetre amb el temps que portes de partida -->
     <div class="oculta" id="cronoTimer">
       <h1 class="waves-effect waves-light btn-large blue">
         TIEMPO: {{ timerMinuto }}:{{ timerZero }}{{ timerCount }}
       </h1>
     </div>
+
     <div id="mostrarjuego" style="display: none" onload="countUpTimer()">
+
+      <!-- Primera paraula -->
       <div class="row center-align margin-celdas">
         <div id="1div0" class="col-grid col m2 z-depth-4">
           <h3>{{ this.paraula1[0] }}</h3>
@@ -50,260 +50,118 @@
         </div>
         <div class="col m2">
           <a class="btn-floating btn-large waves-effect waves-light red">{{
-            this.intents1
+              this.intents1
           }}</a>
         </div>
       </div>
+
       <div class="row center-align margin-celdas oculta" id="pista1">
         <div class="pista-responsive" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p
-            readonly
-            id="textarea1"
-            class="materialize-textarea"
-            style="padding: 5px"
-          >
+          <p readonly id="textarea1" class="materialize-textarea" style="padding: 5px">
             {{ this.definicion1 }}
           </p>
         </div>
       </div>
-      <a class="waves-effect waves-light btn" v-on:click="comprovar()"
-        >Comprovar Paraula 1</a
-      ><br /><br />
+      <a class="waves-effect waves-light btn" v-on:click="comprovar()">Comprovar Paraula 1</a><br /><br />
+      <!-- Teclat -->
       <div id="tecladoCompleto1">
         <div class="row">
-          <button
-            v-on:click="apretar($event)"
-            name="Q"
-            class="waves-effect waves-light btn-large"
-            id="lletre-0"
-          >
+          <button v-on:click="apretar($event)" name="Q" class="waves-effect waves-light btn-large" id="lletre-0">
             Q
           </button>
-          <button
-            v-on:click="apretar($event)"
-            name="W"
-            class="waves-effect waves-light btn-large"
-            id="lletre-1"
-          >
+          <button v-on:click="apretar($event)" name="W" class="waves-effect waves-light btn-large" id="lletre-1">
             W
           </button>
-          <button
-            v-on:click="apretar($event)"
-            name="E"
-            class="waves-effect waves-light btn-large"
-            id="lletre-2"
-          >
+          <button v-on:click="apretar($event)" name="E" class="waves-effect waves-light btn-large" id="lletre-2">
             E
           </button>
 
-          <button
-            v-on:click="apretar($event)"
-            name="R"
-            class="waves-effect waves-light btn-large"
-            id="lletre-3"
-          >
+          <button v-on:click="apretar($event)" name="R" class="waves-effect waves-light btn-large" id="lletre-3">
             R
           </button>
-          <button
-            v-on:click="apretar($event)"
-            name="T"
-            class="waves-effect waves-light btn-large"
-            id="lletre-4"
-          >
+          <button v-on:click="apretar($event)" name="T" class="waves-effect waves-light btn-large" id="lletre-4">
             T
           </button>
-          <button
-            v-on:click="apretar($event)"
-            name="Y"
-            class="waves-effect waves-light btn-large"
-            id="lletre-5"
-          >
+          <button v-on:click="apretar($event)" name="Y" class="waves-effect waves-light btn-large" id="lletre-5">
             Y
           </button>
-          <button
-            v-on:click="apretar($event)"
-            name="U"
-            class="waves-effect waves-light btn-large"
-            id="lletre-5"
-          >
+          <button v-on:click="apretar($event)" name="U" class="waves-effect waves-light btn-large" id="lletre-5">
             U
           </button>
-          <button
-            v-on:click="apretar($event)"
-            name="I"
-            class="waves-effect waves-light btn-large"
-            id="lletre-5"
-          >
+          <button v-on:click="apretar($event)" name="I" class="waves-effect waves-light btn-large" id="lletre-5">
             I
           </button>
-          <button
-            v-on:click="apretar($event)"
-            name="O"
-            class="waves-effect waves-light btn-large"
-            id="lletre-5"
-          >
+          <button v-on:click="apretar($event)" name="O" class="waves-effect waves-light btn-large" id="lletre-5">
             O
           </button>
-          <button
-            v-on:click="apretar($event)"
-            name="P"
-            class="waves-effect waves-light btn-large"
-            id="lletre-5"
-          >
+          <button v-on:click="apretar($event)" name="P" class="waves-effect waves-light btn-large" id="lletre-5">
             P
           </button>
         </div>
         <div class="row">
-          <button
-            v-on:click="apretar($event)"
-            name="A"
-            class="waves-effect waves-light btn-large"
-            id="lletre-0"
-          >
+          <button v-on:click="apretar($event)" name="A" class="waves-effect waves-light btn-large" id="lletre-0">
             A
           </button>
-          <button
-            v-on:click="apretar($event)"
-            name="S"
-            class="waves-effect waves-light btn-large"
-            id="lletre-1"
-          >
+          <button v-on:click="apretar($event)" name="S" class="waves-effect waves-light btn-large" id="lletre-1">
             S
           </button>
-          <button
-            v-on:click="apretar($event)"
-            name="D"
-            class="waves-effect waves-light btn-large"
-            id="lletre-2"
-          >
+          <button v-on:click="apretar($event)" name="D" class="waves-effect waves-light btn-large" id="lletre-2">
             D
           </button>
 
-          <button
-            v-on:click="apretar($event)"
-            name="F"
-            class="waves-effect waves-light btn-large"
-            id="lletre-3"
-          >
+          <button v-on:click="apretar($event)" name="F" class="waves-effect waves-light btn-large" id="lletre-3">
             F
           </button>
-          <button
-            v-on:click="apretar($event)"
-            name="G"
-            class="waves-effect waves-light btn-large"
-            id="lletre-4"
-          >
+          <button v-on:click="apretar($event)" name="G" class="waves-effect waves-light btn-large" id="lletre-4">
             G
           </button>
-          <button
-            v-on:click="apretar($event)"
-            name="H"
-            class="waves-effect waves-light btn-large"
-            id="lletre-5"
-          >
+          <button v-on:click="apretar($event)" name="H" class="waves-effect waves-light btn-large" id="lletre-5">
             H
           </button>
-          <button
-            v-on:click="apretar($event)"
-            name="J"
-            class="waves-effect waves-light btn-large"
-            id="lletre-5"
-          >
+          <button v-on:click="apretar($event)" name="J" class="waves-effect waves-light btn-large" id="lletre-5">
             J
           </button>
-          <button
-            v-on:click="apretar($event)"
-            name="K"
-            class="waves-effect waves-light btn-large"
-            id="lletre-5"
-          >
+          <button v-on:click="apretar($event)" name="K" class="waves-effect waves-light btn-large" id="lletre-5">
             K
           </button>
-          <button
-            v-on:click="apretar($event)"
-            name="L"
-            class="waves-effect waves-light btn-large"
-            id="lletre-5"
-          >
+          <button v-on:click="apretar($event)" name="L" class="waves-effect waves-light btn-large" id="lletre-5">
             L
           </button>
-          <button
-            v-on:click="apretar($event)"
-            name="Ñ"
-            class="waves-effect waves-light btn-large"
-            id="lletre-5"
-          >
+          <button v-on:click="apretar($event)" name="Ñ" class="waves-effect waves-light btn-large" id="lletre-5">
             Ñ
           </button>
         </div>
         <div class="row">
-          <button
-            v-on:click="apretar($event)"
-            name="Z"
-            class="waves-effect waves-light btn-large"
-            id="lletre-0"
-          >
+          <button v-on:click="apretar($event)" name="Z" class="waves-effect waves-light btn-large" id="lletre-0">
             Z
           </button>
-          <button
-            v-on:click="apretar($event)"
-            name="X"
-            class="waves-effect waves-light btn-large"
-            id="lletre-1"
-          >
+          <button v-on:click="apretar($event)" name="X" class="waves-effect waves-light btn-large" id="lletre-1">
             X
           </button>
-          <button
-            v-on:click="apretar($event)"
-            name="C"
-            class="waves-effect waves-light btn-large"
-            id="lletre-2"
-          >
+          <button v-on:click="apretar($event)" name="C" class="waves-effect waves-light btn-large" id="lletre-2">
             C
           </button>
 
-          <button
-            v-on:click="apretar($event)"
-            name="V"
-            class="waves-effect waves-light btn-large"
-            id="lletre-3"
-          >
+          <button v-on:click="apretar($event)" name="V" class="waves-effect waves-light btn-large" id="lletre-3">
             V
           </button>
-          <button
-            v-on:click="apretar($event)"
-            name="B"
-            class="waves-effect waves-light btn-large"
-            id="lletre-4"
-          >
+          <button v-on:click="apretar($event)" name="B" class="waves-effect waves-light btn-large" id="lletre-4">
             B
           </button>
-          <button
-            v-on:click="apretar($event)"
-            name="N"
-            class="waves-effect waves-light btn-large"
-            id="lletre-5"
-          >
+          <button v-on:click="apretar($event)" name="N" class="waves-effect waves-light btn-large" id="lletre-5">
             N
           </button>
-          <button
-            v-on:click="apretar($event)"
-            name="M"
-            class="waves-effect waves-light btn-large"
-            id="lletre-5"
-          >
+          <button v-on:click="apretar($event)" name="M" class="waves-effect waves-light btn-large" id="lletre-5">
             M
           </button>
-          <button
-            class="waves-effect waves-light btn-large red ocultar-del-movil"
-            v-on:click="deleteLetter()"
-          >
+          <button class="waves-effect waves-light btn-large red ocultar-del-movil" v-on:click="deleteLetter()">
             Del
           </button>
         </div>
       </div>
 
+      <!-- Segona paraula -->
       <div class="row center-align margin-celdas">
         <div id="2div0" class="col-grid col m2 z-depth-4">
           <h3>{{ this.paraula2[0] }}</h3>
@@ -322,28 +180,22 @@
         </div>
         <div class="col m2">
           <a class="btn-floating btn-large waves-effect waves-light red">{{
-            this.intents2
+              this.intents2
           }}</a>
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista2">
         <div class="pista-responsive" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p
-            readonly
-            id="textarea1"
-            class="materialize-textarea"
-            style="padding: 5px"
-          >
+          <p readonly id="textarea1" class="materialize-textarea" style="padding: 5px">
             {{ this.definicion2 }}
           </p>
         </div>
       </div>
-      <a class="waves-effect waves-light btn" v-on:click="comprovar2()"
-        >Comprovar Paraula 2</a
-      ><br /><br />
+      <a class="waves-effect waves-light btn" v-on:click="comprovar2()">Comprovar Paraula 2</a><br /><br />
       <div id="tecladoCompleto2"></div>
-      <!-- <h4>3 Paraula</h4> -->
+
+      <!-- Tercera paraula -->
       <div class="row center-align margin-celdas">
         <div id="3div0" class="col-grid col m2 z-depth-4">
           <h3>{{ this.paraula3[0] }}</h3>
@@ -362,29 +214,22 @@
         </div>
         <div class="col m2">
           <a class="btn-floating btn-large waves-effect waves-light red">{{
-            this.intents3
+              this.intents3
           }}</a>
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista3">
         <div class="pista-responsive" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p
-            readonly
-            id="textarea1"
-            class="materialize-textarea"
-            style="padding: 5px"
-          >
+          <p readonly id="textarea1" class="materialize-textarea" style="padding: 5px">
             {{ this.definicion3 }}
           </p>
         </div>
       </div>
-      <a class="waves-effect waves-light btn" v-on:click="comprovar3()"
-        >Comprovar Paraula 3</a
-      ><br /><br />
+      <a class="waves-effect waves-light btn" v-on:click="comprovar3()">Comprovar Paraula 3</a><br /><br />
       <div id="tecladoCompleto3"></div>
 
-      <!-- <h4>4 Paraula</h4> -->
+      <!-- Quarta paraula -->
       <div class="row center-align margin-celdas">
         <div id="4div0" class="col-grid col m2 z-depth-4">
           <h3>{{ this.paraula4[0] }}</h3>
@@ -403,29 +248,22 @@
         </div>
         <div class="col m2">
           <a class="btn-floating btn-large waves-effect waves-light red">{{
-            this.intents4
+              this.intents4
           }}</a>
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista4">
         <div class="pista-responsive" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p
-            readonly
-            id="textarea1"
-            class="materialize-textarea"
-            style="padding: 5px"
-          >
+          <p readonly id="textarea1" class="materialize-textarea" style="padding: 5px">
             {{ this.definicion4 }}
           </p>
         </div>
       </div>
-      <a class="waves-effect waves-light btn" v-on:click="comprovar4()"
-        >Comprovar Paraula 4</a
-      ><br /><br />
+      <a class="waves-effect waves-light btn" v-on:click="comprovar4()">Comprovar Paraula 4</a><br /><br />
       <div id="tecladoCompleto4"></div>
 
-      <!-- <h4>5 Paraula</h4> -->
+      <!-- Cinquena paraula -->
       <div class="row center-align margin-celdas">
         <div id="5div0" class="col-grid col m2 z-depth-4">
           <h3>{{ this.paraula5[0] }}</h3>
@@ -444,31 +282,21 @@
         </div>
         <div class="col m2">
           <a class="btn-floating btn-large waves-effect waves-light red">{{
-            this.intents5
+              this.intents5
           }}</a>
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista5">
         <div class="pista-responsive" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p
-            readonly
-            id="textarea1"
-            class="materialize-textarea"
-            style="padding: 5px"
-          >
+          <p readonly id="textarea1" class="materialize-textarea" style="padding: 5px">
             {{ this.definicion5 }}
           </p>
         </div>
       </div>
-      <a
-        id="modal-verificacion"
-        class="waves-effect waves-light btn"
-        href="#modal2"
-        v-on:click="comprovar5()"
-        >Comprovar Paraula 5</a
-      ><br /><br />
-      <!-- Modal partida finalizada -->
+      <a id="modal-verificacion" class="waves-effect waves-light btn" href="#modal2" v-on:click="comprovar5()">Comprovar
+        Paraula 5</a><br /><br />
+      <!-- Modal partida finalitzada -->
       <div id="modal2" class="modal">
         <div class="modal-content">
           <h4>Puntuación</h4>
@@ -521,14 +349,9 @@
           <br /><br />
           <iframe
             src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fparaudl.alumnes.inspedralbes.cat%2F&layout=button&size=large&width=103&height=28&appId"
-            width="103"
-            height="28"
-            style="border: none; overflow: hidden"
-            scrolling="no"
-            frameborder="0"
+            width="103" height="28" style="border: none; overflow: hidden" scrolling="no" frameborder="0"
             allowfullscreen="true"
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-          ></iframe>
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
         </div>
         <div class="modal-footer">
           <div class="row">
@@ -542,10 +365,7 @@
               </button>
             </div>
             <div class="col s4">
-              <button
-                href="#!"
-                class="modal-close waves-effect waves-green btn"
-              >
+              <button href="#!" class="modal-close waves-effect waves-green btn">
                 Cerrar
               </button>
             </div>
@@ -557,14 +377,10 @@
 
       <p id="Felizitarpartida"></p>
       <div id="botonfinalizar" style="display: none">
-        <RouterLink :to="'/puntuacions'" class="waves-effect waves-light btn"
-          >Finalitza Partida</RouterLink
-        >
+        <RouterLink :to="'/puntuacions'" class="waves-effect waves-light btn">Finalitza Partida</RouterLink>
       </div>
 
       <br />
-
-      <!-- TECLAT 6 LLETRES -->
     </div>
   </div>
 </template>
@@ -682,7 +498,7 @@ export default {
 
       let data = {
         user: usuario,
-        tiempo: this.timerFinalMinuto+":"+this.timerZero+this.timerFinal,
+        tiempo: this.timerFinalMinuto + ":" + this.timerZero + this.timerFinal,
         pistas: this.numeroPistas,
         intentos1: this.intents1,
         intentos2: this.intents2,
@@ -690,7 +506,7 @@ export default {
         intentos4: this.intents4,
         intentos5: this.intents5,
       };
-console.log(data)
+      console.log(data)
       fetch(
         "http://paraudl.back.alumnes.inspedralbes.cat:7099/api/todos/puntuaciones",
         {
@@ -1121,6 +937,7 @@ console.log(data)
 .incorrecte {
   background-color: #ff2a2a;
 }
+
 #keyboard-cont {
   margin: 1rem 0;
   display: flex;
@@ -1148,16 +965,19 @@ console.log(data)
 .margin-celdas {
   padding-left: 14%;
 }
+
 @media screen and (min-width: 800px) and (max-width: 2000px) {
   .pista-responsive {
     margin-right: 16%;
   }
 }
+
 @media screen and (min-width: 200px) and (max-width: 800px) {
   .pista-responsive {
     margin-right: 16%;
   }
 }
+
 @media screen and (min-width: 200px) and (max-width: 800px) {
   .btn-large {
     height: 34px !important;
