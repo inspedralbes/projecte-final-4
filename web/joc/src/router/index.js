@@ -20,6 +20,10 @@ const router = createRouter({
     },
     {
       path: "/admin/:user",
+       beforeEnter: (to, from) => {
+      // rechazar la navegación
+      return false
+    },
       name: "admin",
       component: AdminView
     

@@ -54,9 +54,9 @@
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista1">
-        <div class="col m10" style="border: 2px solid black">
+        <div class="pista-responsive" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p readonly id="textarea1" class="materialize-textarea">
+          <p readonly id="textarea1" class="materialize-textarea" style="padding: 5px;">
             {{ this.definicion1 }}
           </p>
         </div>
@@ -147,12 +147,7 @@
           >
             P
           </button>
-          <button
-            class="waves-effect waves-light btn red"
-            v-on:click="deleteLetter()"
-          >
-            Del
-          </button>
+          
         </div>
         <div class="row">
           <button
@@ -295,6 +290,12 @@
           >
             M
           </button>
+          <button
+            class="waves-effect waves-light btn red ocultar-del-movil"
+            v-on:click="deleteLetter()"
+          >
+            Del
+          </button>
         </div>
       </div>
 
@@ -321,9 +322,9 @@
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista2">
-        <div class="col m10" style="border: 2px solid black">
+        <div class="pista-responsive" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p readonly id="textarea1" class="materialize-textarea">
+          <p readonly id="textarea1" class="materialize-textarea" style="padding: 5px;">
             {{ this.definicion2 }}
           </p>
         </div>
@@ -356,9 +357,9 @@
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista3">
-        <div class="col m10" style="border: 2px solid black">
+        <div class="pista-responsive" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p readonly id="textarea1" class="materialize-textarea">
+          <p readonly id="textarea1" class="materialize-textarea" style="padding: 5px;">
             {{ this.definicion3 }}
           </p>
         </div>
@@ -392,9 +393,9 @@
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista4">
-        <div class="col m10" style="border: 2px solid black">
+        <div class="pista-responsive" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p readonly id="textarea1" class="materialize-textarea">
+          <p readonly id="textarea1" class="materialize-textarea" style="padding: 5px;">
             {{ this.definicion4 }}
           </p>
         </div>
@@ -428,9 +429,9 @@
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista5">
-        <div class="col m10" style="border: 2px solid black">
+        <div class="pista-responsive" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p readonly id="textarea1" class="materialize-textarea">
+          <p readonly id="textarea1" class="materialize-textarea" style="padding: 5px;">
             {{ this.definicion5 }}
           </p>
         </div>
@@ -1088,4 +1089,14 @@ export default {
 .margin-celdas {
   padding-left: 14%;
 }
+@media screen and (min-width: 800px) and (max-width: 2000px) { 
+  .pista-responsive {
+  margin-right: 16%;
+}
+ }
+ @media screen and (min-width: 200px) and (max-width: 800px) { 
+  .pista-responsive {
+  margin-right: 16%;
+}
+ }
 </style>
