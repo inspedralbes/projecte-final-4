@@ -4,15 +4,15 @@
     <br>
     <div class="row center-align box">
 
-      <div class="col s6 ">
+      <div class="col s6">
         <a class="waves-effect waves-light btn-large" href="/">HOME</a>
         <br>
         <a class="waves-effect waves-light btn-large" v-on:click="mostrarPalabras()">Ver Palabras</a>
 
       </div>
-      <div class="col s6 ">
-        <input placeholder="Palabra" id="afegirPalabra" type="text" class="validate" />
-        <input placeholder="Definicion" id="afegirDefinicion" type="text" class="validate" />
+      <div class="col s6 form">
+        <input placeholder="PALABRA" id="afegirPalabra" type="text" class="validate" />
+        <input placeholder="DEFINICIÓN" id="afegirDefinicion" type="text" class="validate" />
         <a class="waves-effect waves-light btn-large" v-on:click="añadirPalabra()">Añadir Palabra</a>
 
       </div>
@@ -116,5 +116,11 @@ export default {
 <style>
 .box {
   padding: 10px;
+}
+.form{
+  background-color: rgba(242,242,242,0.5);
+}
+input::placeholder {
+  color: rgba(0,0,0,0.5);
 }
 </style>
