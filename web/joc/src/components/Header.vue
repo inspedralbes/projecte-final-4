@@ -67,7 +67,7 @@ export default {
       var elems = document.querySelectorAll('.modal');
       var instances = M.Modal.init(elems);
     });
-    fetch("http://localhost:3001/api/todos/admin")
+    fetch("http://paraudl.back.alumnes.inspedralbes.cat:7099/api/todos/admin")
       .then((response) => response.json())
       .then((data) => (this.adminData = data));
   },

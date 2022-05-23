@@ -40,7 +40,7 @@ export default {
     };
   },
   mounted() {
-    fetch("http://localhost:3001/api/todos/puntuaciones")
+    fetch("http://paraudl.back.alumnes.inspedralbes.cat:7099/api/todos/puntuaciones")
       .then((response) => response.json())
       .then((data) => {
         console.log(data);

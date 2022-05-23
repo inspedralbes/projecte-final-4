@@ -505,9 +505,23 @@
           ></iframe>
         </div>
         <div class="modal-footer">
-          <a href="#!" class="modal-close waves-effect waves-green btn-flat"
+          <div class="row">
+            <div class="col s4">
+              <input id="user" type="text" class="validate">
+                  <label for="user">Usuario</label>
+            </div>
+            <div class="col s4">
+               <a href="#!" class="modal-close waves-effect waves-green btn-flat"
+            >Guardar puntuación</a
+          >
+            </div>
+            <div class="col s4">
+               <a href="#!" class="modal-close waves-effect waves-green btn-flat"
             >Cerrar</a
           >
+            </div>
+          </div>
+         
         </div>
       </div>
 
