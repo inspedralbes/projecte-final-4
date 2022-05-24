@@ -12,7 +12,7 @@ var helpers = require("../helpers/todos");
 router.route('/')
  .get(helpers.getTodos)
  .post(helpers.createTodo)
-
+// ruta a login admin
  router.route('/admin/')
  .get(helpers.getAdmin)
 
@@ -20,7 +20,7 @@ router.route('/')
   .post(helpers.signin)
   
   
-
+// ruta a puntuaciones
  router.route('/puntuaciones/')
  .get(helpers.getPuntuaciones)
  .post(helpers.createPuntuaciones)
