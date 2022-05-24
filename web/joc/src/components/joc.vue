@@ -578,7 +578,19 @@
 </template>
 
 <script>
+import { AdminStore } from "../stores/store";
+import { storeToRefs } from "pinia";
 export default {
+  setup(){
+    const main = AdminStore();
+
+    const { user } = storeToRefs(main);
+
+    return {
+      user,
+    };
+  },
+  
   data() {
     return {
       //GENERAL
@@ -650,6 +662,7 @@ export default {
     };
   },
   mounted() {
+    console.log(this.user)
     fetch("http://paraudl.back.alumnes.inspedralbes.cat:7099/api/todos")
       .then((response) => response.json())
       .then((data) => (this.paraulaJson = data));

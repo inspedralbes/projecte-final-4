@@ -19,12 +19,17 @@ const router = createRouter({
     
     },
     {
-      path: "/admin/:user",
+      path: "/admin",
       name: "admin",
-      component: AdminView
+      component: AdminView,
+      meta : {                     
+        requireAuth:true      
+    }
     
     },
   ]
 })
+
+
 
 export default router

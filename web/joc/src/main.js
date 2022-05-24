@@ -14,3 +14,18 @@ app.use(createPinia())
 app.use(router)
 app.use(VueAxios, axios) // 👈
 app.mount('#app')
+
+import { AdminStore } from './stores/store'
+const admin = AdminStore()
+
+router.beforeEach((to,from,next)=>{
+	if(to.meta.requireAuth){
+		if(admin.user){
+			next()
+		}else{
+			next({path:'/'})
+		}
+	}else{
+		next()
+	}
+})
