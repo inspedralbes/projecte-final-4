@@ -354,17 +354,17 @@
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
         </div>
         <div class="modal-footer">
-          <div class="row">
-            <div class="col s4">
+          <div class="row center-align margin-celdas">
+            <div class="col s3">
               <input id="userPunt" type="text" class="validate" />
               <label for="user">Usuario</label>
             </div>
-            <div class="col s4">
+            <div class="col s3">
               <button v-on:click="guardarPuntuacion()" class="modal-close waves-effect waves-green btn">
                 Guardar puntuación
               </button>
             </div>
-            <div class="col s4">
+            <div class="col s3">
               <button href="#!" class="modal-close waves-effect waves-green btn">
                 Cerrar
               </button>
@@ -949,6 +949,9 @@ export default {
   display: flex;
 }
 
+#userPunt{
+  background-color: rgba(96, 233, 130, 0.589);
+}
 .second-row {
   margin: 0.5rem 0;
 }
