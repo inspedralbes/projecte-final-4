@@ -72,7 +72,7 @@
         </div>
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar()"
-        >Comprovar Paraula 1</a
+        >Comprobar palabra 1</a
       ><br /><br />
       <!-- Teclat -->
       <div id="tecladoCompleto1">
@@ -346,7 +346,7 @@
         </div>
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar2()"
-        >Comprovar Paraula 2</a
+        >Comprobar palabra 2</a
       ><br /><br />
       <div id="tecladoCompleto2"></div>
 
@@ -387,7 +387,7 @@
         </div>
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar3()"
-        >Comprovar Paraula 3</a
+        >Comprobar palabra 3</a
       ><br /><br />
       <div id="tecladoCompleto3"></div>
 
@@ -428,7 +428,7 @@
         </div>
       </div>
       <a class="waves-effect waves-light btn" v-on:click="comprovar4()"
-        >Comprovar Paraula 4</a
+        >Comprobar palabra 4</a
       ><br /><br />
       <div id="tecladoCompleto4"></div>
 
@@ -473,7 +473,7 @@
         class="waves-effect waves-light btn"
         href="#modal2"
         v-on:click="comprovar5()"
-        >Comprovar Paraula 5</a
+        >Comprobar palabra 5</a
       ><br /><br />
       <!-- Modal partida finalitzada -->
       <div id="modal2" class="modal">
@@ -701,7 +701,7 @@ export default {
     guardarPuntuacion() {
       var usuario = document.getElementById("userPunt").value;
       let tiempoTimer;
-      if (this.timerCount >= 10) {
+      if (this.timerFinal >= 10) {
         tiempoTimer = this.timerFinalMinuto + ":" + this.timerFinal;
       } else {
         tiempoTimer = this.timerFinalMinuto + ":" + "0" + this.timerFinal;

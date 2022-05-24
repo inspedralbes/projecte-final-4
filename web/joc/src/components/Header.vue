@@ -9,8 +9,6 @@
           <RouterLink :to="'/puntuacions'">Puntuacions</RouterLink>
           <!-- <a href="/puntuacions">Puntuacions</a> -->
         </li>
-        <li><a href="#">Ajustes</a></li>
-        <li><a href="#">Estadistiques</a></li>
         <li><a class="modal-trigger" href="#modal1">Admin</a></li>
       </ul>
     </div>
