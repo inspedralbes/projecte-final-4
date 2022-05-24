@@ -18,4 +18,14 @@
 
 ```
 El joc esta en components/joc.vue , aqui esta tot el joc , tot en el mateix component.
-- El joc comença amb un <button v-on:click="iniciarPartida()"> -> "Linia 7" , la funció iniciarPartida() esta en -> "Linea 726".El que fa aquesta funcio es que al clicar en el boto el boto y la normativa fan un display:none; y es mostra un cronometre que se inicia. ("El temps que durara la partida"). Inmediatament es mostrara les caselles (linea 36) amb un "display: block;"
+- El joc comença amb un <button v-on:click="iniciarPartida()"> -> "Linia 7" ,
+```
+       <button
+      id="buttonpartida"
+      class="waves-effect waves-light btn-large"
+      v-on:click="iniciarPartida()"
+        >
+      Empezar Partida
+    </button>
+```
+    la funció iniciarPartida() esta en -> "Linea 726".El que fa aquesta funcio es que al clicar en el boto el boto y la normativa fan un display:none; y es mostra un cronometre que se inicia. ("El temps que durara la partida"). Inmediatament es mostrara les caselles (linea 36) amb un "display: block;"
