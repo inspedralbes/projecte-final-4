@@ -134,6 +134,11 @@ export default {
 </script>
 
 <style>
+body{
+overflow: scroll !important; 
+overflow-x: hidden !important;
+
+}
 .box {
   padding: 10px;
 }
