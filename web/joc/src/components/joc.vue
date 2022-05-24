@@ -1,9 +1,12 @@
 <template>
   <div>
     <!-- Botó que crida la funció per començar la partida -->
-    <button id="buttonpartida" class="waves-effect waves-light btn-large" v-on:click="iniciarPartida()">
+    <button
+      id="buttonpartida"
+      class="waves-effect waves-light btn-large"
+      v-on:click="iniciarPartida()"
+    >
       Empezar Partida
-
     </button>
 
     <div id="normasjuego">
@@ -13,11 +16,12 @@
         El objetivo del juego es conseguir las 5 palabras que necesitamos en el
         menos tiempo posible. Contra más rápido consigue las 5 palabras , más
         puntos y más alto en el ranking estarás.<br /><br />
-        Contra más rápido y menos intenso conseguirás las 5 palabras, más puntos y más alto en el ranking estarás.
+        Contra más rápido y menos intenso conseguirás las 5 palabras, más puntos
+        y más alto en el ranking estarás.
         <br /><br />
         <b>NORMATIVA DEL JUEGO</b><br /><br />
-        Solo se pueden escribir las palabras con las letras que nosotros damos
-        , si introduces alguna letra que no está en la parte derecha de la
+        Solo se pueden escribir las palabras con las letras que nosotros damos ,
+        si introduces alguna letra que no está en la parte derecha de la
         pantalla automáticamente estará mal
       </h4>
     </div>
@@ -30,7 +34,6 @@
     </div>
 
     <div id="mostrarjuego" style="display: none" onload="countUpTimer()">
-
       <!-- Primera paraula -->
       <div class="row center-align margin-celdas">
         <div id="1div0" class="col-grid col m2 z-depth-4">
@@ -50,7 +53,7 @@
         </div>
         <div class="col m2">
           <a class="btn-floating btn-large waves-effect waves-light red">{{
-              this.intents1
+            this.intents1
           }}</a>
         </div>
       </div>
@@ -58,104 +61,249 @@
       <div class="row center-align margin-celdas oculta" id="pista1">
         <div class="pista-responsive" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p readonly id="textarea1" class="materialize-textarea" style="padding: 5px">
+          <p
+            readonly
+            id="textarea1"
+            class="materialize-textarea"
+            style="padding: 5px"
+          >
             {{ this.definicion1 }}
           </p>
         </div>
       </div>
-      <a class="waves-effect waves-light btn" v-on:click="comprovar()">Comprovar Paraula 1</a><br /><br />
+      <a class="waves-effect waves-light btn" v-on:click="comprovar()"
+        >Comprovar Paraula 1</a
+      ><br /><br />
       <!-- Teclat -->
       <div id="tecladoCompleto1">
         <div class="row">
-          <button v-on:click="apretar($event)" name="Q" class="waves-effect waves-light btn-large" id="lletre-0">
+          <button
+            v-on:click="apretar($event)"
+            name="Q"
+            class="waves-effect waves-light btn-large"
+            id="lletre-0"
+          >
             Q
           </button>
-          <button v-on:click="apretar($event)" name="W" class="waves-effect waves-light btn-large" id="lletre-1">
+          <button
+            v-on:click="apretar($event)"
+            name="W"
+            class="waves-effect waves-light btn-large"
+            id="lletre-1"
+          >
             W
           </button>
-          <button v-on:click="apretar($event)" name="E" class="waves-effect waves-light btn-large" id="lletre-2">
+          <button
+            v-on:click="apretar($event)"
+            name="E"
+            class="waves-effect waves-light btn-large"
+            id="lletre-2"
+          >
             E
           </button>
 
-          <button v-on:click="apretar($event)" name="R" class="waves-effect waves-light btn-large" id="lletre-3">
+          <button
+            v-on:click="apretar($event)"
+            name="R"
+            class="waves-effect waves-light btn-large"
+            id="lletre-3"
+          >
             R
           </button>
-          <button v-on:click="apretar($event)" name="T" class="waves-effect waves-light btn-large" id="lletre-4">
+          <button
+            v-on:click="apretar($event)"
+            name="T"
+            class="waves-effect waves-light btn-large"
+            id="lletre-4"
+          >
             T
           </button>
-          <button v-on:click="apretar($event)" name="Y" class="waves-effect waves-light btn-large" id="lletre-5">
+          <button
+            v-on:click="apretar($event)"
+            name="Y"
+            class="waves-effect waves-light btn-large"
+            id="lletre-5"
+          >
             Y
           </button>
-          <button v-on:click="apretar($event)" name="U" class="waves-effect waves-light btn-large" id="lletre-5">
+          <button
+            v-on:click="apretar($event)"
+            name="U"
+            class="waves-effect waves-light btn-large"
+            id="lletre-5"
+          >
             U
           </button>
-          <button v-on:click="apretar($event)" name="I" class="waves-effect waves-light btn-large" id="lletre-5">
+          <button
+            v-on:click="apretar($event)"
+            name="I"
+            class="waves-effect waves-light btn-large"
+            id="lletre-5"
+          >
             I
           </button>
-          <button v-on:click="apretar($event)" name="O" class="waves-effect waves-light btn-large" id="lletre-5">
+          <button
+            v-on:click="apretar($event)"
+            name="O"
+            class="waves-effect waves-light btn-large"
+            id="lletre-5"
+          >
             O
           </button>
-          <button v-on:click="apretar($event)" name="P" class="waves-effect waves-light btn-large" id="lletre-5">
+          <button
+            v-on:click="apretar($event)"
+            name="P"
+            class="waves-effect waves-light btn-large"
+            id="lletre-5"
+          >
             P
           </button>
         </div>
         <div class="row">
-          <button v-on:click="apretar($event)" name="A" class="waves-effect waves-light btn-large" id="lletre-0">
+          <button
+            v-on:click="apretar($event)"
+            name="A"
+            class="waves-effect waves-light btn-large"
+            id="lletre-0"
+          >
             A
           </button>
-          <button v-on:click="apretar($event)" name="S" class="waves-effect waves-light btn-large" id="lletre-1">
+          <button
+            v-on:click="apretar($event)"
+            name="S"
+            class="waves-effect waves-light btn-large"
+            id="lletre-1"
+          >
             S
           </button>
-          <button v-on:click="apretar($event)" name="D" class="waves-effect waves-light btn-large" id="lletre-2">
+          <button
+            v-on:click="apretar($event)"
+            name="D"
+            class="waves-effect waves-light btn-large"
+            id="lletre-2"
+          >
             D
           </button>
 
-          <button v-on:click="apretar($event)" name="F" class="waves-effect waves-light btn-large" id="lletre-3">
+          <button
+            v-on:click="apretar($event)"
+            name="F"
+            class="waves-effect waves-light btn-large"
+            id="lletre-3"
+          >
             F
           </button>
-          <button v-on:click="apretar($event)" name="G" class="waves-effect waves-light btn-large" id="lletre-4">
+          <button
+            v-on:click="apretar($event)"
+            name="G"
+            class="waves-effect waves-light btn-large"
+            id="lletre-4"
+          >
             G
           </button>
-          <button v-on:click="apretar($event)" name="H" class="waves-effect waves-light btn-large" id="lletre-5">
+          <button
+            v-on:click="apretar($event)"
+            name="H"
+            class="waves-effect waves-light btn-large"
+            id="lletre-5"
+          >
             H
           </button>
-          <button v-on:click="apretar($event)" name="J" class="waves-effect waves-light btn-large" id="lletre-5">
+          <button
+            v-on:click="apretar($event)"
+            name="J"
+            class="waves-effect waves-light btn-large"
+            id="lletre-5"
+          >
             J
           </button>
-          <button v-on:click="apretar($event)" name="K" class="waves-effect waves-light btn-large" id="lletre-5">
+          <button
+            v-on:click="apretar($event)"
+            name="K"
+            class="waves-effect waves-light btn-large"
+            id="lletre-5"
+          >
             K
           </button>
-          <button v-on:click="apretar($event)" name="L" class="waves-effect waves-light btn-large" id="lletre-5">
+          <button
+            v-on:click="apretar($event)"
+            name="L"
+            class="waves-effect waves-light btn-large"
+            id="lletre-5"
+          >
             L
           </button>
-          <button v-on:click="apretar($event)" name="Ñ" class="waves-effect waves-light btn-large" id="lletre-5">
+          <button
+            v-on:click="apretar($event)"
+            name="Ñ"
+            class="waves-effect waves-light btn-large"
+            id="lletre-5"
+          >
             Ñ
           </button>
         </div>
         <div class="row">
-          <button v-on:click="apretar($event)" name="Z" class="waves-effect waves-light btn-large" id="lletre-0">
+          <button
+            v-on:click="apretar($event)"
+            name="Z"
+            class="waves-effect waves-light btn-large"
+            id="lletre-0"
+          >
             Z
           </button>
-          <button v-on:click="apretar($event)" name="X" class="waves-effect waves-light btn-large" id="lletre-1">
+          <button
+            v-on:click="apretar($event)"
+            name="X"
+            class="waves-effect waves-light btn-large"
+            id="lletre-1"
+          >
             X
           </button>
-          <button v-on:click="apretar($event)" name="C" class="waves-effect waves-light btn-large" id="lletre-2">
+          <button
+            v-on:click="apretar($event)"
+            name="C"
+            class="waves-effect waves-light btn-large"
+            id="lletre-2"
+          >
             C
           </button>
 
-          <button v-on:click="apretar($event)" name="V" class="waves-effect waves-light btn-large" id="lletre-3">
+          <button
+            v-on:click="apretar($event)"
+            name="V"
+            class="waves-effect waves-light btn-large"
+            id="lletre-3"
+          >
             V
           </button>
-          <button v-on:click="apretar($event)" name="B" class="waves-effect waves-light btn-large" id="lletre-4">
+          <button
+            v-on:click="apretar($event)"
+            name="B"
+            class="waves-effect waves-light btn-large"
+            id="lletre-4"
+          >
             B
           </button>
-          <button v-on:click="apretar($event)" name="N" class="waves-effect waves-light btn-large" id="lletre-5">
+          <button
+            v-on:click="apretar($event)"
+            name="N"
+            class="waves-effect waves-light btn-large"
+            id="lletre-5"
+          >
             N
           </button>
-          <button v-on:click="apretar($event)" name="M" class="waves-effect waves-light btn-large" id="lletre-5">
+          <button
+            v-on:click="apretar($event)"
+            name="M"
+            class="waves-effect waves-light btn-large"
+            id="lletre-5"
+          >
             M
           </button>
-          <button class="waves-effect waves-light btn-large red ocultar-del-movil" v-on:click="deleteLetter()">
+          <button
+            class="waves-effect waves-light btn-large red ocultar-del-movil"
+            v-on:click="deleteLetter()"
+          >
             Del
           </button>
         </div>
@@ -180,19 +328,26 @@
         </div>
         <div class="col m2">
           <a class="btn-floating btn-large waves-effect waves-light red">{{
-              this.intents2
+            this.intents2
           }}</a>
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista2">
         <div class="pista-responsive" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p readonly id="textarea1" class="materialize-textarea" style="padding: 5px">
+          <p
+            readonly
+            id="textarea1"
+            class="materialize-textarea"
+            style="padding: 5px"
+          >
             {{ this.definicion2 }}
           </p>
         </div>
       </div>
-      <a class="waves-effect waves-light btn" v-on:click="comprovar2()">Comprovar Paraula 2</a><br /><br />
+      <a class="waves-effect waves-light btn" v-on:click="comprovar2()"
+        >Comprovar Paraula 2</a
+      ><br /><br />
       <div id="tecladoCompleto2"></div>
 
       <!-- Tercera paraula -->
@@ -214,19 +369,26 @@
         </div>
         <div class="col m2">
           <a class="btn-floating btn-large waves-effect waves-light red">{{
-              this.intents3
+            this.intents3
           }}</a>
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista3">
         <div class="pista-responsive" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p readonly id="textarea1" class="materialize-textarea" style="padding: 5px">
+          <p
+            readonly
+            id="textarea1"
+            class="materialize-textarea"
+            style="padding: 5px"
+          >
             {{ this.definicion3 }}
           </p>
         </div>
       </div>
-      <a class="waves-effect waves-light btn" v-on:click="comprovar3()">Comprovar Paraula 3</a><br /><br />
+      <a class="waves-effect waves-light btn" v-on:click="comprovar3()"
+        >Comprovar Paraula 3</a
+      ><br /><br />
       <div id="tecladoCompleto3"></div>
 
       <!-- Quarta paraula -->
@@ -248,19 +410,26 @@
         </div>
         <div class="col m2">
           <a class="btn-floating btn-large waves-effect waves-light red">{{
-              this.intents4
+            this.intents4
           }}</a>
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista4">
         <div class="pista-responsive" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p readonly id="textarea1" class="materialize-textarea" style="padding: 5px">
+          <p
+            readonly
+            id="textarea1"
+            class="materialize-textarea"
+            style="padding: 5px"
+          >
             {{ this.definicion4 }}
           </p>
         </div>
       </div>
-      <a class="waves-effect waves-light btn" v-on:click="comprovar4()">Comprovar Paraula 4</a><br /><br />
+      <a class="waves-effect waves-light btn" v-on:click="comprovar4()"
+        >Comprovar Paraula 4</a
+      ><br /><br />
       <div id="tecladoCompleto4"></div>
 
       <!-- Cinquena paraula -->
@@ -282,20 +451,30 @@
         </div>
         <div class="col m2">
           <a class="btn-floating btn-large waves-effect waves-light red">{{
-              this.intents5
+            this.intents5
           }}</a>
         </div>
       </div>
       <div class="row center-align margin-celdas oculta" id="pista5">
         <div class="pista-responsive" style="border: 2px solid black">
           <label for="textarea1">PISTA</label>
-          <p readonly id="textarea1" class="materialize-textarea" style="padding: 5px">
+          <p
+            readonly
+            id="textarea1"
+            class="materialize-textarea"
+            style="padding: 5px"
+          >
             {{ this.definicion5 }}
           </p>
         </div>
       </div>
-      <a id="modal-verificacion" class="waves-effect waves-light btn" href="#modal2" v-on:click="comprovar5()">Comprovar
-        Paraula 5</a><br /><br />
+      <a
+        id="modal-verificacion"
+        class="waves-effect waves-light btn"
+        href="#modal2"
+        v-on:click="comprovar5()"
+        >Comprovar Paraula 5</a
+      ><br /><br />
       <!-- Modal partida finalitzada -->
       <div id="modal2" class="modal">
         <div class="modal-content">
@@ -349,9 +528,14 @@
           <br /><br />
           <iframe
             src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fparaudl.alumnes.inspedralbes.cat%2F&layout=button&size=large&width=103&height=28&appId"
-            width="103" height="28" style="border: none; overflow: hidden" scrolling="no" frameborder="0"
+            width="103"
+            height="28"
+            style="border: none; overflow: hidden"
+            scrolling="no"
+            frameborder="0"
             allowfullscreen="true"
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          ></iframe>
         </div>
         <div class="modal-footer">
           <div class="row center-align margin-celdas">
@@ -360,12 +544,18 @@
               <label for="user">Usuario</label>
             </div>
             <div class="col s3">
-              <button v-on:click="guardarPuntuacion()" class="modal-close waves-effect waves-green btn">
+              <button
+                v-on:click="guardarPuntuacion()"
+                class="modal-close waves-effect waves-green btn"
+              >
                 Guardar puntuación
               </button>
             </div>
             <div class="col s3">
-              <button href="#!" class="modal-close waves-effect waves-green btn">
+              <button
+                href="#!"
+                class="modal-close waves-effect waves-green btn"
+              >
                 Cerrar
               </button>
             </div>
@@ -377,7 +567,9 @@
 
       <p id="Felizitarpartida"></p>
       <div id="botonfinalizar" style="display: none">
-        <RouterLink :to="'/puntuacions'" class="waves-effect waves-light btn">Finalitza Partida</RouterLink>
+        <RouterLink :to="'/puntuacions'" class="waves-effect waves-light btn"
+          >Finalitza Partida</RouterLink
+        >
       </div>
 
       <br />
@@ -495,10 +687,16 @@ export default {
     },
     guardarPuntuacion() {
       var usuario = document.getElementById("userPunt").value;
+      let tiempoTimer;
+      if (this.timerCount >= 10) {
+        tiempoTimer = this.timerFinalMinuto + ":" + this.timerFinal;
+      } else {
+        tiempoTimer = this.timerFinalMinuto + ":" + "0" + this.timerFinal;
+      }
 
       let data = {
         user: usuario,
-        tiempo: this.timerFinalMinuto + ":" + this.timerZero + this.timerFinal,
+        tiempo: tiempoTimer,
         pistas: this.numeroPistas,
         intentos1: this.intents1,
         intentos2: this.intents2,
@@ -506,7 +704,7 @@ export default {
         intentos4: this.intents4,
         intentos5: this.intents5,
       };
-      console.log(data)
+      console.log(data);
       fetch(
         "http://paraudl.back.alumnes.inspedralbes.cat:7099/api/todos/puntuaciones",
         {
@@ -949,7 +1147,7 @@ export default {
   display: flex;
 }
 
-#userPunt{
+#userPunt {
   background-color: rgba(96, 233, 130, 0.589);
 }
 .second-row {
