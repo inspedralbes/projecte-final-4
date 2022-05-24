@@ -30,9 +30,9 @@
                   <label for="icon_prefix">Usuario</label>
                 </div>
                 <div class="input-field col s6">
-                  <i class="material-icons prefix">phone</i>
-                  <input id="icon_telephone" type="password" class="validate">
-                  <label for="icon_telephone">Contraseña</label>
+                  <i class="material-icons prefix">lock</i>
+                  <input id="icon_lock" type="password" class="validate">
+                  <label for="icon_lock">Contraseña</label>
                 </div>
               </div>
             </form>
@@ -78,7 +78,7 @@ export default {
       this.adminUser = this.adminData[0].usuario
       this.adminPassword = this.adminData[0].contraseña
       this.inputUser = document.getElementById("icon_prefix").value
-      this.inputPassword = document.getElementById("icon_telephone").value
+      this.inputPassword = document.getElementById("icon_lock").value
 
       if (this.inputUser == this.adminUser && this.inputPassword == this.adminPassword) {
         window.location.href = "/admin/" + this.inputUser;
@@ -102,7 +102,12 @@ export default {
 .oculta {
   display: none;
 }
-
+#icon_prefix{
+    background-color: rgba(96, 233, 130, 0.589);
+}
+#icon_lock{
+    background-color: rgba(96, 233, 130, 0.589);
+}
 .nav-header {
   height: 80px;
 }
