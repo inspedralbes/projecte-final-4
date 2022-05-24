@@ -17,7 +17,7 @@ export default {
 
 <template>
 <div>
-  <Header/>
+  <Header />
     <main>
     <div class="row center-align">
 

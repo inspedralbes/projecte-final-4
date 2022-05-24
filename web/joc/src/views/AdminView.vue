@@ -5,7 +5,7 @@
     <div class="row center-align box">
       <div class="col s6">
         <a class="waves-effect waves-light btn-large" href="/">HOME</a>
-        <br />
+        <br /><br />
         <a
           class="waves-effect waves-light btn-large"
           v-on:click="mostrarPalabras()"
