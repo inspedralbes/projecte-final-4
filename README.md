@@ -14,7 +14,7 @@ Fem un npm install i update per intalar/actualitzar el NPM:
 npm install
 npm update
 ```
-Despres per poder desplegar el projecte en local fen un :
+Despres per poder desplegar el projecte en local fem un :
 ```
 npm run dev
 ```
