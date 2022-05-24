@@ -6,8 +6,8 @@
       </a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li>
-          <!-- <RouterLink :to="'/puntuacions'">Puntuacions</RouterLink> -->
-          <a href="/puntuacions">Puntuacions</a>
+          <RouterLink :to="'/puntuacions'">Puntuacions</RouterLink>
+          <!-- <a href="/puntuacions">Puntuacions</a> -->
         </li>
         <li><a href="#">Ajustes</a></li>
         <li><a href="#">Estadistiques</a></li>
