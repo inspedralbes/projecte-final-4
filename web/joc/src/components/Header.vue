@@ -14,8 +14,8 @@
       </ul>
     </div>
     <!-- MODAL LOGIN ADMIN -->
-    <div class="container">
-      <div id="modal1" class="modal #66bb6a green lighten-1">
+    <div class="container" >
+      <div id="modal1" style="overflow-y:hidden" class="modal #66bb6a green lighten-1">
         <div class="modal-content">
           <div class="row">
             <form class="col s12">
@@ -40,18 +40,23 @@
             </form>
           </div>
         </div>
-        <div class="modal-footer #66bb6a green lighten-1">
+        <div style="display: flex; padding:10px">
+           <div class="modal-footer #66bb6a green lighten-1">
           <a href="#!" class="waves-effect waves-light btn" v-on:click="login()"
             >Iniciar Sesión</a
           >
-        </div>
-        <div class="modal-footer #66bb6a green lighten-1">
-          <a
+
+          <a style="margin-left: 15px;"
             href="#!"
             class="modal-action modal-close waves-effect waves-light btn"
             >Cerrar</a
           >
         </div>
+       
+          
+        
+        </div>
+       
       </div>
     </div>
   </nav>
