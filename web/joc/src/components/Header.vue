@@ -95,8 +95,6 @@ export default {
   },
   methods: {
     login() {
-      console.log(this.adminData[0].usuario);
-      console.log(this.adminData[0].contraseña);
       this.adminUser = this.adminData[0].usuario;
       this.adminPassword = this.adminData[0].contraseña;
       this.inputUser = document.getElementById("icon_prefix").value;
@@ -107,7 +105,6 @@ export default {
         this.inputPassword == this.adminPassword
       ) {
         this.user = "admin";
-        console.log(this.user)
         this.$router.push("admin");
       } else {
         document.getElementById("error").classList.remove("oculta");

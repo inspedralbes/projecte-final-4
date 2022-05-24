@@ -86,10 +86,6 @@ export default {
       };
       // const data = { palabra: paraula };
 
-      console.log("paraula: ", paraula);
-      console.log("paraula: ", defi);
-      console.log("data: ", data);
-
       fetch("http://paraudl.back.alumnes.inspedralbes.cat:7099/api/todos", {
         method: "POST",
         headers: {
@@ -99,23 +95,18 @@ export default {
       })
         .then((response) => response.json())
         .then((data) => {
-          console.log("Success:", data);
         })
         .catch((error) => {
-          console.error("Error:", error);
         });
     },
     mostrarPalabras() {
       fetch("http://paraudl.back.alumnes.inspedralbes.cat:7099/api/todos")
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
           this.listaPalabras = data;
-          console.log("lenght", data.length);
         });
     },
     deletePalabra(id) {
-      console.log("id: ", id);
       fetch(
         "http://paraudl.back.alumnes.inspedralbes.cat:7099/api/todos/" + id,
         {

@@ -662,7 +662,6 @@ export default {
     };
   },
   mounted() {
-    console.log(this.user)
     fetch("http://paraudl.back.alumnes.inspedralbes.cat:7099/api/todos")
       .then((response) => response.json())
       .then((data) => (this.paraulaJson = data));
@@ -686,16 +685,12 @@ export default {
     generarRandNumero() {
       for (var i = 0; i < this.paraulaJson.length; i++) {
         this.vectorNumbers.push(i);
-        console.log("Vector", i, " ", this.vectorNumbers);
-        console.log("JSON", i, " ", this.paraulaJson.length);
       }
 
       for (var j = 0; j < 6; j++) {
         let position = Math.floor(Math.random() * this.vectorNumbers.length);
         this.randomNumber[j] = this.vectorNumbers[position];
         this.vectorNumbers.splice(position, 1);
-        console.log("Vector", j, " ", this.vectorNumbers);
-        console.log("Number", j, " ", this.randomNumber);
       }
     },
     guardarPuntuacion() {
@@ -717,7 +712,6 @@ export default {
         intentos4: this.intents4,
         intentos5: this.intents5,
       };
-      console.log(data);
       fetch(
         "http://paraudl.back.alumnes.inspedralbes.cat:7099/api/todos/puntuaciones",
         {
@@ -730,10 +724,8 @@ export default {
       )
         .then((response) => response.json())
         .then((data) => {
-          console.log("Success:", data);
         })
         .catch((error) => {
-          console.error("Error:", error);
         });
     },
     iniciarPartida() {
@@ -742,7 +734,6 @@ export default {
       }, 1000);
       document.getElementById("cronoTimer").classList.remove("oculta");
       this.generarRandNumero();
-      console.log("LENGHT", this.paraulaJson.length);
 
       document.getElementById("buttonpartida").style.display = "none";
       document.getElementById("mostrarjuego").style.display = "block";
@@ -784,15 +775,12 @@ export default {
     },
     apretar(e) {
       this.letra = e.target.name;
-      console.log(e.target.name);
       this.solucio1Count = 0;
-      console.log("Partida: ", this.partida);
       //PARAULA 1
       if (this.partida == 1) {
         if (this.count < 5) {
           this.paraula1[this.count] = this.letra;
           this.count++;
-          console.log("Posicion", this.count);
         }
         if (this.count < 5) {
         }
@@ -802,7 +790,6 @@ export default {
         if (this.count < 5) {
           this.paraula2[this.count] = this.letra;
           this.count++;
-          console.log("Posicion", this.count);
         }
         if (this.count < 5) {
         }
@@ -812,7 +799,6 @@ export default {
         if (this.count < 5) {
           this.paraula3[this.count] = this.letra;
           this.count++;
-          console.log("Posicion", this.count);
         }
         if (this.count < 5) {
         }
@@ -822,7 +808,6 @@ export default {
         if (this.count < 5) {
           this.paraula4[this.count] = this.letra;
           this.count++;
-          console.log("Posicion", this.count);
         }
         if (this.count < 5) {
         }
@@ -832,7 +817,6 @@ export default {
         if (this.count < 5) {
           this.paraula5[this.count] = this.letra;
           this.count++;
-          console.log("Posicion", this.count);
         }
         if (this.count < 5) {
         }
@@ -852,7 +836,6 @@ export default {
 
           this.count = this.count - 1;
         }
-        console.log("Posicion", this.count);
       }
       //PARAULA 2
       if (this.partida == 2) {
@@ -867,7 +850,6 @@ export default {
 
           this.count = this.count - 1;
         }
-        console.log("Posicion", this.count);
       }
       //PARAULA 3
       if (this.partida == 3) {
@@ -882,7 +864,6 @@ export default {
 
           this.count = this.count - 1;
         }
-        console.log("Posicion", this.count);
       }
       //PARAULA 4
       if (this.partida == 4) {
@@ -897,7 +878,6 @@ export default {
 
           this.count = this.count - 1;
         }
-        console.log("Posicion", this.count);
       }
       //PARAULA 5
       if (this.partida == 5) {
@@ -912,18 +892,13 @@ export default {
 
           this.count = this.count - 1;
         }
-        console.log("Posicion", this.count);
       }
     },
 
     comprovar() {
-      console.log(this.paraulaJson[this.randomNumber]);
-      console.log("number random ", this.randomNumber);
       //PARAULA 1
       if (this.partida == 1) {
         for (var i = 0; i < 5; i++) {
-          console.log("Paraula", this.paraula1[i]);
-          console.log("Solucio", this.solucio1[i]);
           if (this.paraula1[i] === this.solucio1[i]) {
             this.estatParaula1[i] = 0;
             document.getElementById("1div" + i).classList.remove("incorrecte");
@@ -934,13 +909,9 @@ export default {
             document.getElementById("1div" + i).classList.remove("correcte");
             document.getElementById("1div" + i).classList.add("incorrecte");
           }
-          console.log(this.estatParaula1[i]);
           if (this.estatParaula1[i] == this.estatSolucio[i]) {
             this.solucio1Count++;
           }
-          console.log("estatParaula1: ", this.estatParaula1[i]);
-          console.log("estatSolucio: ", this.estatSolucio[i]);
-          console.log("Counter correctes: ", this.solucio1Count);
         }
         //Esta bien
         if (this.solucio1Count >= 5) {
@@ -965,8 +936,6 @@ export default {
       //PARAULA 2
       if (this.partida == 2) {
         for (var i = 0; i < 5; i++) {
-          console.log("Paraula", this.paraula2[i]);
-          console.log("Solucio", this.solucio2[i]);
           if (this.paraula2[i] === this.solucio2[i]) {
             this.estatParaula2[i] = 0;
             document.getElementById("2div" + i).classList.remove("incorrecte");
@@ -977,13 +946,9 @@ export default {
             document.getElementById("2div" + i).classList.remove("correcte");
             document.getElementById("2div" + i).classList.add("incorrecte");
           }
-          console.log(this.estatParaula2[i]);
           if (this.estatParaula2[i] == this.estatSolucio[i]) {
             this.solucio2Count++;
           }
-          console.log("estatParaula1: ", this.estatParaula2[i]);
-          console.log("estatSolucio: ", this.estatSolucio[i]);
-          console.log("Counter correctes: ", this.solucio2Count);
         }
         if (this.solucio2Count >= 5) {
           this.count = 0;
@@ -1007,8 +972,6 @@ export default {
       //PARAULA 3
       if (this.partida == 3) {
         for (var i = 0; i < 5; i++) {
-          console.log("Paraula", this.paraula3[i]);
-          console.log("Solucio", this.solucio3[i]);
           if (this.paraula3[i] === this.solucio3[i]) {
             this.estatParaula3[i] = 0;
             document.getElementById("3div" + i).classList.remove("incorrecte");
@@ -1019,13 +982,9 @@ export default {
             document.getElementById("3div" + i).classList.remove("correcte");
             document.getElementById("3div" + i).classList.add("incorrecte");
           }
-          console.log(this.estatParaula3[i]);
           if (this.estatParaula3[i] == this.estatSolucio[i]) {
             this.solucio3Count++;
           }
-          console.log("estatParaula1: ", this.estatParaula3[i]);
-          console.log("estatSolucio: ", this.estatSolucio[i]);
-          console.log("Counter correctes: ", this.solucio3Count);
         }
         if (this.solucio3Count >= 5) {
           this.count = 0;
@@ -1049,8 +1008,6 @@ export default {
       //PARAULA 4
       if (this.partida == 4) {
         for (var i = 0; i < 5; i++) {
-          console.log("Paraula", this.paraula4[i]);
-          console.log("Solucio", this.solucio4[i]);
           if (this.paraula4[i] === this.solucio4[i]) {
             this.estatParaula4[i] = 0;
             document.getElementById("4div" + i).classList.remove("incorrecte");
@@ -1061,13 +1018,9 @@ export default {
             document.getElementById("4div" + i).classList.remove("correcte");
             document.getElementById("4div" + i).classList.add("incorrecte");
           }
-          console.log(this.estatParaula4[i]);
           if (this.estatParaula4[i] == this.estatSolucio[i]) {
             this.solucio4Count++;
           }
-          console.log("estatParaula1: ", this.estatParaula4[i]);
-          console.log("estatSolucio: ", this.estatSolucio[i]);
-          console.log("Counter correctes: ", this.solucio4Count);
         }
         if (this.solucio4Count >= 5) {
           this.count = 0;
@@ -1091,8 +1044,6 @@ export default {
       //PARAULA 5
       if (this.partida == 5) {
         for (var i = 0; i < 5; i++) {
-          console.log("Paraula", this.paraula5[i]);
-          console.log("Solucio", this.solucio5[i]);
           if (this.paraula5[i] === this.solucio5[i]) {
             this.estatParaula5[i] = 0;
             document.getElementById("5div" + i).classList.remove("incorrecte");
@@ -1103,13 +1054,9 @@ export default {
             document.getElementById("5div" + i).classList.remove("correcte");
             document.getElementById("5div" + i).classList.add("incorrecte");
           }
-          console.log(this.estatParaula5[i]);
           if (this.estatParaula5[i] == this.estatSolucio[i]) {
             this.solucio5Count++;
           }
-          console.log("estatParaula1: ", this.estatParaula5[i]);
-          console.log("estatSolucio: ", this.estatSolucio[i]);
-          console.log("Counter correctes: ", this.solucio5Count);
         }
         //ESTA BIEN
         if (this.solucio5Count >= 5) {
