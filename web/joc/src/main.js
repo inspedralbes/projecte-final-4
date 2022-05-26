@@ -2,6 +2,8 @@ import { createApp } from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import { createPinia } from 'pinia'
+import VueCryptojs from 'vue-cryptojs'
+
 
 import App from './App.vue'
 import router from './router'
@@ -14,6 +16,7 @@ app.use(createPinia())
 app.use(router)
 app.use(VueAxios, axios) // 👈
 app.mount('#app')
+app.use(VueCryptojs)
 
 import { AdminStore } from './stores/store'
 const admin = AdminStore()

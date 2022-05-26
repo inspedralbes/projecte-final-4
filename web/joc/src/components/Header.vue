@@ -13,16 +13,14 @@
       </ul>
     </div>
     <!-- MODAL LOGIN ADMIN -->
-    <div class="container" >
+    <div class="container">
       <div id="modal1" style="overflow-y:hidden" class="modal #66bb6a green lighten-1">
         <div class="modal-content">
           <div class="row">
             <form class="col s12">
               <h1 class="negro">Administrador</h1>
               <div id="error" class="oculta">
-                <a class="waves-effect waves-light btn red"
-                  >Usuario o contraseña incorrecta</a
-                >
+                <a class="waves-effect waves-light btn red">Usuario o contraseña incorrecta</a>
               </div>
               <div class="row">
                 <div class="input-field col s6">
@@ -40,22 +38,17 @@
           </div>
         </div>
         <div style="display: flex; padding:10px">
-           <div class="modal-footer #66bb6a green lighten-1">
-          <a href="#!" class="waves-effect waves-light btn" v-on:click="login()"
-            >Iniciar Sesión</a
-          >
+          <div class="modal-footer #66bb6a green lighten-1">
+            <a href="#!" class="waves-effect waves-light btn" v-on:click="login()">Iniciar Sesión</a>
 
-          <a style="margin-left: 15px;"
-            href="#!"
-            class="modal-action modal-close waves-effect waves-light btn"
-            >Cerrar</a
-          >
+            <a style="margin-left: 15px;" href="#!"
+              class="modal-action modal-close waves-effect waves-light btn">Cerrar</a>
+          </div>
+
+
+
         </div>
-       
-          
-        
-        </div>
-       
+
       </div>
     </div>
   </nav>
@@ -64,6 +57,9 @@
 <script>
 import { AdminStore } from "../stores/store";
 import { storeToRefs } from "pinia";
+import CryptoJS from 'crypto-js';
+
+
 
 export default {
   setup() {
@@ -82,6 +78,7 @@ export default {
       adminPassword: "",
       inputUser: "",
       inputPassword: "",
+      adminPasswordDecrypt: ""
     };
   },
   mounted() {
@@ -97,12 +94,14 @@ export default {
     login() {
       this.adminUser = this.adminData[0].usuario;
       this.adminPassword = this.adminData[0].contraseña;
+
       this.inputUser = document.getElementById("icon_prefix").value;
       this.inputPassword = document.getElementById("icon_lock").value;
+      this.adminPasswordDecrypt = this.$CryptoJS.AES.decrypt(this.adminPassword, "admin").toString(CryptoJS.enc.Utf8);
 
       if (
         this.inputUser == this.adminUser &&
-        this.inputPassword == this.adminPassword
+        this.inputPassword == this.adminPasswordDecrypt
       ) {
         this.user = "admin";
         this.$router.push("admin");
@@ -122,12 +121,15 @@ export default {
 .oculta {
   display: none;
 }
+
 #icon_prefix {
   background-color: rgba(96, 233, 130, 0.589);
 }
+
 #icon_lock {
   background-color: rgba(96, 233, 130, 0.589);
 }
+
 .nav-header {
   height: 80px;
 }
